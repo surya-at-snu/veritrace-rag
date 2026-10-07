@@ -1,0 +1,89 @@
+{
+ "tau": -6.522273426055908,
+ "rule": "zero documents if best cross-encoder score < tau (1st percentile of in-domain train)",
+ "table": [
+  {
+   "train_percentile": 0.5,
+   "tau": -8.165146045684814,
+   "scifact_test_rejected": 0.006666666666666667,
+   "fiqa_rejected": 0.9182098765432098,
+   "general_rejected": 0.85
+  },
+  {
+   "train_percentile": 1,
+   "tau": -6.522273426055908,
+   "scifact_test_rejected": 0.02666666666666667,
+   "fiqa_rejected": 0.9753086419753086,
+   "general_rejected": 0.975
+  },
+  {
+   "train_percentile": 2,
+   "tau": -5.84126070022583,
+   "scifact_test_rejected": 0.03333333333333333,
+   "fiqa_rejected": 0.9814814814814815,
+   "general_rejected": 0.975
+  },
+  {
+   "train_percentile": 5,
+   "tau": -4.064367866516113,
+   "scifact_test_rejected": 0.06333333333333334,
+   "fiqa_rejected": 0.9922839506172839,
+   "general_rejected": 0.975
+  }
+ ],
+ "general_scores": {
+  "Who won the 2018 FIFA World Cup?": -10.74,
+  "who won the world cup in 2025": -10.34,
+  "Who won the cricket world cup in 2011?": -10.75,
+  "How do I bake sourdough bread?": -10.2,
+  "What is the capital of Australia?": -8.05,
+  "Who is the president of the United States?": -10.74,
+  "Best smartphone to buy in 2024": -11.0,
+  "How to learn guitar quickly?": -10.99,
+  "Who wrote Harry Potter?": -10.96,
+  "What is the tallest mountain in the world?": -10.86,
+  "How do I reset my Gmail password?": -10.89,
+  "When did World War II end?": -8.17,
+  "Which movie won the Oscar for best picture in 2020?": -10.48,
+  "How much does a Tesla Model 3 cost?": -9.75,
+  "What time zone is Tokyo in?": -10.69,
+  "How to make a cup of masala chai?": -10.99,
+  "Who painted the Mona Lisa?": -10.67,
+  "What is the population of India?": -2.05,
+  "How do I install Python on Windows?": -10.76,
+  "Best places to visit in Goa": -10.82,
+  "Who won the IPL in 2023?": -10.9,
+  "What is the exchange rate of dollar to rupee?": -10.46,
+  "How to tie a tie?": -7.03,
+  "Lyrics of a famous Bollywood song": -10.77,
+  "Who is Virat Kohli?": -10.98,
+  "What is the plot of the movie Inception?": -10.3,
+  "How to start a small business in India?": -10.73,
+  "What is the speed limit on Indian highways?": -11.01,
+  "Which team has won the most Champions League titles?": -10.87,
+  "How many players are in a football team?": -8.09,
+  "What is the price of gold today?": -7.4,
+  "How to write a cover letter for an internship?": -9.28,
+  "When is Diwali celebrated?": -10.95,
+  "What is the best laptop for gaming?": -11.03,
+  "How do airplanes fly?": -10.55,
+  "Who invented the telephone?": -10.03,
+  "What are the rules of chess?": -10.19,
+  "How do I cook biryani?": -11.16,
+  "Which country hosted the 2016 Olympics?": -6.76,
+  "What does a stock market index measure?": -8.6
+ },
+ "missed": [
+  [
+   "What is the population of India?",
+   -2.05
+  ]
+ ],
+ "n": {
+  "scifact_train": 809,
+  "scifact_test": 300,
+  "fiqa": 648,
+  "general": 40
+ },
+ "median_in_domain_train": 3.47
+}

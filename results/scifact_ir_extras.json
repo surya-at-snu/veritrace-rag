@@ -1,0 +1,1207 @@
+{
+ "smart": {
+  "rows": [
+   {
+    "scheme": "nnn.nnn",
+    "nDCG@10": 0.3957434110683691,
+    "P@1": 0.27666666666666667,
+    "P@5": 0.09733333333333333,
+    "P@10": 0.05733333333333333,
+    "R@10": 0.5301111111111111,
+    "R@100": 0.7783333333333333,
+    "MAP@100": 0.36086625988581855,
+    "MRR@10": 0.35882142857142857
+   },
+   {
+    "scheme": "nnc.nnc",
+    "nDCG@10": 0.476163550588511,
+    "P@1": 0.36666666666666664,
+    "P@5": 0.11466666666666667,
+    "P@10": 0.06633333333333333,
+    "R@10": 0.6002222222222222,
+    "R@100": 0.8079999999999999,
+    "MAP@100": 0.4406610587279974,
+    "MRR@10": 0.44635978835978835
+   },
+   {
+    "scheme": "ntc.ntc",
+    "nDCG@10": 0.5895675665902026,
+    "P@1": 0.43666666666666665,
+    "P@5": 0.14266666666666666,
+    "P@10": 0.08399999999999999,
+    "R@10": 0.7698888888888888,
+    "R@100": 0.9197777777777778,
+    "MAP@100": 0.5334290176725289,
+    "MRR@10": 0.5447314814814815
+   },
+   {
+    "scheme": "ltc.ltc",
+    "nDCG@10": 0.653020644092008,
+    "P@1": 0.5166666666666667,
+    "P@5": 0.156,
+    "P@10": 0.08899999999999998,
+    "R@10": 0.814888888888889,
+    "R@100": 0.9192222222222222,
+    "MAP@100": 0.6024420356313201,
+    "MRR@10": 0.6100224867724867
+   },
+   {
+    "scheme": "lnc.ltc",
+    "nDCG@10": 0.6470733566815453,
+    "P@1": 0.51,
+    "P@5": 0.15266666666666664,
+    "P@10": 0.086,
+    "R@10": 0.7883888888888889,
+    "R@100": 0.9142222222222222,
+    "MAP@100": 0.6051931997227584,
+    "MRR@10": 0.6093095238095239
+   },
+   {
+    "scheme": "lnc.lnc",
+    "nDCG@10": 0.5337349219626342,
+    "P@1": 0.4166666666666667,
+    "P@5": 0.12933333333333333,
+    "P@10": 0.07266666666666667,
+    "R@10": 0.6610555555555555,
+    "R@100": 0.8555555555555554,
+    "MAP@100": 0.49805751222983297,
+    "MRR@10": 0.49915211640211643
+   },
+   {
+    "scheme": "anc.ltc",
+    "nDCG@10": 0.6464266970663076,
+    "P@1": 0.51,
+    "P@5": 0.15266666666666664,
+    "P@10": 0.08733333333333332,
+    "R@10": 0.795888888888889,
+    "R@100": 0.9275555555555555,
+    "MAP@100": 0.6008688580958759,
+    "MRR@10": 0.6054034391534392
+   },
+   {
+    "scheme": "bnc.btc",
+    "nDCG@10": 0.6249554061874922,
+    "P@1": 0.51,
+    "P@5": 0.146,
+    "P@10": 0.08166666666666665,
+    "R@10": 0.7495555555555555,
+    "R@100": 0.9168888888888889,
+    "MAP@100": 0.5891465842077025,
+    "MRR@10": 0.5919788359788359
+   },
+   {
+    "scheme": "ltn.ltn",
+    "nDCG@10": 0.6584073659610783,
+    "P@1": 0.5133333333333333,
+    "P@5": 0.15333333333333332,
+    "P@10": 0.08999999999999998,
+    "R@10": 0.8126666666666668,
+    "R@100": 0.9185555555555557,
+    "MAP@100": 0.6096976815909783,
+    "MRR@10": 0.6155833333333334
+   },
+   {
+    "scheme": "jaccard",
+    "nDCG@10": 0.43222120343352693,
+    "P@1": 0.30333333333333334,
+    "P@5": 0.10733333333333332,
+    "P@10": 0.06199999999999999,
+    "R@10": 0.5687222222222222,
+    "R@100": 0.8086111111111111,
+    "MAP@100": 0.39391615363553323,
+    "MRR@10": 0.3951521164021164
+   },
+   {
+    "scheme": "bm25 (k1=0.6, b=0.3)",
+    "nDCG@10": 0.6598724284848402,
+    "P@1": 0.5333333333333333,
+    "P@5": 0.1573333333333333,
+    "P@10": 0.08566666666666665,
+    "R@10": 0.7870555555555556,
+    "R@100": 0.9235555555555556,
+    "MAP@100": 0.6210541753379429,
+    "MRR@10": 0.6270899470899471
+   }
+  ],
+  "p_vs_lnc_ltc": {
+   "nnn.nnn": 2.5514875212272953e-24,
+   "nnc.nnc": 2.0263123557483896e-14,
+   "ntc.ntc": 0.0003305205895358903,
+   "ltc.ltc": 0.5161449107537487,
+   "lnc.lnc": 1.4366904745117395e-13,
+   "anc.ltc": 0.8677117168194431,
+   "bnc.btc": 0.024670639863781194,
+   "ltn.ltn": 0.21576472911508185,
+   "jaccard": 1.930947852423424e-26,
+   "bm25": 0.08797624077640731
+  }
+ },
+ "analysis": [
+  {
+   "chain": "porter",
+   "stemmer": "porter",
+   "stopwords_removed": true,
+   "vocab": 27192,
+   "postings": 565321,
+   "positions": 799709,
+   "build_s": 4.3064844608306885,
+   "k1": 0.6,
+   "b": 0.3,
+   "bm25_zones": {
+    "nDCG@10": 0.6803831157324844,
+    "P@1": 0.5566666666666666,
+    "P@5": 0.15866666666666665,
+    "P@10": 0.08999999999999998,
+    "R@10": 0.8202222222222223,
+    "R@100": 0.9208888888888889,
+    "MAP@100": 0.6365658562776381,
+    "MRR@10": 0.6432751322751322
+   },
+   "tfidf_body": {
+    "nDCG@10": 0.6470733566815453,
+    "P@1": 0.51,
+    "P@5": 0.15266666666666664,
+    "P@10": 0.086,
+    "R@10": 0.7883888888888889,
+    "R@100": 0.9142222222222222,
+    "MAP@100": 0.6051931997227584,
+    "MRR@10": 0.6093095238095239
+   },
+   "p_bm25_vs_porter": 1.0,
+   "p_tfidf_vs_porter": 1.0
+  },
+  {
+   "chain": "s",
+   "stemmer": "s",
+   "stopwords_removed": true,
+   "vocab": 32768,
+   "postings": 581358,
+   "positions": 799709,
+   "build_s": 3.8973495960235596,
+   "k1": 0.6,
+   "b": 0.3,
+   "bm25_zones": {
+    "nDCG@10": 0.6633943092921128,
+    "P@1": 0.5533333333333333,
+    "P@5": 0.15799999999999997,
+    "P@10": 0.08566666666666665,
+    "R@10": 0.7798333333333333,
+    "R@100": 0.8963333333333332,
+    "MAP@100": 0.62777251665229,
+    "MRR@10": 0.6324656084656085
+   },
+   "tfidf_body": {
+    "nDCG@10": 0.6328123644719723,
+    "P@1": 0.5033333333333333,
+    "P@5": 0.15199999999999997,
+    "P@10": 0.08299999999999999,
+    "R@10": 0.7620555555555556,
+    "R@100": 0.8996666666666666,
+    "MAP@100": 0.5936109061685513,
+    "MRR@10": 0.5990357142857143
+   },
+   "p_bm25_vs_porter": 0.039005791305273034,
+   "p_tfidf_vs_porter": 0.09741729803518485
+  },
+  {
+   "chain": "none",
+   "stemmer": "none",
+   "stopwords_removed": true,
+   "vocab": 36578,
+   "postings": 596138,
+   "positions": 799709,
+   "build_s": 3.744460105895996,
+   "k1": 0.6,
+   "b": 0.3,
+   "bm25_zones": {
+    "nDCG@10": 0.6506170630143182,
+    "P@1": 0.53,
+    "P@5": 0.15466666666666665,
+    "P@10": 0.08466666666666665,
+    "R@10": 0.7684444444444445,
+    "R@100": 0.8752222222222222,
+    "MAP@100": 0.6138997212371432,
+    "MRR@10": 0.6184788359788359
+   },
+   "tfidf_body": {
+    "nDCG@10": 0.621776104082114,
+    "P@1": 0.48333333333333334,
+    "P@5": 0.15066666666666662,
+    "P@10": 0.08333333333333331,
+    "R@10": 0.7600555555555556,
+    "R@100": 0.8852222222222222,
+    "MAP@100": 0.5783054853040881,
+    "MRR@10": 0.5854338624338624
+   },
+   "p_bm25_vs_porter": 0.004870139496926307,
+   "p_tfidf_vs_porter": 0.007405853873902667
+  },
+  {
+   "chain": "porter+stopwords",
+   "stemmer": "porter",
+   "stopwords_removed": false,
+   "vocab": 27290,
+   "postings": 746057,
+   "positions": 1208294,
+   "build_s": 5.028174877166748,
+   "k1": 0.6,
+   "b": 0.3,
+   "bm25_zones": {
+    "nDCG@10": 0.6745481861072241,
+    "P@1": 0.5466666666666666,
+    "P@5": 0.16266666666666665,
+    "P@10": 0.08833333333333332,
+    "R@10": 0.8081666666666666,
+    "R@100": 0.9185555555555556,
+    "MAP@100": 0.6323749373571775,
+    "MRR@10": 0.6395436507936508
+   },
+   "tfidf_body": {
+    "nDCG@10": 0.6483550790045186,
+    "P@1": 0.5133333333333333,
+    "P@5": 0.15533333333333332,
+    "P@10": 0.08533333333333333,
+    "R@10": 0.7810555555555555,
+    "R@100": 0.9218888888888889,
+    "MAP@100": 0.6081826225110205,
+    "MRR@10": 0.6122156084656084
+   },
+   "p_bm25_vs_porter": 0.20113946932218296,
+   "p_tfidf_vs_porter": 0.844221194446261
+  },
+  {
+   "chain": "none+stopwords",
+   "stemmer": "none",
+   "stopwords_removed": false,
+   "vocab": 36707,
+   "postings": 777296,
+   "positions": 1208294,
+   "build_s": 4.758918046951294,
+   "k1": 0.6,
+   "b": 0.5,
+   "bm25_zones": {
+    "nDCG@10": 0.6470925597451511,
+    "P@1": 0.53,
+    "P@5": 0.15199999999999997,
+    "P@10": 0.08366666666666665,
+    "R@10": 0.7626111111111111,
+    "R@100": 0.8702222222222222,
+    "MAP@100": 0.6113351786362197,
+    "MRR@10": 0.6163862433862434
+   },
+   "tfidf_body": {
+    "nDCG@10": 0.6216845424567159,
+    "P@1": 0.4866666666666667,
+    "P@5": 0.14933333333333332,
+    "P@10": 0.08233333333333331,
+    "R@10": 0.7528888888888889,
+    "R@100": 0.8710555555555556,
+    "MAP@100": 0.5808357942402427,
+    "MRR@10": 0.5870634920634921
+   },
+   "p_bm25_vs_porter": 0.001191893621266241,
+   "p_tfidf_vs_porter": 0.013726576393541618
+  }
+ ],
+ "spell": {
+  "vocab_words": 21042,
+  "kgram_postings": 190858,
+  "build_s": 0.48897576332092285,
+  "train_claims_changed": 46,
+  "n_train": 809,
+  "train_changes": [
+   [
+    [
+     "overexpressors",
+     "overexpresses",
+     2
+    ],
+    [
+     "ompa",
+     "ampa",
+     1
+    ]
+   ],
+   [
+    [
+     "overexpressors",
+     "overexpresses",
+     2
+    ]
+   ],
+   [
+    [
+     "scapular",
+     "scapula",
+     1
+    ]
+   ],
+   [
+    [
+     "risen",
+     "rise",
+     1
+    ]
+   ],
+   [
+    [
+     "remolding",
+     "resolving",
+     2
+    ]
+   ],
+   [
+    [
+     "tocopheryl",
+     "tocopherol",
+     1
+    ]
+   ],
+   [
+    [
+     "tocopheryl",
+     "tocopherol",
+     1
+    ]
+   ],
+   [
+    [
+     "swapping",
+     "mapping",
+     2
+    ]
+   ],
+   [
+    [
+     "reational",
+     "rational",
+     1
+    ]
+   ],
+   [
+    [
+     "tssl",
+     "tssk",
+     1
+    ]
+   ],
+   [
+    [
+     "leaky",
+     "leak",
+     1
+    ]
+   ],
+   [
+    [
+     "executor",
+     "execution",
+     2
+    ]
+   ],
+   [
+    [
+     "dlns",
+     "lns",
+     1
+    ]
+   ],
+   [
+    [
+     "hdle",
+     "hdl",
+     1
+    ]
+   ],
+   [
+    [
+     "reatment",
+     "treatment",
+     1
+    ]
+   ],
+   [
+    [
+     "comymv",
+     "coymv",
+     1
+    ]
+   ],
+   [
+    [
+     "comymv",
+     "coymv",
+     1
+    ],
+    [
+     "baise",
+     "base",
+     1
+    ]
+   ],
+   [
+    [
+     "crct",
+     "crc",
+     1
+    ]
+   ],
+   [
+    [
+     "crct",
+     "crc",
+     1
+    ]
+   ],
+   [
+    [
+     "ppary",
+     "ppar",
+     1
+    ]
+   ],
+   [
+    [
+     "indictivate",
+     "inactivate",
+     2
+    ]
+   ],
+   [
+    [
+     "port",
+     "part",
+     1
+    ]
+   ],
+   [
+    [
+     "port",
+     "part",
+     1
+    ]
+   ],
+   [
+    [
+     "ateriosus",
+     "arteriosus",
+     1
+    ]
+   ],
+   [
+    [
+     "ateriosus",
+     "arteriosus",
+     1
+    ]
+   ],
+   [
+    [
+     "microenviroment",
+     "microenvironment",
+     1
+    ]
+   ],
+   [
+    [
+     "scapular",
+     "scapula",
+     1
+    ]
+   ],
+   [
+    [
+     "florescent",
+     "fluorescent",
+     1
+    ],
+    [
+     "florescent",
+     "fluorescent",
+     1
+    ]
+   ],
+   [
+    [
+     "ppary",
+     "ppar",
+     1
+    ]
+   ],
+   [
+    [
+     "assosciated",
+     "associated",
+     1
+    ]
+   ],
+   [
+    [
+     "overexpressors",
+     "overexpresses",
+     2
+    ]
+   ],
+   [
+    [
+     "tegmental",
+     "segmental",
+     1
+    ]
+   ],
+   [
+    [
+     "supresses",
+     "suppresses",
+     1
+    ]
+   ],
+   [
+    [
+     "lice",
+     "mice",
+     1
+    ]
+   ],
+   [
+    [
+     "stadtmanae",
+     "stadtmaniae",
+     1
+    ]
+   ],
+   [
+    [
+     "stadtmanae",
+     "stadtmaniae",
+     1
+    ]
+   ],
+   [
+    [
+     "coavtivator",
+     "coactivator",
+     1
+    ]
+   ],
+   [
+    [
+     "coavtivator",
+     "coactivator",
+     1
+    ]
+   ],
+   [
+    [
+     "reponse",
+     "response",
+     1
+    ]
+   ],
+   [
+    [
+     "polm",
+     "pol",
+     1
+    ]
+   ],
+   [
+    [
+     "polm",
+     "pol",
+     1
+    ]
+   ],
+   [
+    [
+     "reponse",
+     "response",
+     1
+    ]
+   ],
+   [
+    [
+     "osteoparthritis",
+     "osteoarthritis",
+     1
+    ]
+   ],
+   [
+    [
+     "suppresss",
+     "suppress",
+     1
+    ]
+   ],
+   [
+    [
+     "persistor",
+     "persisted",
+     2
+    ]
+   ],
+   [
+    [
+     "transgultaminase",
+     "transglutaminase",
+     1
+    ]
+   ]
+  ],
+  "settings": {
+   "1": {
+    "metrics": {
+     "clean": {
+      "nDCG@10": 0.6803831157324844,
+      "P@1": 0.5566666666666666,
+      "P@5": 0.15866666666666665,
+      "P@10": 0.08999999999999998,
+      "R@10": 0.8202222222222223,
+      "R@100": 0.9208888888888889,
+      "MAP@100": 0.6365658562776381,
+      "MRR@10": 0.6432751322751322
+     },
+     "clean+corrector": {
+      "nDCG@10": 0.6833315649789506,
+      "P@1": 0.5633333333333334,
+      "P@5": 0.15866666666666665,
+      "P@10": 0.09,
+      "R@10": 0.8202222222222223,
+      "R@100": 0.9242222222222222,
+      "MAP@100": 0.6407392569510387,
+      "MRR@10": 0.6474232804232805
+     },
+     "typo": {
+      "nDCG@10": 0.6566218960571877,
+      "P@1": 0.5333333333333333,
+      "P@5": 0.15266666666666664,
+      "P@10": 0.08766666666666666,
+      "R@10": 0.7998333333333333,
+      "R@100": 0.9002222222222223,
+      "MAP@100": 0.6122974211261717,
+      "MRR@10": 0.6169285714285714
+     },
+     "typo+corrector": {
+      "nDCG@10": 0.6729257069986081,
+      "P@1": 0.5533333333333333,
+      "P@5": 0.15666666666666668,
+      "P@10": 0.08899999999999998,
+      "R@10": 0.8102222222222222,
+      "R@100": 0.9175555555555555,
+      "MAP@100": 0.6304030746148563,
+      "MRR@10": 0.6368306878306879
+     }
+    },
+    "typos": 300,
+    "restored_exactly": 262,
+    "methods": {
+     "k-gram+edit": 262
+    },
+    "p_typo_vs_fixed": 0.05470694644758362,
+    "p_clean_vs_fixed": 0.21619701972998528,
+    "examples": [
+     {
+      "clean": "0-dimensional biomaterials show inductive properties.",
+      "typo": "0-dimensional biomatreials show inductive properties.",
+      "corrected": "0-dimensional biomatreials show inductive properties.",
+      "fixes": []
+     },
+     {
+      "clean": "All hematopoietic stem cells segregate their chromosomes randomly.",
+      "typo": "All hematopoietic stem clls segregate their chromosomes randomly.",
+      "corrected": "All hematopoietic stem clls segregate their chromosomes randomly.",
+      "fixes": []
+     },
+     {
+      "clean": "Radioiodine treatment of non-toxic multinodular goitre reduces thyroid volume.",
+      "typo": "radzioiodine treatment of non-toxic multinodular goitre reduces thyroid volume.",
+      "corrected": "radioiodine treatment of non-toxic multinodular goitre reduces thyroid volume.",
+      "fixes": [
+       {
+        "original": "radzioiodine",
+        "corrected": "radioiodine",
+        "method": "k-gram+edit",
+        "distance": 1,
+        "jaccard": 0.833
+       }
+      ]
+     },
+     {
+      "clean": "Rapamycin decreases the concentration of triacylglycerols in fruit flies.",
+      "typo": "Rapamycin decreases the concentration of triacylglycerols in furit flies.",
+      "corrected": "Rapamycin decreases the concentration of triacylglycerols in furit flies.",
+      "fixes": []
+     },
+     {
+      "clean": "Rapid phosphotransfer rates govern fidelity in two component systems",
+      "typo": "Rapid phosphotransfer rates govern fidelity in two cmoponent systems",
+      "corrected": "Rapid phosphotransfer rates govern fidelity in two component systems",
+      "fixes": [
+       {
+        "original": "cmoponent",
+        "corrected": "component",
+        "method": "k-gram+edit",
+        "distance": 1,
+        "jaccard": 0.538
+       }
+      ]
+     },
+     {
+      "clean": "Rapid up-regulation and higher basal expression of interferon-induced genes increase survival of granule cell neurons that are infected by West Nile virus.",
+      "typo": "Rapid up-regulation and higher basal expression of interferon-induced genes increase survival of granlue cell neurons that are infected by West Nile virus.",
+      "corrected": "Rapid up-regulation and higher basal expression of interferon-induced genes increase survival of granule cell neurons that are infected by West Nile virus.",
+      "fixes": [
+       {
+        "original": "granlue",
+        "corrected": "granule",
+        "method": "k-gram+edit",
+        "distance": 1,
+        "jaccard": 0.455
+       }
+      ]
+     },
+     {
+      "clean": "Rapid up-regulation and higher basal expression of interferon-induced genes reduce survival of granule cell neurons that are infected by West Nile virus.",
+      "typo": "Rapid up-regulation and higher basal expression of interferon-induced genes reduce survival of granumle cell neurons that are infected by West Nile virus.",
+      "corrected": "Rapid up-regulation and higher basal expression of interferon-induced genes reduce survival of granule cell neurons that are infected by West Nile virus.",
+      "fixes": [
+       {
+        "original": "granumle",
+        "corrected": "granule",
+        "method": "k-gram+edit",
+        "distance": 1,
+        "jaccard": 0.7
+       }
+      ]
+     },
+     {
+      "clean": "Recurrent mutations occur frequently within CTCF anchor sites adjacent to oncogenes.",
+      "typo": "Recurrent mutaytions occur frequently within CTCF anchor sites adjacent to oncogenes.",
+      "corrected": "Recurrent mutations occur frequently within CTCF anchor sites adjacent to oncogenes.",
+      "fixes": [
+       {
+        "original": "mutaytions",
+        "corrected": "mutations",
+        "method": "k-gram+edit",
+        "distance": 1,
+        "jaccard": 0.75
+       }
+      ]
+     }
+    ]
+   },
+   "2": {
+    "metrics": {
+     "clean": {
+      "nDCG@10": 0.6803831157324844,
+      "P@1": 0.5566666666666666,
+      "P@5": 0.15866666666666665,
+      "P@10": 0.08999999999999998,
+      "R@10": 0.8202222222222223,
+      "R@100": 0.9208888888888889,
+      "MAP@100": 0.6365658562776381,
+      "MRR@10": 0.6432751322751322
+     },
+     "clean+corrector": {
+      "nDCG@10": 0.6833315649789506,
+      "P@1": 0.5633333333333334,
+      "P@5": 0.15866666666666665,
+      "P@10": 0.09,
+      "R@10": 0.8202222222222223,
+      "R@100": 0.9242222222222222,
+      "MAP@100": 0.6407392569510387,
+      "MRR@10": 0.6474232804232805
+     },
+     "typo": {
+      "nDCG@10": 0.6137065300310744,
+      "P@1": 0.48,
+      "P@5": 0.1473333333333333,
+      "P@10": 0.08266666666666665,
+      "R@10": 0.7555000000000001,
+      "R@100": 0.8676666666666667,
+      "MAP@100": 0.5696292568748547,
+      "MRR@10": 0.5766679894179894
+     },
+     "typo+corrector": {
+      "nDCG@10": 0.6687003284595986,
+      "P@1": 0.55,
+      "P@5": 0.15466666666666665,
+      "P@10": 0.088,
+      "R@10": 0.8052222222222222,
+      "R@100": 0.9175555555555555,
+      "MAP@100": 0.6265192641825746,
+      "MRR@10": 0.6338399470899471
+     }
+    },
+    "typos": 599,
+    "restored_exactly": 538,
+    "methods": {
+     "k-gram+edit": 538
+    },
+    "p_typo_vs_fixed": 1.4916002130990499e-05,
+    "p_clean_vs_fixed": 0.04784018607307673,
+    "examples": [
+     {
+      "clean": "0-dimensional biomaterials show inductive properties.",
+      "typo": "0-dimensional biomaterials show inductie propefrties.",
+      "corrected": "0-dimensional biomaterials show inductive properties.",
+      "fixes": [
+       {
+        "original": "inductie",
+        "corrected": "inductive",
+        "method": "k-gram+edit",
+        "distance": 1,
+        "jaccard": 0.727
+       },
+       {
+        "original": "propefrties",
+        "corrected": "properties",
+        "method": "k-gram+edit",
+        "distance": 1,
+        "jaccard": 0.769
+       }
+      ]
+     },
+     {
+      "clean": "All hematopoietic stem cells segregate their chromosomes randomly.",
+      "typo": "All hematopoietic stem cells segegate their chromosoes randomly.",
+      "corrected": "All hematopoietic stem cells segregate their chromosomes randomly.",
+      "fixes": [
+       {
+        "original": "segegate",
+        "corrected": "segregate",
+        "method": "k-gram+edit",
+        "distance": 1,
+        "jaccard": 0.7
+       },
+       {
+        "original": "chromosoes",
+        "corrected": "chromosomes",
+        "method": "k-gram+edit",
+        "distance": 1,
+        "jaccard": 0.833
+       }
+      ]
+     },
+     {
+      "clean": "Radioiodine treatment of non-toxic multinodular goitre reduces thyroid volume.",
+      "typo": "Radioiodine treatment of non-toxic multinodular goitfre reduces thryoid volume.",
+      "corrected": "Radioiodine treatment of non-toxic multinodular goitre reduces thyroid volume.",
+      "fixes": [
+       {
+        "original": "goitfre",
+        "corrected": "goitre",
+        "method": "k-gram+edit",
+        "distance": 1,
+        "jaccard": 0.667
+       },
+       {
+        "original": "thryoid",
+        "corrected": "thyroid",
+        "method": "k-gram+edit",
+        "distance": 1,
+        "jaccard": 0.455
+       }
+      ]
+     },
+     {
+      "clean": "Rapamycin decreases the concentration of triacylglycerols in fruit flies.",
+      "typo": "rapamycn dqecreases the concentration of triacylglycerols in fruit flies.",
+      "corrected": "rapamycin decreases the concentration of triacylglycerols in fruit flies.",
+      "fixes": [
+       {
+        "original": "rapamycn",
+        "corrected": "rapamycin",
+        "method": "k-gram+edit",
+        "distance": 1,
+        "jaccard": 0.727
+       },
+       {
+        "original": "dqecreases",
+        "corrected": "decreases",
+        "method": "k-gram+edit",
+        "distance": 1,
+        "jaccard": 0.75
+       }
+      ]
+     },
+     {
+      "clean": "Rapid phosphotransfer rates govern fidelity in two component systems",
+      "typo": "Rapid phosphotransfer rates govern fidelity in two comvponent systms",
+      "corrected": "Rapid phosphotransfer rates govern fidelity in two component systems",
+      "fixes": [
+       {
+        "original": "comvponent",
+        "corrected": "component",
+        "method": "k-gram+edit",
+        "distance": 1,
+        "jaccard": 0.75
+       },
+       {
+        "original": "systms",
+        "corrected": "systems",
+        "method": "k-gram+edit",
+        "distance": 1,
+        "jaccard": 0.667
+       }
+      ]
+     },
+     {
+      "clean": "Rapid up-regulation and higher basal expression of interferon-induced genes increase survival of granule cell neurons that are infected by West Nile virus.",
+      "typo": "Rapid up-regulation and higher basal expresslon of interferon-induced genes increase sgrvival of granule cell neurons that are infected by West Nile virus.",
+      "corrected": "Rapid up-regulation and higher basal expression of interferon-induced genes increase survival of granule cell neurons that are infected by West Nile virus.",
+      "fixes": [
+       {
+        "original": "expresslon",
+        "corrected": "expression",
+        "method": "k-gram+edit",
+        "distance": 1,
+        "jaccard": 0.692
+       },
+       {
+        "original": "sgrvival",
+        "corrected": "survival",
+        "method": "k-gram+edit",
+        "distance": 1,
+        "jaccard": 0.636
+       }
+      ]
+     },
+     {
+      "clean": "Rapid up-regulation and higher basal expression of interferon-induced genes reduce survival of granule cell neurons that are infected by West Nile virus.",
+      "typo": "rpaid up-regulation and higher basal epxression of interferon-induced genes reduce survival of granule cell neurons that are infected by West Nile virus.",
+      "corrected": "paid up-regulation and higher basal expression of interferon-induced genes reduce survival of granule cell neurons that are infected by West Nile virus.",
+      "fixes": [
+       {
+        "original": "rpaid",
+        "corrected": "paid",
+        "method": "k-gram+edit",
+        "distance": 1,
+        "jaccard": 0.571
+       },
+       {
+        "original": "epxression",
+        "corrected": "expression",
+        "method": "k-gram+edit",
+        "distance": 1,
+        "jaccard": 0.571
+       }
+      ]
+     },
+     {
+      "clean": "Recurrent mutations occur frequently within CTCF anchor sites adjacent to oncogenes.",
+      "typo": "Recurrent mutations ogccur frequently within CTCF anchor sites andjacent to oncogenes.",
+      "corrected": "Recurrent mutations occur frequently within CTCF anchor sites adjacent to oncogenes.",
+      "fixes": [
+       {
+        "original": "ogccur",
+        "corrected": "occur",
+        "method": "k-gram+edit",
+        "distance": 1,
+        "jaccard": 0.625
+       },
+       {
+        "original": "andjacent",
+        "corrected": "adjacent",
+        "method": "k-gram+edit",
+        "distance": 1,
+        "jaccard": 0.727
+       }
+      ]
+     }
+    ]
+   }
+  }
+ },
+ "cluster": {
+  "encoder": "bge-ft",
+  "n_leaders": 95,
+  "rows": [
+   {
+    "config": "exact (all chunks)",
+    "b1": null,
+    "b2": null,
+    "vectors_scored": 9022,
+    "ms_per_query": 0.555809566666691,
+    "nDCG@10": 0.7450881257003878,
+    "P@1": 0.62,
+    "P@5": 0.18199999999999997,
+    "P@10": 0.09866666666666667,
+    "R@10": 0.8778888888888889,
+    "R@100": 0.9766666666666667,
+    "MAP@100": 0.7040332017215386,
+    "MRR@10": 0.7074378306878306
+   },
+   {
+    "config": "cluster pruning b1=1 b2=1",
+    "b1": 1,
+    "b2": 1,
+    "vectors_scored": 215.37,
+    "ms_per_query": 0.2635824166668499,
+    "top1_agreement": 0.47333333333333333,
+    "p_vs_exact": 8.997424282907006e-34,
+    "nDCG@10": 0.3767868473448884,
+    "P@1": 0.33666666666666667,
+    "P@5": 0.09333333333333334,
+    "P@10": 0.05,
+    "R@10": 0.41955555555555557,
+    "R@100": 0.4342222222222223,
+    "MAP@100": 0.3598271461481988,
+    "MRR@10": 0.36909656084656084
+   },
+   {
+    "config": "cluster pruning b1=1 b2=2",
+    "b1": 1,
+    "b2": 2,
+    "vectors_scored": 333.22333333333336,
+    "ms_per_query": 0.34830691999938307,
+    "top1_agreement": 0.6366666666666667,
+    "p_vs_exact": 2.484549761977371e-21,
+    "nDCG@10": 0.49355645929174624,
+    "P@1": 0.43,
+    "P@5": 0.12133333333333331,
+    "P@10": 0.06533333333333334,
+    "R@10": 0.5644444444444445,
+    "R@100": 0.5881111111111111,
+    "MAP@100": 0.468320727662032,
+    "MRR@10": 0.47724074074074074
+   },
+   {
+    "config": "cluster pruning b1=1 b2=5",
+    "b1": 1,
+    "b2": 5,
+    "vectors_scored": 665.4266666666666,
+    "ms_per_query": 0.49847854666647134,
+    "top1_agreement": 0.8266666666666667,
+    "p_vs_exact": 3.229549643180791e-10,
+    "nDCG@10": 0.6214903571994012,
+    "P@1": 0.52,
+    "P@5": 0.15333333333333332,
+    "P@10": 0.08333333333333331,
+    "R@10": 0.7256666666666667,
+    "R@100": 0.775,
+    "MAP@100": 0.5873378222206546,
+    "MRR@10": 0.5927182539682541
+   },
+   {
+    "config": "cluster pruning b1=1 b2=10",
+    "b1": 1,
+    "b2": 10,
+    "vectors_scored": 1185.25,
+    "ms_per_query": 0.687047020000288,
+    "top1_agreement": 0.92,
+    "p_vs_exact": 0.0001171685133631092,
+    "nDCG@10": 0.6943500556937696,
+    "P@1": 0.5833333333333334,
+    "P@5": 0.16933333333333334,
+    "P@10": 0.092,
+    "R@10": 0.8145555555555556,
+    "R@100": 0.8716666666666667,
+    "MAP@100": 0.6558441035719393,
+    "MRR@10": 0.6609232804232804
+   },
+   {
+    "config": "cluster pruning b1=1 b2=20",
+    "b1": 1,
+    "b2": 20,
+    "vectors_scored": 2148.54,
+    "ms_per_query": 1.238028463333194,
+    "top1_agreement": 0.9633333333333334,
+    "p_vs_exact": 0.06832080519653927,
+    "nDCG@10": 0.7311784469699443,
+    "P@1": 0.6166666666666667,
+    "P@5": 0.1773333333333333,
+    "P@10": 0.09666666666666665,
+    "R@10": 0.8595555555555556,
+    "R@100": 0.9366666666666666,
+    "MAP@100": 0.6902684972689733,
+    "MRR@10": 0.6965568783068783
+   },
+   {
+    "config": "cluster pruning b1=2 b2=1",
+    "b1": 2,
+    "b2": 1,
+    "vectors_scored": 327.49333333333334,
+    "ms_per_query": 0.23053736333319344,
+    "top1_agreement": 0.6666666666666666,
+    "p_vs_exact": 1.4254134124683596e-20,
+    "nDCG@10": 0.5122772813083923,
+    "P@1": 0.44,
+    "P@5": 0.12400000000000001,
+    "P@10": 0.06733333333333333,
+    "R@10": 0.5806666666666667,
+    "R@100": 0.6203333333333333,
+    "MAP@100": 0.4888878642711058,
+    "MRR@10": 0.4935079365079366
+   },
+   {
+    "config": "cluster pruning b1=2 b2=2",
+    "b1": 2,
+    "b2": 2,
+    "vectors_scored": 541.3366666666667,
+    "ms_per_query": 0.3314300699995935,
+    "top1_agreement": 0.7866666666666666,
+    "p_vs_exact": 5.36266589312564e-13,
+    "nDCG@10": 0.5938834999516016,
+    "P@1": 0.49333333333333335,
+    "P@5": 0.14466666666666664,
+    "P@10": 0.07933333333333333,
+    "R@10": 0.6983333333333334,
+    "R@100": 0.752,
+    "MAP@100": 0.5595982747026443,
+    "MRR@10": 0.5655661375661376
+   },
+   {
+    "config": "cluster pruning b1=2 b2=5",
+    "b1": 2,
+    "b2": 5,
+    "vectors_scored": 1089.3466666666666,
+    "ms_per_query": 0.5990509533330624,
+    "top1_agreement": 0.9133333333333333,
+    "p_vs_exact": 2.7213603174211887e-05,
+    "nDCG@10": 0.6865075513856672,
+    "P@1": 0.5766666666666667,
+    "P@5": 0.16799999999999998,
+    "P@10": 0.09133333333333332,
+    "R@10": 0.8045555555555556,
+    "R@100": 0.8733333333333333,
+    "MAP@100": 0.6492675167565591,
+    "MRR@10": 0.6537989417989418
+   },
+   {
+    "config": "cluster pruning b1=2 b2=10",
+    "b1": 2,
+    "b2": 10,
+    "vectors_scored": 1892.7033333333334,
+    "ms_per_query": 0.937993649999953,
+    "top1_agreement": 0.9566666666666667,
+    "p_vs_exact": 0.0037527003885659436,
+    "nDCG@10": 0.7158036374940867,
+    "P@1": 0.6033333333333334,
+    "P@5": 0.17466666666666664,
+    "P@10": 0.09466666666666666,
+    "R@10": 0.8378888888888889,
+    "R@100": 0.9233333333333333,
+    "MAP@100": 0.6777182145749908,
+    "MRR@10": 0.6818439153439153
+   },
+   {
+    "config": "cluster pruning b1=2 b2=20",
+    "b1": 2,
+    "b2": 20,
+    "vectors_scored": 3238.786666666667,
+    "ms_per_query": 1.467556269999477,
+    "top1_agreement": 0.99,
+    "p_vs_exact": 0.05597371857735912,
+    "nDCG@10": 0.733358075893411,
+    "P@1": 0.6166666666666667,
+    "P@5": 0.17799999999999996,
+    "P@10": 0.09666666666666665,
+    "R@10": 0.8578888888888889,
+    "R@100": 0.9533333333333334,
+    "MAP@100": 0.6948639410146975,
+    "MRR@10": 0.6982195767195767
+   }
+  ]
+ }
+}

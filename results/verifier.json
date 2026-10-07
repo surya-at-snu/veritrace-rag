@@ -1,0 +1,354 @@
+{
+ "results": {
+  "full": {
+   "auroc": 0.9019104084321476,
+   "tau": 0.5361488207114908,
+   "support_P": 0.6,
+   "support_R": 0.5869565217391305,
+   "support_F1": 0.5934065934065934,
+   "halluc_P": 0.926261319534282,
+   "halluc_R": 0.9298701298701298,
+   "halluc_F1": 0.9280622164614387,
+   "acc": 0.8777533039647577,
+   "macro_F1_3class": 0.6659622629946419,
+   "per_class_F1": {
+    "SUPPORTED": 0.62,
+    "CONTRADICTED": 0.5028,
+    "UNSUPPORTED": 0.8751
+   },
+   "synthetic_detection": {
+    "syn_negation": 0.875,
+    "syn_direction": 0.921875,
+    "syn_number": 0.92,
+    "syn_entity": 0.8394160583941606
+   },
+   "false_alarm_on_supported": 0.41304347826086957
+  },
+  "full_no_synthetic": {
+   "auroc": 0.9023338979860718,
+   "tau": 0.46857065336518955,
+   "support_P": 0.5581395348837209,
+   "support_R": 0.6956521739130435,
+   "support_F1": 0.6193548387096774,
+   "halluc_P": 0.9429347826086957,
+   "halluc_R": 0.9012987012987013,
+   "halluc_F1": 0.9216467463479415,
+   "acc": 0.8700440528634361,
+   "macro_F1_3class": 0.6653324756302424,
+   "per_class_F1": {
+    "SUPPORTED": 0.6194,
+    "CONTRADICTED": 0.4935,
+    "UNSUPPORTED": 0.8831
+   },
+   "synthetic_detection": {
+    "syn_negation": 0.8083333333333333,
+    "syn_direction": 0.84375,
+    "syn_number": 0.8,
+    "syn_entity": 0.7226277372262774
+   },
+   "false_alarm_on_supported": 0.30434782608695654
+  },
+  "no_nli": {
+   "auroc": 0.7892810088462262,
+   "tau": 0.21407665360106043,
+   "support_P": 0.30935251798561153,
+   "support_R": 0.6231884057971014,
+   "support_F1": 0.41346153846153844,
+   "halluc_P": 0.9174603174603174,
+   "halluc_R": 0.7506493506493507,
+   "halluc_F1": 0.8257142857142857,
+   "acc": 0.7312775330396476,
+   "macro_F1_3class": 0.48624832112040456,
+   "per_class_F1": {
+    "SUPPORTED": 0.424,
+    "CONTRADICTED": 0.1782,
+    "UNSUPPORTED": 0.8565
+   },
+   "synthetic_detection": {
+    "syn_negation": 0.8916666666666667,
+    "syn_direction": 0.609375,
+    "syn_number": 0.84,
+    "syn_entity": 0.5912408759124088
+   },
+   "false_alarm_on_supported": 0.37681159420289856
+  },
+  "ir_only": {
+   "auroc": 0.7222379070205157,
+   "tau": 0.39945133750362677,
+   "support_P": 0.325,
+   "support_R": 0.37681159420289856,
+   "support_F1": 0.348993288590604,
+   "halluc_P": 0.8850267379679144,
+   "halluc_R": 0.8597402597402597,
+   "halluc_F1": 0.8722002635046113,
+   "acc": 0.7863436123348018,
+   "macro_F1_3class": 0.44399750944870003,
+   "per_class_F1": {
+    "SUPPORTED": 0.3413,
+    "CONTRADICTED": 0.1633,
+    "UNSUPPORTED": 0.8274
+   },
+   "synthetic_detection": {
+    "syn_negation": 0.9666666666666667,
+    "syn_direction": 0.796875,
+    "syn_number": 1.0,
+    "syn_entity": 0.8613138686131386
+   },
+   "false_alarm_on_supported": 0.6231884057971014
+  },
+  "cosine_chunk": {
+   "auroc": 0.7753199698851871,
+   "tau": 0.23012080073356633,
+   "support_P": 0.3217993079584775,
+   "support_R": 0.6739130434782609,
+   "support_F1": 0.43559718969555034,
+   "halluc_P": 0.9273021001615509,
+   "halluc_R": 0.7454545454545455,
+   "halluc_F1": 0.8264938804895609,
+   "acc": 0.7345814977973568,
+   "synthetic_detection": {
+    "syn_negation": 0.31666666666666665,
+    "syn_direction": 0.28125,
+    "syn_number": 0.6,
+    "syn_entity": 0.6642335766423357
+   }
+  },
+  "cosine_best_sentence": {
+   "auroc": 0.74746847355543,
+   "tau": 0.31317607253789903,
+   "support_P": 0.3185483870967742,
+   "support_R": 0.572463768115942,
+   "support_F1": 0.40932642487046633,
+   "halluc_P": 0.9106060606060606,
+   "halluc_R": 0.7805194805194805,
+   "halluc_F1": 0.8405594405594405,
+   "acc": 0.748898678414097,
+   "synthetic_detection": {
+    "syn_negation": 0.4083333333333333,
+    "syn_direction": 0.40625,
+    "syn_number": 0.64,
+    "syn_entity": 0.7445255474452555
+   }
+  },
+  "dense_cosine": {
+   "auroc": 0.7987342367777149,
+   "tau": 0.8244510650634765,
+   "support_P": 0.37244897959183676,
+   "support_R": 0.5289855072463768,
+   "support_F1": 0.437125748502994,
+   "halluc_P": 0.9087078651685393,
+   "halluc_R": 0.8402597402597403,
+   "halluc_F1": 0.873144399460189,
+   "acc": 0.7929515418502202,
+   "synthetic_detection": {
+    "syn_negation": 0.5583333333333333,
+    "syn_direction": 0.421875,
+    "syn_number": 0.48,
+    "syn_entity": 0.7372262773722628
+   }
+  },
+  "nli_entailment": {
+   "auroc": 0.8704498400150574,
+   "tau": 0.7121026620268823,
+   "support_P": 0.55,
+   "support_R": 0.6376811594202898,
+   "support_F1": 0.5906040268456376,
+   "halluc_P": 0.9331550802139037,
+   "halluc_R": 0.9064935064935065,
+   "halluc_F1": 0.919631093544137,
+   "acc": 0.8656387665198237,
+   "synthetic_detection": {
+    "syn_negation": 0.7666666666666667,
+    "syn_direction": 0.796875,
+    "syn_number": 0.84,
+    "syn_entity": 0.6496350364963503
+   },
+   "macro_F1_3class": 0.5739462288160628
+  }
+ },
+ "n_train": 2822,
+ "n_train_synthetic": 368,
+ "n_dev_human": 908,
+ "n_dev_synthetic": 346,
+ "dev_label_counts": {
+  "SUPPORTED": 138,
+  "CONTRADICTED": 71,
+  "UNSUPPORTED": 699
+ },
+ "feature_gain": {
+  "cos_chunk": 0.0278,
+  "cos_best": 0.0343,
+  "cos_best2": 0.0361,
+  "idf_cov_chunk": 0.0467,
+  "idf_cov_best": 0.0295,
+  "miss_max_idf": 0.0291,
+  "biword_cov": 0.0169,
+  "num_claim": 0.0017,
+  "num_missing": 0.0041,
+  "neg_claim": 0.0154,
+  "neg_best": 0.0073,
+  "neg_mismatch": 0.0095,
+  "dir_conflict": 0.0013,
+  "dense_chunk": 0.1123,
+  "dense_best": 0.0581,
+  "nli_e_best": 0.0336,
+  "nli_c_best": 0.043,
+  "nli_e_max": 0.0501,
+  "nli_c_max": 0.1034,
+  "nli_n_min": 0.07,
+  "nli_e_chunk": 0.1342,
+  "nli_c_chunk": 0.1195,
+  "claim_len": 0.0161
+ },
+ "tau_support": 0.5361488207114908,
+ "examples": [
+  {
+   "type": "syn_negation",
+   "orig": "1,000 genomes project enables mapping of genetic sequence variation consisting of rare variants with larger penetrance effects than common variants.",
+   "corrupted": "1,000 genomes project does not enable mapping of genetic sequence variation consisting of rare variants with larger penetrance effects than common variants.",
+   "cosine": 0.181,
+   "p_support": 0.003,
+   "p_contradict": 0.123
+  },
+  {
+   "type": "syn_direction",
+   "orig": "1,000 genomes project enables mapping of genetic sequence variation consisting of rare variants with larger penetrance effects than common variants.",
+   "corrupted": "1,000 genomes project enables mapping of genetic sequence variation consisting of rare variants with smaller penetrance effects than common variants.",
+   "cosine": 0.178,
+   "p_support": 0.024,
+   "p_contradict": 0.004
+  },
+  {
+   "type": "syn_number",
+   "orig": "1,000 genomes project enables mapping of genetic sequence variation consisting of rare variants with larger penetrance effects than common variants.",
+   "corrupted": "1,7 genomes project enables mapping of genetic sequence variation consisting of rare variants with larger penetrance effects than common variants.",
+   "cosine": 0.184,
+   "p_support": 0.015,
+   "p_contradict": 0.009
+  },
+  {
+   "type": "syn_entity",
+   "orig": "1,000 genomes project enables mapping of genetic sequence variation consisting of rare variants with larger penetrance effects than common variants.",
+   "corrupted": "1,000 genomes project enables mapping of genetic sequence variation consisting of preferentially variants with larger penetrance effects than common variants.",
+   "cosine": 0.133,
+   "p_support": 0.014,
+   "p_contradict": 0.003
+  },
+  {
+   "type": "syn_negation",
+   "orig": "1/2000 in UK have abnormal PrP positivity.",
+   "corrupted": "1/2000 in UK have not abnormal PrP positivity.",
+   "cosine": 0.166,
+   "p_support": 0.014,
+   "p_contradict": 0.082
+  },
+  {
+   "type": "syn_direction",
+   "orig": "APOE4 expression in iPSC-derived neurons increases AlphaBeta production and tau phosphorylation causing GABA neuron degeneration.",
+   "corrupted": "APOE4 expression in iPSC-derived neurons decreases AlphaBeta production and tau phosphorylation causing GABA neuron degeneration.",
+   "cosine": 0.287,
+   "p_support": 0.059,
+   "p_contradict": 0.8
+  },
+  {
+   "type": "syn_number",
+   "orig": "Activation of PPM1D suppresses p53 function.",
+   "corrupted": "Activation of PPM1D suppresses p59 function.",
+   "cosine": 0.166,
+   "p_support": 0.185,
+   "p_contradict": 0.267
+  },
+  {
+   "type": "syn_entity",
+   "orig": "Activation of PPM1D suppresses p53 function.",
+   "corrupted": "Activation of Angeles suppresses p53 function.",
+   "cosine": 0.125,
+   "p_support": 0.023,
+   "p_contradict": 0.024
+  },
+  {
+   "type": "syn_negation",
+   "orig": "Activation of PPM1D suppresses p53 function.",
+   "corrupted": "Activation of PPM1D does not suppress p53 function.",
+   "cosine": 0.233,
+   "p_support": 0.001,
+   "p_contradict": 0.992
+  },
+  {
+   "type": "syn_direction",
+   "orig": "Activation of PPM1D suppresses p53 function.",
+   "corrupted": "Activation of PPM1D activates p53 function.",
+   "cosine": 0.211,
+   "p_support": 0.039,
+   "p_contradict": 0.055
+  },
+  {
+   "type": "syn_number",
+   "orig": "Activation of PPM1D suppresses p53 function.",
+   "corrupted": "Activation of PPM1D suppresses p52 function.",
+   "cosine": 0.147,
+   "p_support": 0.205,
+   "p_contradict": 0.078
+  },
+  {
+   "type": "syn_entity",
+   "orig": "Activation of PPM1D suppresses p53 function.",
+   "corrupted": "Activation of Ketogenic suppresses p53 function.",
+   "cosine": 0.106,
+   "p_support": 0.006,
+   "p_contradict": 0.019
+  }
+ ],
+ "pairwise": {
+  "Cosine (best sentence)": {
+   "syn_negation": 0.49166666666666664,
+   "syn_negation_n": 120,
+   "syn_direction": 0.71875,
+   "syn_direction_n": 64,
+   "syn_number": 0.88,
+   "syn_number_n": 25,
+   "syn_entity": 0.9124087591240876,
+   "syn_entity_n": 137
+  },
+  "Cosine (cited chunk)": {
+   "syn_negation": 0.5583333333333333,
+   "syn_negation_n": 120,
+   "syn_direction": 0.828125,
+   "syn_direction_n": 64,
+   "syn_number": 0.88,
+   "syn_number_n": 25,
+   "syn_entity": 0.9927007299270073,
+   "syn_entity_n": 137
+  },
+  "Dense cosine": {
+   "syn_negation": 0.8166666666666667,
+   "syn_negation_n": 120,
+   "syn_direction": 0.671875,
+   "syn_direction_n": 64,
+   "syn_number": 0.76,
+   "syn_number_n": 25,
+   "syn_entity": 0.9051094890510949,
+   "syn_entity_n": 137
+  },
+  "NLI entailment": {
+   "syn_negation": 0.7166666666666667,
+   "syn_negation_n": 120,
+   "syn_direction": 0.796875,
+   "syn_direction_n": 64,
+   "syn_number": 0.84,
+   "syn_number_n": 25,
+   "syn_entity": 0.8467153284671532,
+   "syn_entity_n": 137
+  },
+  "VeriTrace verifier": {
+   "syn_negation": 0.85,
+   "syn_negation_n": 120,
+   "syn_direction": 0.84375,
+   "syn_direction_n": 64,
+   "syn_number": 0.8,
+   "syn_number_n": 25,
+   "syn_entity": 0.927007299270073,
+   "syn_entity_n": 137
+  }
+ }
+}

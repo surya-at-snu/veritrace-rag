@@ -1,0 +1,5395 @@
+{
+ "summary": {
+  "generator": "extractive-mmr",
+  "mode": "generate",
+  "n_queries": 30,
+  "n_sentences": 91,
+  "n_claims": 91,
+  "n_meta": 0,
+  "insufficient_evidence_answers": 0,
+  "context_has_relevant": 0.7,
+  "status_counts": {
+   "VERIFIED": 89,
+   "REPAIRED": 1,
+   "REPAIRED_NEW": 0,
+   "CONTRADICTED": 1,
+   "UNSUPPORTED": 0,
+   "NOT_A_CLAIM": 0
+  },
+  "raw_citation_support": 0.967032967032967,
+  "claims_without_citation": 1,
+  "judge_supported_by_any_context": 0.989010989010989,
+  "after_audit_kept_fraction": 0.989010989010989,
+  "after_audit_precision_of_kept": 0.9777777777777777,
+  "verifier_vs_judge": {
+   "precision": 0.9888888888888889,
+   "recall": 0.9888888888888889,
+   "f1": 0.9888888888888889
+  },
+  "injected": {
+   "n": 30,
+   "veritrace_detect": 0.9,
+   "cosine_detect": 0.0,
+   "by_kind": {
+    "negation": {
+     "n": 10,
+     "veritrace": 10,
+     "cosine": 0
+    },
+    "number": {
+     "n": 4,
+     "veritrace": 4,
+     "cosine": 0
+    },
+    "entity": {
+     "n": 13,
+     "veritrace": 10,
+     "cosine": 0
+    },
+    "direction": {
+     "n": 3,
+     "veritrace": 3,
+     "cosine": 0
+    }
+   },
+   "examples": [
+    {
+     "orig": "Mexico's population is comprised of Amerindians (AM) and Mestizos who have variable AM, European (EUR) and African genetic ancestry and an increased risk of nutrition-related chronic diseases.",
+     "corrupted": "Mexico's population is not comprised of Amerindians (AM) and Mestizos who have variable AM, European (EUR) and African genetic ancestry and an increased risk of nutrition-related chronic diseases.",
+     "kind": "negation",
+     "status": "CONTRADICTED",
+     "cos_best": 0.8837847113609314
+    },
+    {
+     "orig": "We determined that A20 (TNFAIP3), a regulator of cell survival and the NF-kappaB pathway, is overexpressed in GSCs relative to non-stem glioblastoma cells at both the mRNA and protein levels.",
+     "corrupted": "We determined that A22 (TNFAIP3), a regulator of cell survival and the NF-kappaB pathway, is overexpressed in GSCs relative to non-stem glioblastoma cells at both the mRNA and protein levels.",
+     "kind": "number",
+     "status": "CONTRADICTED",
+     "cos_best": 0.734154462814331
+    },
+    {
+     "orig": "The androgen receptor (AR) is overexpressed and hyperactivated in human castration-resistant prostate cancer (CRPC).",
+     "corrupted": "The androgen receptor (AR) is overexpressed and hyperactivated in human castration-resistant prostate cancer (Doubt).",
+     "kind": "entity",
+     "status": "CONTRADICTED",
+     "cos_best": 0.7864517569541931
+    },
+    {
+     "orig": "Myelodysplastic syndromes (MDS) comprise a heterogeneous group of disorders characterized by ineffective hematopoiesis, with an increased propensity to develop acute myelogenous leukemia (AML).",
+     "corrupted": "Myelodysplastic syndromes (MDS) comprise a heterogeneous group of disorders characterized by ineffective hematopoiesis, with an increased propensity to develop acute immtac leukemia (AML).",
+     "kind": "entity",
+     "status": "CONTRADICTED",
+     "cos_best": 0.8338907957077026
+    },
+    {
+     "orig": "Possible mechanisms of DdrB action in damage recovery are discussed.",
+     "corrupted": "Possible mechanisms of DdrB action in damage recovery are not discussed.",
+     "kind": "negation",
+     "status": "CONTRADICTED",
+     "cos_best": 0.8904504776000977
+    },
+    {
+     "orig": "The N-terminal domains of the cathelicidins present one or two Asp-Pro bonds, which are particularly acid-labile in proBac5 and proBac7, but stable in prododecapeptide.",
+     "corrupted": "The N-terminal domains of the cathelicidins present one or two Asp-Pro bonds, which are not particularly acid-labile in proBac5 and proBac7, but stable in prododecapeptide.",
+     "kind": "negation",
+     "status": "CONTRADICTED",
+     "cos_best": 0.895869255065918
+    },
+    {
+     "orig": "Even if only 7% of patients awaiting kidney transplantation participated in an optimized national KPD program, the health care system could save as much as $750 million.",
+     "corrupted": "Even if only 7% of patients transdifferentiation kidney transplantation participated in an optimized national KPD program, the health care system could save as much as $750 million.",
+     "kind": "entity",
+     "status": "UNSUPPORTED",
+     "cos_best": 0.8460885286331177
+    },
+    {
+     "orig": "These data highlight an important role for the tolerance of genome doubling in driving cancer genome evolution.",
+     "corrupted": "These data highlight an important role for the tolerance of genome doubling in driving cancer genome polarized.",
+     "kind": "entity",
+     "status": "CONTRADICTED",
+     "cos_best": 0.8228190541267395
+    }
+   ]
+  },
+  "mean_timings": {
+   "sparse_ms": 3.4961700439453125,
+   "dense_ms": 65.1168664296468,
+   "router_ms": 655.8884541193644,
+   "ltr_ms": 1228.2094478607178,
+   "retrieval_total_ms": 1955.968952178955,
+   "generate_s": 0.9198450485865275,
+   "verify_s": 17.135753305753074
+  }
+ },
+ "records": [
+  {
+   "qid": "1110",
+   "query": "Suboptimal nutrition is not predictive of chronic disease",
+   "answer": "Mexico's population is comprised of Amerindians (AM) and Mestizos who have variable AM, European (EUR) and African genetic ancestry and an increased risk of nutrition-related chronic diseases. [1] OBJECTIVE To review the importance of maternal nutrition and strategies being employed to optimize outcomes. [3] METHODS Selected data from recent literature with special focus on rationale for and currently published results of maternal nutrition supplements, including lipid based nutrition supplements. [3]",
+   "context_chunks": [
+    6938,
+    8573,
+    8713,
+    638,
+    3724
+   ],
+   "context_has_relevant": false,
+   "confidence": 0.4240845235111131,
+   "alpha": 0.3647700815330954,
+   "verdicts": [
+    {
+     "text": "Mexico's population is comprised of Amerindians (AM) and Mestizos who have variable AM, European (EUR) and African genetic ancestry and an increased risk of nutrition-related chronic diseases.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "Mexico's population is comprised of Amerindians (AM) and Mestizos who have variable AM, European (EUR) and African genetic ancestry and an increased risk of nutrition-related chronic diseases.",
+     "p_support": 0.96058264921985,
+     "p_contradict": 0.0014652774072932567,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.961,
+       0.001,
+       0.038
+      ],
+      "2": [
+       0.002,
+       0.001,
+       0.998
+      ],
+      "3": [
+       0.001,
+       0.0,
+       0.999
+      ],
+      "4": [
+       0.001,
+       0.0,
+       0.999
+      ],
+      "5": [
+       0.001,
+       0.004,
+       0.994
+      ]
+     }
+    },
+    {
+     "text": "OBJECTIVE To review the importance of maternal nutrition and strategies being employed to optimize outcomes.",
+     "cited": [
+      3
+     ],
+     "status": "VERIFIED",
+     "support_ref": 3,
+     "support_sentence": "OBJECTIVE To review the importance of maternal nutrition and strategies being employed to optimize outcomes.",
+     "p_support": 0.9923627121876,
+     "p_contradict": 0.0009027536547050763,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.002,
+       0.039,
+       0.959
+      ],
+      "2": [
+       0.002,
+       0.115,
+       0.883
+      ],
+      "3": [
+       0.992,
+       0.001,
+       0.007
+      ],
+      "4": [
+       0.001,
+       0.08,
+       0.919
+      ],
+      "5": [
+       0.001,
+       0.012,
+       0.987
+      ]
+     }
+    },
+    {
+     "text": "METHODS Selected data from recent literature with special focus on rationale for and currently published results of maternal nutrition supplements, including lipid based nutrition supplements.",
+     "cited": [
+      3
+     ],
+     "status": "VERIFIED",
+     "support_ref": 3,
+     "support_sentence": "METHODS Selected data from recent literature with special focus on rationale for and currently published results of maternal nutrition supplements, including lipid based nutrition supplements.",
+     "p_support": 0.9732887613419215,
+     "p_contradict": 0.0040201303513935785,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.001,
+       0.002,
+       0.997
+      ],
+      "2": [
+       0.001,
+       0.001,
+       0.998
+      ],
+      "3": [
+       0.973,
+       0.004,
+       0.023
+      ],
+      "4": [
+       0.0,
+       0.002,
+       0.998
+      ],
+      "5": [
+       0.001,
+       0.001,
+       0.998
+      ]
+     }
+    }
+   ],
+   "timings": {
+    "sparse_ms": 3.876924514770508,
+    "dense_ms": 193.20321083068848,
+    "router_ms": 12252.057552337646,
+    "ltr_ms": 4556.571483612061,
+    "retrieval_total_ms": 17010.72597503662,
+    "generate_s": 1.9923903942108154,
+    "verify_s": 23.30947756767273
+   },
+   "injected": {
+    "orig": "Mexico's population is comprised of Amerindians (AM) and Mestizos who have variable AM, European (EUR) and African genetic ancestry and an increased risk of nutrition-related chronic diseases.",
+    "corrupted": "Mexico's population is not comprised of Amerindians (AM) and Mestizos who have variable AM, European (EUR) and African genetic ancestry and an increased risk of nutrition-related chronic diseases.",
+    "kind": "negation",
+    "status": "CONTRADICTED",
+    "cos_best": 0.8837847113609314
+   }
+  },
+  {
+   "qid": "1137",
+   "query": "TNFAIP3 is a tumor suppressor in glioblastoma.",
+   "answer": "Glioblastomas are deadly cancers that display a functional cellular hierarchy maintained by self-renewing glioblastoma stem cells (GSCs). [1] We determined that A20 (TNFAIP3), a regulator of cell survival and the NF-kappaB pathway, is overexpressed in GSCs relative to non-stem glioblastoma cells at both the mRNA and protein levels. [1] Modeling these BTSC proliferation mechanisms may provide a rationale for individualized glioblastoma treatment. [3]",
+   "context_chunks": [
+    9,
+    165,
+    5803,
+    2184,
+    1644
+   ],
+   "context_has_relevant": true,
+   "confidence": 0.9616825451017058,
+   "alpha": 0.22205897075330092,
+   "verdicts": [
+    {
+     "text": "Glioblastomas are deadly cancers that display a functional cellular hierarchy maintained by self-renewing glioblastoma stem cells (GSCs).",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "Glioblastomas are deadly cancers that display a functional cellular hierarchy maintained by self-renewing glioblastoma stem cells (GSCs).",
+     "p_support": 0.9822723047465918,
+     "p_contradict": 0.0008239241907954641,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.982,
+       0.001,
+       0.017
+      ],
+      "2": [
+       0.037,
+       0.045,
+       0.918
+      ],
+      "3": [
+       0.364,
+       0.017,
+       0.619
+      ],
+      "4": [
+       0.188,
+       0.148,
+       0.664
+      ],
+      "5": [
+       0.01,
+       0.051,
+       0.939
+      ]
+     }
+    },
+    {
+     "text": "We determined that A20 (TNFAIP3), a regulator of cell survival and the NF-kappaB pathway, is overexpressed in GSCs relative to non-stem glioblastoma cells at both the mRNA and protein levels.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "We determined that A20 (TNFAIP3), a regulator of cell survival and the NF-kappaB pathway, is overexpressed in GSCs relative to non-stem glioblastoma cells at both the mRNA and protein levels.",
+     "p_support": 0.9929905173353454,
+     "p_contradict": 0.0006642745933383713,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.993,
+       0.001,
+       0.006
+      ],
+      "2": [
+       0.017,
+       0.021,
+       0.962
+      ],
+      "3": [
+       0.036,
+       0.013,
+       0.951
+      ],
+      "4": [
+       0.015,
+       0.01,
+       0.975
+      ],
+      "5": [
+       0.013,
+       0.152,
+       0.835
+      ]
+     }
+    },
+    {
+     "text": "Modeling these BTSC proliferation mechanisms may provide a rationale for individualized glioblastoma treatment.",
+     "cited": [
+      3
+     ],
+     "status": "VERIFIED",
+     "support_ref": 3,
+     "support_sentence": "Modeling these BTSC proliferation mechanisms may provide a rationale for individualized glioblastoma treatment.",
+     "p_support": 0.9927040653709225,
+     "p_contradict": 0.0003457633091267239,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.002,
+       0.001,
+       0.997
+      ],
+      "2": [
+       0.004,
+       0.001,
+       0.995
+      ],
+      "3": [
+       0.993,
+       0.0,
+       0.007
+      ],
+      "4": [
+       0.334,
+       0.058,
+       0.608
+      ],
+      "5": [
+       0.041,
+       0.007,
+       0.952
+      ]
+     }
+    }
+   ],
+   "timings": {
+    "sparse_ms": 1.336812973022461,
+    "dense_ms": 68.06826591491699,
+    "router_ms": 278.2762050628662,
+    "ltr_ms": 1089.6666049957275,
+    "retrieval_total_ms": 1440.8671855926514,
+    "generate_s": 0.9025208950042725,
+    "verify_s": 20.408233642578125
+   },
+   "injected": {
+    "orig": "We determined that A20 (TNFAIP3), a regulator of cell survival and the NF-kappaB pathway, is overexpressed in GSCs relative to non-stem glioblastoma cells at both the mRNA and protein levels.",
+    "corrupted": "We determined that A22 (TNFAIP3), a regulator of cell survival and the NF-kappaB pathway, is overexpressed in GSCs relative to non-stem glioblastoma cells at both the mRNA and protein levels.",
+    "kind": "number",
+    "status": "CONTRADICTED",
+    "cos_best": 0.734154462814331
+   }
+  },
+  {
+   "qid": "1140",
+   "query": "Taking 400mg of \u03b1-tocopheryl acetate helps to prevent prostate cancer.",
+   "answer": "CONTEXT Many individuals take vitamins in the hopes of preventing chronic diseases such as cancer, and vitamins E and C are among the most common individual supplements. [1] Some human and animal studies indicate that plasma concentrations of gamma-tocopherol are inversely associated with the incidence of cardiovascular disease and prostate cancer. [2] The androgen receptor (AR) is overexpressed and hyperactivated in human castration-resistant prostate cancer (CRPC). [4]",
+   "context_chunks": [
+    3422,
+    1475,
+    94,
+    4768,
+    1515
+   ],
+   "context_has_relevant": true,
+   "confidence": 0.9207684858880013,
+   "alpha": 0.0,
+   "verdicts": [
+    {
+     "text": "CONTEXT Many individuals take vitamins in the hopes of preventing chronic diseases such as cancer, and vitamins E and C are among the most common individual supplements.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "CONTEXT Many individuals take vitamins in the hopes of preventing chronic diseases such as cancer, and vitamins E and C are among the most common individual supplements.",
+     "p_support": 0.9829332632118237,
+     "p_contradict": 0.001870792727514724,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.983,
+       0.002,
+       0.015
+      ],
+      "2": [
+       0.102,
+       0.012,
+       0.886
+      ],
+      "3": [
+       0.001,
+       0.0,
+       0.999
+      ],
+      "4": [
+       0.002,
+       0.0,
+       0.998
+      ],
+      "5": [
+       0.011,
+       0.001,
+       0.988
+      ]
+     }
+    },
+    {
+     "text": "Plasma concentrations of gamma-tocopherol are inversely associated with the incidence of cardiovascular disease and prostate cancer.",
+     "cited": [
+      2
+     ],
+     "status": "VERIFIED",
+     "support_ref": 2,
+     "support_sentence": "Some human and animal studies indicate that plasma concentrations of gamma-tocopherol are inversely associated with the incidence of cardiovascular disease and prostate cancer.",
+     "p_support": 0.9930270618843108,
+     "p_contradict": 0.0005104666336374647,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.018,
+       0.015,
+       0.967
+      ],
+      "2": [
+       0.993,
+       0.001,
+       0.006
+      ],
+      "3": [
+       0.016,
+       0.009,
+       0.975
+      ],
+      "4": [
+       0.004,
+       0.001,
+       0.994
+      ],
+      "5": [
+       0.003,
+       0.001,
+       0.996
+      ]
+     }
+    },
+    {
+     "text": "The androgen receptor (AR) is overexpressed and hyperactivated in human castration-resistant prostate cancer (CRPC).",
+     "cited": [
+      4
+     ],
+     "status": "VERIFIED",
+     "support_ref": 4,
+     "support_sentence": "The androgen receptor (AR) is overexpressed and hyperactivated in human castration-resistant prostate cancer (CRPC).",
+     "p_support": 0.9959704191145649,
+     "p_contradict": 0.0003545264751385469,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.012,
+       0.001,
+       0.987
+      ],
+      "2": [
+       0.009,
+       0.001,
+       0.99
+      ],
+      "3": [
+       0.01,
+       0.012,
+       0.978
+      ],
+      "4": [
+       0.996,
+       0.0,
+       0.004
+      ],
+      "5": [
+       0.004,
+       0.001,
+       0.996
+      ]
+     }
+    }
+   ],
+   "timings": {
+    "sparse_ms": 3.657817840576172,
+    "dense_ms": 106.96220397949219,
+    "router_ms": 611.4890575408936,
+    "ltr_ms": 2517.5833702087402,
+    "retrieval_total_ms": 3245.4233169555664,
+    "generate_s": 1.938950777053833,
+    "verify_s": 30.24387288093567
+   },
+   "injected": {
+    "orig": "The androgen receptor (AR) is overexpressed and hyperactivated in human castration-resistant prostate cancer (CRPC).",
+    "corrupted": "The androgen receptor (AR) is overexpressed and hyperactivated in human castration-resistant prostate cancer (Doubt).",
+    "kind": "entity",
+    "status": "CONTRADICTED",
+    "cos_best": 0.7864517569541931
+   }
+  },
+  {
+   "qid": "1150",
+   "query": "Tetraspanin-3 is a causative factor in the development of acute myelogenous leukemia",
+   "answer": "Acute Myelogenous Leukemia (AML) is an aggressive cancer that strikes both adults and children and is frequently resistant to therapy. [1] Here, we show that Tetraspanin 3 is a target of the RNA binding protein Musashi 2, which plays a key role in AML. [1] Myelodysplastic syndromes (MDS) comprise a heterogeneous group of disorders characterized by ineffective hematopoiesis, with an increased propensity to develop acute myelogenous leukemia (AML). [5]",
+   "context_chunks": [
+    3275,
+    6633,
+    2788,
+    2786,
+    1812
+   ],
+   "context_has_relevant": true,
+   "confidence": 0.9814002925736565,
+   "alpha": 0.19458244210554088,
+   "verdicts": [
+    {
+     "text": "Acute Myelogenous Leukemia (AML) is an aggressive cancer that strikes both adults and children and is frequently resistant to therapy.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "Acute Myelogenous Leukemia (AML) is an aggressive cancer that strikes both adults and children and is frequently resistant to therapy.",
+     "p_support": 0.9500118088898887,
+     "p_contradict": 0.000753779836388446,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.95,
+       0.001,
+       0.049
+      ],
+      "2": [
+       0.015,
+       0.0,
+       0.985
+      ],
+      "3": [
+       0.097,
+       0.007,
+       0.896
+      ],
+      "4": [
+       0.008,
+       0.004,
+       0.989
+      ],
+      "5": [
+       0.027,
+       0.003,
+       0.97
+      ]
+     }
+    },
+    {
+     "text": "Tetraspanin 3 is a target of the RNA binding protein Musashi 2, which plays a key role in AML.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "Here, we show that Tetraspanin 3 is a target of the RNA binding protein Musashi 2, which plays a key role in AML.",
+     "p_support": 0.9905038733317133,
+     "p_contradict": 0.0006177935868835037,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.991,
+       0.001,
+       0.009
+      ],
+      "2": [
+       0.003,
+       0.006,
+       0.991
+      ],
+      "3": [
+       0.042,
+       0.029,
+       0.929
+      ],
+      "4": [
+       0.023,
+       0.002,
+       0.975
+      ],
+      "5": [
+       0.286,
+       0.028,
+       0.686
+      ]
+     }
+    },
+    {
+     "text": "Myelodysplastic syndromes (MDS) comprise a heterogeneous group of disorders characterized by ineffective hematopoiesis, with an increased propensity to develop acute myelogenous leukemia (AML).",
+     "cited": [
+      5
+     ],
+     "status": "VERIFIED",
+     "support_ref": 5,
+     "support_sentence": "Myelodysplastic syndromes (MDS) comprise a heterogeneous group of disorders characterized by ineffective hematopoiesis, with an increased propensity to develop acute myelogenous leukemia (AML).",
+     "p_support": 0.9165744504847705,
+     "p_contradict": 0.0022371796607906437,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.008,
+       0.004,
+       0.989
+      ],
+      "2": [
+       0.001,
+       0.0,
+       0.999
+      ],
+      "3": [
+       0.004,
+       0.002,
+       0.994
+      ],
+      "4": [
+       0.009,
+       0.002,
+       0.989
+      ],
+      "5": [
+       0.917,
+       0.002,
+       0.081
+      ]
+     }
+    }
+   ],
+   "timings": {
+    "sparse_ms": 1.6393661499023438,
+    "dense_ms": 48.02417755126953,
+    "router_ms": 205.46913146972656,
+    "ltr_ms": 972.0492362976074,
+    "retrieval_total_ms": 1229.32767868042,
+    "generate_s": 0.5733280181884766,
+    "verify_s": 13.2691011428833
+   },
+   "injected": {
+    "orig": "Myelodysplastic syndromes (MDS) comprise a heterogeneous group of disorders characterized by ineffective hematopoiesis, with an increased propensity to develop acute myelogenous leukemia (AML).",
+    "corrupted": "Myelodysplastic syndromes (MDS) comprise a heterogeneous group of disorders characterized by ineffective hematopoiesis, with an increased propensity to develop acute immtac leukemia (AML).",
+    "kind": "entity",
+    "status": "CONTRADICTED",
+    "cos_best": 0.8338907957077026
+   }
+  },
+  {
+   "qid": "1163",
+   "query": "The DdrB protein from Deinococcus radiodurans is an alternative SSB.",
+   "answer": "Here, we report the 2.8 A structure of DdrB, a single-stranded DNA (ssDNA) binding protein unique to Deinococcus spp. [1] Unexpectedly, the crystal structure reveals that DdrB comprises a novel fold that is structurally and topologically distinct from all other single-stranded binding (SSB) proteins characterized to date. [1] Possible mechanisms of DdrB action in damage recovery are discussed. [1]",
+   "context_chunks": [
+    4304,
+    263,
+    601,
+    2449,
+    4822
+   ],
+   "context_has_relevant": true,
+   "confidence": 0.9959489996761651,
+   "alpha": 0.1033302022526415,
+   "verdicts": [
+    {
+     "text": "Here, we report the 2.8 A structure of DdrB, a single-stranded DNA (ssDNA) binding protein unique to Deinococcus spp.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "Here, we report the 2.8 A structure of DdrB, a single-stranded DNA (ssDNA) binding protein unique to Deinococcus spp.",
+     "p_support": 0.9912221323893703,
+     "p_contradict": 0.0012211593173288547,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.991,
+       0.001,
+       0.008
+      ],
+      "2": [
+       0.015,
+       0.815,
+       0.17
+      ],
+      "3": [
+       0.005,
+       0.585,
+       0.409
+      ],
+      "4": [
+       0.005,
+       0.242,
+       0.753
+      ],
+      "5": [
+       0.004,
+       0.835,
+       0.161
+      ]
+     }
+    },
+    {
+     "text": "DdrB comprises a novel fold that is structurally and topologically distinct from all other single-stranded binding (SSB) proteins characterized to date.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "Unexpectedly, the crystal structure reveals that DdrB comprises a novel fold that is structurally and topologically distinct from all other single-stranded binding (SSB) proteins characterized to date.",
+     "p_support": 0.9945424745259032,
+     "p_contradict": 0.0003977597465711304,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.995,
+       0.0,
+       0.005
+      ],
+      "2": [
+       0.03,
+       0.007,
+       0.963
+      ],
+      "3": [
+       0.008,
+       0.005,
+       0.987
+      ],
+      "4": [
+       0.001,
+       0.001,
+       0.998
+      ],
+      "5": [
+       0.005,
+       0.003,
+       0.992
+      ]
+     }
+    },
+    {
+     "text": "Possible mechanisms of DdrB action in damage recovery are discussed.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "Possible mechanisms of DdrB action in damage recovery are discussed.",
+     "p_support": 0.9483585438925055,
+     "p_contradict": 0.0009245653615052119,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.948,
+       0.001,
+       0.051
+      ],
+      "2": [
+       0.004,
+       0.001,
+       0.994
+      ],
+      "3": [
+       0.0,
+       0.0,
+       0.999
+      ],
+      "4": [
+       0.002,
+       0.022,
+       0.976
+      ],
+      "5": [
+       0.005,
+       0.002,
+       0.993
+      ]
+     }
+    }
+   ],
+   "timings": {
+    "sparse_ms": 3.6346912384033203,
+    "dense_ms": 59.56244468688965,
+    "router_ms": 277.3556709289551,
+    "ltr_ms": 958.1410884857178,
+    "retrieval_total_ms": 1301.1746406555176,
+    "generate_s": 0.5729484558105469,
+    "verify_s": 14.646261930465698
+   },
+   "injected": {
+    "orig": "Possible mechanisms of DdrB action in damage recovery are discussed.",
+    "corrupted": "Possible mechanisms of DdrB action in damage recovery are not discussed.",
+    "kind": "negation",
+    "status": "CONTRADICTED",
+    "cos_best": 0.8904504776000977
+   }
+  },
+  {
+   "qid": "1175",
+   "query": "The PPR MDA5 has two N-terminal CARD domains.",
+   "answer": "Two N-terminal caspase activation and recruitment domains (CARDs) transmit the signal, and the regulatory domain prevents signaling in the absence of viral RNA. [1] They are characterized by a conserved N-terminal region while the C-terminal antimicrobial domain can vary considerably in both primary sequence and length. [4] The N-terminal domains of the cathelicidins present one or two Asp-Pro bonds, which are particularly acid-labile in proBac5 and proBac7, but stable in prododecapeptide. [4]",
+   "context_chunks": [
+    4328,
+    4485,
+    4713,
+    5665,
+    6697
+   ],
+   "context_has_relevant": false,
+   "confidence": 0.8082797644938263,
+   "alpha": 0.5789783068481886,
+   "verdicts": [
+    {
+     "text": "Two N-terminal caspase activation and recruitment domains (CARDs) transmit the signal, and the regulatory domain prevents signaling in the absence of viral RNA.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "Two N-terminal caspase activation and recruitment domains (CARDs) transmit the signal, and the regulatory domain prevents signaling in the absence of viral RNA.",
+     "p_support": 0.9586372938918538,
+     "p_contradict": 0.009911611687445542,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.959,
+       0.01,
+       0.031
+      ],
+      "2": [
+       0.14,
+       0.121,
+       0.739
+      ],
+      "3": [
+       0.002,
+       0.025,
+       0.972
+      ],
+      "4": [
+       0.001,
+       0.014,
+       0.985
+      ],
+      "5": [
+       0.002,
+       0.056,
+       0.941
+      ]
+     }
+    },
+    {
+     "text": "They are characterized by a conserved N-terminal region while the C-terminal antimicrobial domain can vary considerably in both primary sequence and length.",
+     "cited": [
+      4
+     ],
+     "status": "VERIFIED",
+     "support_ref": 4,
+     "support_sentence": "They are characterized by a conserved N-terminal region while the C-terminal antimicrobial domain can vary considerably in both primary sequence and length.",
+     "p_support": 0.9259391475858187,
+     "p_contradict": 0.0021522840565279477,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.007,
+       0.004,
+       0.988
+      ],
+      "2": [
+       0.002,
+       0.001,
+       0.998
+      ],
+      "3": [
+       0.011,
+       0.039,
+       0.95
+      ],
+      "4": [
+       0.926,
+       0.002,
+       0.072
+      ],
+      "5": [
+       0.002,
+       0.004,
+       0.993
+      ]
+     }
+    },
+    {
+     "text": "The N-terminal domains of the cathelicidins present one or two Asp-Pro bonds, which are particularly acid-labile in proBac5 and proBac7, but stable in prododecapeptide.",
+     "cited": [
+      4
+     ],
+     "status": "VERIFIED",
+     "support_ref": 4,
+     "support_sentence": "The N-terminal domains of the cathelicidins present one or two Asp-Pro bonds, which are particularly acid-labile in proBac5 and proBac7, but stable in prododecapeptide.",
+     "p_support": 0.9892221664232892,
+     "p_contradict": 0.0014039040463994011,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.01,
+       0.005,
+       0.985
+      ],
+      "2": [
+       0.005,
+       0.001,
+       0.994
+      ],
+      "3": [
+       0.006,
+       0.017,
+       0.978
+      ],
+      "4": [
+       0.989,
+       0.001,
+       0.009
+      ],
+      "5": [
+       0.016,
+       0.004,
+       0.98
+      ]
+     }
+    }
+   ],
+   "timings": {
+    "sparse_ms": 1.7690658569335938,
+    "dense_ms": 39.1080379486084,
+    "router_ms": 237.1363639831543,
+    "ltr_ms": 1010.6594562530518,
+    "retrieval_total_ms": 1290.7304763793945,
+    "generate_s": 0.7377383708953857,
+    "verify_s": 15.803327798843384
+   },
+   "injected": {
+    "orig": "The N-terminal domains of the cathelicidins present one or two Asp-Pro bonds, which are particularly acid-labile in proBac5 and proBac7, but stable in prododecapeptide.",
+    "corrupted": "The N-terminal domains of the cathelicidins present one or two Asp-Pro bonds, which are not particularly acid-labile in proBac5 and proBac7, but stable in prododecapeptide.",
+    "kind": "negation",
+    "status": "CONTRADICTED",
+    "cos_best": 0.895869255065918
+   }
+  },
+  {
+   "qid": "1185",
+   "query": "The US health care system can save up to $750 million if 7% of patients waiting for kidney transplants participate in the optimized national kidney paired donation program.",
+   "answer": "Even if only 7% of patients awaiting kidney transplantation participated in an optimized national KPD program, the health care system could save as much as $750 million. [1] We propose a Medicare Demonstration Project to develop a standard acquisition charge for kidney paired donation. [2] Providing transplantation opportunities for patients with incompatible live donors through kidney paired donation (KPD) is seen as one of the important strategies for easing the crisis in organ availability. [3]",
+   "context_chunks": [
+    4610,
+    8375,
+    5579,
+    5422,
+    5335
+   ],
+   "context_has_relevant": true,
+   "confidence": 0.9978765222987559,
+   "alpha": 0.0,
+   "verdicts": [
+    {
+     "text": "Even if only 7% of patients awaiting kidney transplantation participated in an optimized national KPD program, the health care system could save as much as $750 million.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "Even if only 7% of patients awaiting kidney transplantation participated in an optimized national KPD program, the health care system could save as much as $750 million.",
+     "p_support": 0.978202575277321,
+     "p_contradict": 0.0011818064916701509,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.978,
+       0.001,
+       0.021
+      ],
+      "2": [
+       0.0,
+       0.0,
+       0.999
+      ],
+      "3": [
+       0.006,
+       0.001,
+       0.993
+      ],
+      "4": [
+       0.001,
+       0.0,
+       0.999
+      ],
+      "5": [
+       0.001,
+       0.0,
+       0.999
+      ]
+     }
+    },
+    {
+     "text": "We propose a Medicare Demonstration Project to develop a standard acquisition charge for kidney paired donation.",
+     "cited": [
+      2
+     ],
+     "status": "VERIFIED",
+     "support_ref": 2,
+     "support_sentence": "We propose a Medicare Demonstration Project to develop a standard acquisition charge for kidney paired donation.",
+     "p_support": 0.9956401768172791,
+     "p_contradict": 0.0010719027356431458,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.006,
+       0.003,
+       0.991
+      ],
+      "2": [
+       0.996,
+       0.001,
+       0.003
+      ],
+      "3": [
+       0.002,
+       0.002,
+       0.996
+      ],
+      "4": [
+       0.001,
+       0.005,
+       0.994
+      ],
+      "5": [
+       0.0,
+       0.0,
+       0.999
+      ]
+     }
+    },
+    {
+     "text": "Providing transplantation opportunities for patients with incompatible live donors through kidney paired donation (KPD) is seen as one of the important strategies for easing the crisis in organ availability.",
+     "cited": [
+      3
+     ],
+     "status": "VERIFIED",
+     "support_ref": 3,
+     "support_sentence": "Providing transplantation opportunities for patients with incompatible live donors through kidney paired donation (KPD) is seen as one of the important strategies for easing the crisis in organ availability.",
+     "p_support": 0.9892998375974487,
+     "p_contradict": 0.0014440280029410562,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.038,
+       0.037,
+       0.925
+      ],
+      "2": [
+       0.035,
+       0.008,
+       0.957
+      ],
+      "3": [
+       0.989,
+       0.001,
+       0.009
+      ],
+      "4": [
+       0.027,
+       0.004,
+       0.97
+      ],
+      "5": [
+       0.001,
+       0.0,
+       0.999
+      ]
+     }
+    }
+   ],
+   "timings": {
+    "sparse_ms": 6.192207336425781,
+    "dense_ms": 65.52696228027344,
+    "router_ms": 238.89780044555664,
+    "ltr_ms": 968.651533126831,
+    "retrieval_total_ms": 1282.1178436279297,
+    "generate_s": 0.6983911991119385,
+    "verify_s": 13.22628378868103
+   },
+   "injected": {
+    "orig": "Even if only 7% of patients awaiting kidney transplantation participated in an optimized national KPD program, the health care system could save as much as $750 million.",
+    "corrupted": "Even if only 7% of patients transdifferentiation kidney transplantation participated in an optimized national KPD program, the health care system could save as much as $750 million.",
+    "kind": "entity",
+    "status": "UNSUPPORTED",
+    "cos_best": 0.8460885286331177
+   }
+  },
+  {
+   "qid": "1191",
+   "query": "The amount of publicly available DNA data doubles every 10 years.",
+   "answer": "These data highlight an important role for the tolerance of genome doubling in driving cancer genome evolution. [2] Data were available from the year 1953, when the registry was established. [5] Women age 30-60 years are notified for screening every 5 years. [5]",
+   "context_chunks": [
+    3958,
+    2229,
+    8930,
+    732,
+    7835
+   ],
+   "context_has_relevant": false,
+   "confidence": 0.425744893706305,
+   "alpha": 0.2351328272572164,
+   "verdicts": [
+    {
+     "text": "These data highlight an important role for the tolerance of genome doubling in driving cancer genome evolution.",
+     "cited": [
+      2
+     ],
+     "status": "VERIFIED",
+     "support_ref": 2,
+     "support_sentence": "These data highlight an important role for the tolerance of genome doubling in driving cancer genome evolution.",
+     "p_support": 0.9964588995453064,
+     "p_contradict": 0.0003964648129851297,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.001,
+       0.001,
+       0.998
+      ],
+      "2": [
+       0.996,
+       0.0,
+       0.003
+      ],
+      "3": [
+       0.013,
+       0.016,
+       0.971
+      ],
+      "4": [
+       0.003,
+       0.001,
+       0.996
+      ],
+      "5": [
+       0.001,
+       0.0,
+       0.999
+      ]
+     }
+    },
+    {
+     "text": "Data were available from the year 1953, when the registry was established.",
+     "cited": [
+      5
+     ],
+     "status": "VERIFIED",
+     "support_ref": 5,
+     "support_sentence": "Data were available from the year 1953, when the registry was established.",
+     "p_support": 0.9404472148198861,
+     "p_contradict": 0.0009397130874401725,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.003,
+       0.004,
+       0.993
+      ],
+      "2": [
+       0.005,
+       0.002,
+       0.993
+      ],
+      "3": [
+       0.005,
+       0.008,
+       0.987
+      ],
+      "4": [
+       0.003,
+       0.001,
+       0.996
+      ],
+      "5": [
+       0.94,
+       0.001,
+       0.059
+      ]
+     }
+    },
+    {
+     "text": "Women age 30-60 years are notified for screening every 5 years.",
+     "cited": [
+      5
+     ],
+     "status": "VERIFIED",
+     "support_ref": 5,
+     "support_sentence": "Women age 30-60 years are notified for screening every 5 years.",
+     "p_support": 0.9177859607080237,
+     "p_contradict": 0.002309039164986046,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.0,
+       0.0,
+       0.999
+      ],
+      "2": [
+       0.001,
+       0.0,
+       0.999
+      ],
+      "3": [
+       0.001,
+       0.0,
+       0.999
+      ],
+      "4": [
+       0.001,
+       0.001,
+       0.998
+      ],
+      "5": [
+       0.918,
+       0.002,
+       0.08
+      ]
+     }
+    }
+   ],
+   "timings": {
+    "sparse_ms": 4.282951354980469,
+    "dense_ms": 56.89692497253418,
+    "router_ms": 346.1427688598633,
+    "ltr_ms": 937.6344680786133,
+    "retrieval_total_ms": 1347.2900390625,
+    "generate_s": 0.9393587112426758,
+    "verify_s": 16.288861513137817
+   },
+   "injected": {
+    "orig": "These data highlight an important role for the tolerance of genome doubling in driving cancer genome evolution.",
+    "corrupted": "These data highlight an important role for the tolerance of genome doubling in driving cancer genome polarized.",
+    "kind": "entity",
+    "status": "CONTRADICTED",
+    "cos_best": 0.8228190541267395
+   }
+  },
+  {
+   "qid": "1204",
+   "query": "The combination of H3K4me3 and H3K79me2 is found in quiescent hair follicle stem cells.",
+   "answer": "Using mouse skin, where bountiful reservoirs of synchronized hair follicle stem cells (HF-SCs) fuel cycles of regeneration, we explore how adult SCs remodel chromatin in response to activating cues. [1] Hair graying, a typical sign of aging in mammals, is caused by the incomplete maintenance of melanocyte stem cells (MSCs) with age. [2] The resulting MSC depletion leads to irreversible hair graying. [2]",
+   "context_chunks": [
+    7341,
+    4583,
+    1158,
+    8761,
+    3445
+   ],
+   "context_has_relevant": true,
+   "confidence": 0.9296771325496804,
+   "alpha": 0.14189181834860884,
+   "verdicts": [
+    {
+     "text": "Using mouse skin, where bountiful reservoirs of synchronized hair follicle stem cells (HF-SCs) fuel cycles of regeneration, we explore how adult SCs remodel chromatin in response to activating cues.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "Using mouse skin, where bountiful reservoirs of synchronized hair follicle stem cells (HF-SCs) fuel cycles of regeneration, we explore how adult SCs remodel chromatin in response to activating cues.",
+     "p_support": 0.9774041620892999,
+     "p_contradict": 0.0058524765000210754,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.977,
+       0.006,
+       0.017
+      ],
+      "2": [
+       0.032,
+       0.015,
+       0.953
+      ],
+      "3": [
+       0.008,
+       0.031,
+       0.961
+      ],
+      "4": [
+       0.015,
+       0.003,
+       0.982
+      ],
+      "5": [
+       0.028,
+       0.019,
+       0.953
+      ]
+     }
+    },
+    {
+     "text": "Hair graying, a typical sign of aging in mammals, is caused by the incomplete maintenance of melanocyte stem cells (MSCs) with age.",
+     "cited": [
+      2
+     ],
+     "status": "VERIFIED",
+     "support_ref": 2,
+     "support_sentence": "Hair graying, a typical sign of aging in mammals, is caused by the incomplete maintenance of melanocyte stem cells (MSCs) with age.",
+     "p_support": 0.9948100037174402,
+     "p_contradict": 0.0008864363714375927,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.035,
+       0.014,
+       0.951
+      ],
+      "2": [
+       0.995,
+       0.001,
+       0.004
+      ],
+      "3": [
+       0.001,
+       0.0,
+       0.999
+      ],
+      "4": [
+       0.042,
+       0.0,
+       0.958
+      ],
+      "5": [
+       0.004,
+       0.001,
+       0.996
+      ]
+     }
+    },
+    {
+     "text": "The resulting MSC depletion leads to irreversible hair graying.",
+     "cited": [
+      2
+     ],
+     "status": "VERIFIED",
+     "support_ref": 2,
+     "support_sentence": "The resulting MSC depletion leads to irreversible hair graying.",
+     "p_support": 0.9874435829157939,
+     "p_contradict": 0.0005266596372963608,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.001,
+       0.011,
+       0.988
+      ],
+      "2": [
+       0.987,
+       0.001,
+       0.012
+      ],
+      "3": [
+       0.005,
+       0.003,
+       0.992
+      ],
+      "4": [
+       0.001,
+       0.001,
+       0.998
+      ],
+      "5": [
+       0.003,
+       0.018,
+       0.98
+      ]
+     }
+    }
+   ],
+   "timings": {
+    "sparse_ms": 2.5289058685302734,
+    "dense_ms": 59.40890312194824,
+    "router_ms": 214.4479751586914,
+    "ltr_ms": 1212.5961780548096,
+    "retrieval_total_ms": 1492.1154975891113,
+    "generate_s": 0.6881792545318604,
+    "verify_s": 15.464572429656982
+   },
+   "injected": {
+    "orig": "Hair graying, a typical sign of aging in mammals, is caused by the incomplete maintenance of melanocyte stem cells (MSCs) with age.",
+    "corrupted": "Hair graying, a typical sign of aging in mammals, is caused by the incomplete maintenance of september stem cells (MSCs) with age.",
+    "kind": "entity",
+    "status": "CONTRADICTED",
+    "cos_best": 0.8197930455207825
+   }
+  },
+  {
+   "qid": "1213",
+   "query": "The deregulated and prolonged activation of monocytes has deleterious effects in inflammatory diseases.",
+   "answer": "We have previously shown that KLF2 inhibits proinflammatory activation of monocytes. [4] Under inflammatory conditions elicited either by acute infection with Listeria monocytogenes or chronic infection with Leishmania major, there was a significant increase in immature Ly-6C(high) monocytes, resembling the inflammatory left shift of granulocytes. [5] Taken together, these data identify distinct subpopulations of mouse blood monocytes that differ in maturation stage and capacity to become recruited to inflammatory sites. [5]",
+   "context_chunks": [
+    2505,
+    5512,
+    3100,
+    2418,
+    7848
+   ],
+   "context_has_relevant": false,
+   "confidence": 0.4238809019040907,
+   "alpha": 0.17817804706076468,
+   "verdicts": [
+    {
+     "text": "We have previously shown that KLF2 inhibits proinflammatory activation of monocytes.",
+     "cited": [
+      4
+     ],
+     "status": "VERIFIED",
+     "support_ref": 4,
+     "support_sentence": "We have previously shown that KLF2 inhibits proinflammatory activation of monocytes.",
+     "p_support": 0.9935395549786379,
+     "p_contradict": 0.00027992809282180654,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.004,
+       0.001,
+       0.995
+      ],
+      "2": [
+       0.006,
+       0.03,
+       0.965
+      ],
+      "3": [
+       0.005,
+       0.01,
+       0.985
+      ],
+      "4": [
+       0.994,
+       0.0,
+       0.006
+      ],
+      "5": [
+       0.006,
+       0.005,
+       0.989
+      ]
+     }
+    },
+    {
+     "text": "Under inflammatory conditions elicited either by acute infection with Listeria monocytogenes or chronic infection with Leishmania major, there was a significant increase in immature Ly-6C(high) monocytes, resembling the inflammatory left shift of granulocytes.",
+     "cited": [
+      5
+     ],
+     "status": "VERIFIED",
+     "support_ref": 5,
+     "support_sentence": "Under inflammatory conditions elicited either by acute infection with Listeria monocytogenes or chronic infection with Leishmania major, there was a significant increase in immature Ly-6C(high) monocytes, resembling the inflammatory left shift of granulocytes.",
+     "p_support": 0.9735881810236718,
+     "p_contradict": 0.00511758731390742,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.004,
+       0.001,
+       0.995
+      ],
+      "2": [
+       0.019,
+       0.005,
+       0.976
+      ],
+      "3": [
+       0.035,
+       0.011,
+       0.954
+      ],
+      "4": [
+       0.003,
+       0.001,
+       0.996
+      ],
+      "5": [
+       0.974,
+       0.005,
+       0.021
+      ]
+     }
+    },
+    {
+     "text": "Taken together, these data identify distinct subpopulations of mouse blood monocytes that differ in maturation stage and capacity to become recruited to inflammatory sites.",
+     "cited": [
+      5
+     ],
+     "status": "VERIFIED",
+     "support_ref": 5,
+     "support_sentence": "Taken together, these data identify distinct subpopulations of mouse blood monocytes that differ in maturation stage and capacity to become recruited to inflammatory sites.",
+     "p_support": 0.9658025853071577,
+     "p_contradict": 0.010627709215170783,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.003,
+       0.002,
+       0.995
+      ],
+      "2": [
+       0.004,
+       0.075,
+       0.921
+      ],
+      "3": [
+       0.006,
+       0.004,
+       0.99
+      ],
+      "4": [
+       0.028,
+       0.005,
+       0.967
+      ],
+      "5": [
+       0.966,
+       0.011,
+       0.024
+      ]
+     }
+    }
+   ],
+   "timings": {
+    "sparse_ms": 6.760597229003906,
+    "dense_ms": 62.3626708984375,
+    "router_ms": 209.946870803833,
+    "ltr_ms": 978.7187576293945,
+    "retrieval_total_ms": 1259.9964141845703,
+    "generate_s": 0.6494264602661133,
+    "verify_s": 15.902100563049316
+   },
+   "injected": {
+    "orig": "Under inflammatory conditions elicited either by acute infection with Listeria monocytogenes or chronic infection with Leishmania major, there was a significant increase in immature Ly-6C(high) monocytes, resembling the inflammatory left shift of granulocytes.",
+    "corrupted": "Under inflammatory conditions elicited either by acute infection with Listeria monocytogenes or chronic infection with Leishmania major, there was not a significant increase in immature Ly-6C(high) monocytes, resembling the inflammatory left shift of granulocytes.",
+    "kind": "negation",
+    "status": "CONTRADICTED",
+    "cos_best": 0.9235020279884338
+   }
+  },
+  {
+   "qid": "1221",
+   "query": "The genomic aberrations found in matasteses are very similar to those found in the primary tumor.",
+   "answer": "Four hotspots of chromosomal aberrations were detected: full trisomy 11 (with a minimally recurrent gain in 11qE2), full trisomy 8, and deletions in chromosomes 10qB and 14qC-14qE. The most recurrent aberration in mouse PSCs, gain 11qE2, turned out to be fully syntenic to the common aberration 17q25 in human PSCs, while other recurrent aberrations were found to be species specific. [1] Importantly, these common aberrations jeopardize the interpretation of published comparisons of PSCs, which were unintentionally conducted between normal and aberrant cells. [1] We also found that new somatic L1 insertions occur at high frequencies in human lung cancer genomes. [3]",
+   "context_chunks": [
+    5507,
+    1259,
+    4807,
+    969,
+    2515
+   ],
+   "context_has_relevant": false,
+   "confidence": 0.6056537248719358,
+   "alpha": 0.0,
+   "verdicts": [
+    {
+     "text": "Four hotspots of chromosomal aberrations were detected: full trisomy 11 (with a minimally recurrent gain in 11qE2), full trisomy 8, and deletions in chromosomes 10qB and 14qC-14qE.",
+     "cited": [],
+     "status": "REPAIRED",
+     "support_ref": 1,
+     "support_sentence": "Four hotspots of chromosomal aberrations were detected: full trisomy 11 (with a minimally recurrent gain in 11qE2), full trisomy 8, and deletions in chromosomes 10qB and 14qC-14qE. The most recurrent aberration in mouse PSCs, gain 11qE2, turned out to be fully syntenic to the common aberration 17q25 in human PSCs, while other recurrent aberrations were found to be species specific.",
+     "p_support": 0.9673325639944081,
+     "p_contradict": 0.012754701401161582,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.967,
+       0.013,
+       0.02
+      ],
+      "2": [
+       0.004,
+       0.002,
+       0.994
+      ],
+      "3": [
+       0.002,
+       0.001,
+       0.997
+      ],
+      "4": [
+       0.002,
+       0.001,
+       0.997
+      ],
+      "5": [
+       0.012,
+       0.002,
+       0.986
+      ]
+     }
+    },
+    {
+     "text": "The most recurrent aberration in mouse PSCs, gain 11qE2, turned out to be fully syntenic to the common aberration 17q25 in human PSCs, while other recurrent aberrations were found to be species specific.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "Four hotspots of chromosomal aberrations were detected: full trisomy 11 (with a minimally recurrent gain in 11qE2), full trisomy 8, and deletions in chromosomes 10qB and 14qC-14qE. The most recurrent aberration in mouse PSCs, gain 11qE2, turned out to be fully syntenic to the common aberration 17q25 in human PSCs, while other recurrent aberrations were found to be species specific.",
+     "p_support": 0.9835024146292125,
+     "p_contradict": 0.006132535748819302,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.984,
+       0.006,
+       0.01
+      ],
+      "2": [
+       0.003,
+       0.001,
+       0.995
+      ],
+      "3": [
+       0.003,
+       0.001,
+       0.997
+      ],
+      "4": [
+       0.003,
+       0.001,
+       0.995
+      ],
+      "5": [
+       0.001,
+       0.0,
+       0.998
+      ]
+     }
+    },
+    {
+     "text": "Importantly, these common aberrations jeopardize the interpretation of published comparisons of PSCs, which were unintentionally conducted between normal and aberrant cells.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "Importantly, these common aberrations jeopardize the interpretation of published comparisons of PSCs, which were unintentionally conducted between normal and aberrant cells.",
+     "p_support": 0.7248206447028214,
+     "p_contradict": 0.022009694704917798,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.725,
+       0.022,
+       0.253
+      ],
+      "2": [
+       0.0,
+       0.0,
+       1.0
+      ],
+      "3": [
+       0.001,
+       0.001,
+       0.999
+      ],
+      "4": [
+       0.001,
+       0.0,
+       0.999
+      ],
+      "5": [
+       0.001,
+       0.0,
+       0.999
+      ]
+     }
+    },
+    {
+     "text": "New somatic L1 insertions occur at high frequencies in human lung cancer genomes.",
+     "cited": [
+      3
+     ],
+     "status": "VERIFIED",
+     "support_ref": 3,
+     "support_sentence": "We also found that new somatic L1 insertions occur at high frequencies in human lung cancer genomes.",
+     "p_support": 0.995381748571924,
+     "p_contradict": 0.0006034043399289672,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.023,
+       0.005,
+       0.972
+      ],
+      "2": [
+       0.008,
+       0.036,
+       0.955
+      ],
+      "3": [
+       0.995,
+       0.001,
+       0.004
+      ],
+      "4": [
+       0.01,
+       0.013,
+       0.977
+      ],
+      "5": [
+       0.001,
+       0.01,
+       0.989
+      ]
+     }
+    }
+   ],
+   "timings": {
+    "sparse_ms": 2.800464630126953,
+    "dense_ms": 62.652587890625,
+    "router_ms": 212.82243728637695,
+    "ltr_ms": 1198.9953517913818,
+    "retrieval_total_ms": 1481.9185733795166,
+    "generate_s": 0.7953932285308838,
+    "verify_s": 19.87256360054016
+   },
+   "injected": {
+    "orig": "The most recurrent aberration in mouse PSCs, gain 11qE2, turned out to be fully syntenic to the common aberration 17q25 in human PSCs, while other recurrent aberrations were found to be species specific.",
+    "corrupted": "The most recurrent aberration in mouse PSCs, loss 11qE2, turned out to be fully syntenic to the common aberration 17q25 in human PSCs, while other recurrent aberrations were found to be species specific.",
+    "kind": "direction",
+    "status": "CONTRADICTED",
+    "cos_best": 0.6653055548667908
+   }
+  },
+  {
+   "qid": "1274",
+   "query": "The tip of the inner tube of the toxic type VI secretion system (T6SS) antibacterial effector in Escherichia coli (E. coli) carries toxic effector proteins.",
+   "answer": "The bacterial type VI secretion system (T6SS) is a dynamic organelle that bacteria use to target prey cells for inhibition via translocation of effector proteins. [3] Type VI protein secretion system (T6SS) is important for bacterial competition through contact-dependent killing of competitors. [4] Gram-negative bacteria use the Type VI secretion system (T6SS) to inject toxic proteins into rival bacteria or eukaryotic cells. [5]",
+   "context_chunks": [
+    6995,
+    1341,
+    2213,
+    5759,
+    2284
+   ],
+   "context_has_relevant": true,
+   "confidence": 0.9859925706749872,
+   "alpha": 0.20390510937097855,
+   "verdicts": [
+    {
+     "text": "The bacterial type VI secretion system (T6SS) is a dynamic organelle that bacteria use to target prey cells for inhibition via translocation of effector proteins.",
+     "cited": [
+      3
+     ],
+     "status": "VERIFIED",
+     "support_ref": 3,
+     "support_sentence": "The bacterial type VI secretion system (T6SS) is a dynamic organelle that bacteria use to target prey cells for inhibition via translocation of effector proteins.",
+     "p_support": 0.9275560101116603,
+     "p_contradict": 0.053665373277432274,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.904,
+       0.007,
+       0.089
+      ],
+      "2": [
+       0.887,
+       0.009,
+       0.104
+      ],
+      "3": [
+       0.928,
+       0.054,
+       0.019
+      ],
+      "4": [
+       0.404,
+       0.022,
+       0.574
+      ],
+      "5": [
+       0.228,
+       0.032,
+       0.74
+      ]
+     }
+    },
+    {
+     "text": "Type VI protein secretion system (T6SS) is important for bacterial competition through contact-dependent killing of competitors.",
+     "cited": [
+      4
+     ],
+     "status": "VERIFIED",
+     "support_ref": 4,
+     "support_sentence": "Type VI protein secretion system (T6SS) is important for bacterial competition through contact-dependent killing of competitors.",
+     "p_support": 0.9933866708170576,
+     "p_contradict": 0.0003934917122102589,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.32,
+       0.226,
+       0.454
+      ],
+      "2": [
+       0.623,
+       0.096,
+       0.281
+      ],
+      "3": [
+       0.282,
+       0.259,
+       0.46
+      ],
+      "4": [
+       0.993,
+       0.0,
+       0.006
+      ],
+      "5": [
+       0.517,
+       0.027,
+       0.456
+      ]
+     }
+    },
+    {
+     "text": "Gram-negative bacteria use the Type VI secretion system (T6SS) to inject toxic proteins into rival bacteria or eukaryotic cells.",
+     "cited": [
+      5
+     ],
+     "status": "VERIFIED",
+     "support_ref": 5,
+     "support_sentence": "Gram-negative bacteria use the Type VI secretion system (T6SS) to inject toxic proteins into rival bacteria or eukaryotic cells.",
+     "p_support": 0.9934789026942146,
+     "p_contradict": 0.0010874466821310126,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.697,
+       0.016,
+       0.286
+      ],
+      "2": [
+       0.844,
+       0.001,
+       0.155
+      ],
+      "3": [
+       0.67,
+       0.052,
+       0.278
+      ],
+      "4": [
+       0.641,
+       0.004,
+       0.355
+      ],
+      "5": [
+       0.993,
+       0.001,
+       0.005
+      ]
+     }
+    }
+   ],
+   "timings": {
+    "sparse_ms": 4.263162612915039,
+    "dense_ms": 62.801361083984375,
+    "router_ms": 211.09771728515625,
+    "ltr_ms": 933.3510398864746,
+    "retrieval_total_ms": 1214.287519454956,
+    "generate_s": 0.49138808250427246,
+    "verify_s": 13.741436243057251
+   },
+   "injected": {
+    "orig": "Gram-negative bacteria use the Type VI secretion system (T6SS) to inject toxic proteins into rival bacteria or eukaryotic cells.",
+    "corrupted": "Gram-negative bacteria use the Type VI secretion system (T6SS) to inject toxic proteins into pazopanib bacteria or eukaryotic cells.",
+    "kind": "entity",
+    "status": "REPAIRED",
+    "cos_best": 0.779746413230896
+   }
+  },
+  {
+   "qid": "1316",
+   "query": "Transferred UCB T cells acquire a memory-like phenotype in recipients.",
+   "answer": "By using adoptive transfer of antigen-specific memory CD4(+) T cell subpopulations in the lymphocytic choriomeningitis virus infection model, we found that there are distinct memory CD4(+) T cell populations with commitment to either Tfh- or Th1-cell lineages. [1] The last part of the review reports available data on UCB, as well as third-party peripheral blood derived anti-viral cell therapy, which provides a novel approach to rescue UCB recipients with viral complications in the post-transplant period. [2] Immunization results in the differentiation of CD8+ T cells, such that they acquire effector abilities and convert into a memory pool. [4]",
+   "context_chunks": [
+    6337,
+    6915,
+    7062,
+    4975,
+    5461
+   ],
+   "context_has_relevant": false,
+   "confidence": 0.6731862558315087,
+   "alpha": 0.29172583463829044,
+   "verdicts": [
+    {
+     "text": "By using adoptive transfer of antigen-specific memory CD4(+) T cell subpopulations in the lymphocytic choriomeningitis virus infection model, we found that there are distinct memory CD4(+) T cell populations with commitment to either Tfh- or Th1-cell lineages.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "By using adoptive transfer of antigen-specific memory CD4(+) T cell subpopulations in the lymphocytic choriomeningitis virus infection model, we found that there are distinct memory CD4(+) T cell populations with commitment to either Tfh- or Th1-cell lineages.",
+     "p_support": 0.986669929497171,
+     "p_contradict": 0.002970297804162622,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.987,
+       0.003,
+       0.01
+      ],
+      "2": [
+       0.009,
+       0.001,
+       0.989
+      ],
+      "3": [
+       0.081,
+       0.042,
+       0.877
+      ],
+      "4": [
+       0.006,
+       0.004,
+       0.99
+      ],
+      "5": [
+       0.024,
+       0.007,
+       0.969
+      ]
+     }
+    },
+    {
+     "text": "The last part of the review reports available data on UCB, as well as third-party peripheral blood derived anti-viral cell therapy, which provides a novel approach to rescue UCB recipients with viral complications in the post-transplant period.",
+     "cited": [
+      2
+     ],
+     "status": "VERIFIED",
+     "support_ref": 2,
+     "support_sentence": "The last part of the review reports available data on UCB, as well as third-party peripheral blood derived anti-viral cell therapy, which provides a novel approach to rescue UCB recipients with viral complications in the post-transplant period.",
+     "p_support": 0.9440882910252404,
+     "p_contradict": 0.016673630339521406,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.002,
+       0.0,
+       0.998
+      ],
+      "2": [
+       0.944,
+       0.017,
+       0.039
+      ],
+      "3": [
+       0.002,
+       0.0,
+       0.998
+      ],
+      "4": [
+       0.0,
+       0.0,
+       1.0
+      ],
+      "5": [
+       0.001,
+       0.0,
+       0.999
+      ]
+     }
+    },
+    {
+     "text": "Immunization results in the differentiation of CD8+ T cells, such that they acquire effector abilities and convert into a memory pool.",
+     "cited": [
+      4
+     ],
+     "status": "VERIFIED",
+     "support_ref": 4,
+     "support_sentence": "Immunization results in the differentiation of CD8+ T cells, such that they acquire effector abilities and convert into a memory pool.",
+     "p_support": 0.991739481482155,
+     "p_contradict": 0.0005181959869907096,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.041,
+       0.046,
+       0.913
+      ],
+      "2": [
+       0.015,
+       0.006,
+       0.98
+      ],
+      "3": [
+       0.217,
+       0.025,
+       0.758
+      ],
+      "4": [
+       0.992,
+       0.001,
+       0.008
+      ],
+      "5": [
+       0.375,
+       0.036,
+       0.588
+      ]
+     }
+    }
+   ],
+   "timings": {
+    "sparse_ms": 7.513523101806641,
+    "dense_ms": 62.165021896362305,
+    "router_ms": 213.40107917785645,
+    "ltr_ms": 1009.8822116851807,
+    "retrieval_total_ms": 1295.1712608337402,
+    "generate_s": 0.5897483825683594,
+    "verify_s": 15.036569356918335
+   },
+   "injected": {
+    "orig": "By using adoptive transfer of antigen-specific memory CD4(+) T cell subpopulations in the lymphocytic choriomeningitis virus infection model, we found that there are distinct memory CD4(+) T cell populations with commitment to either Tfh- or Th1-cell lineages.",
+    "corrupted": "By using adoptive transfer of antigen-specific memory CD4(+) T cell subpopulations in the lymphocytic choriomeningitis virus infection model, we found that there are not distinct memory CD4(+) T cell populations with commitment to either Tfh- or Th1-cell lineages.",
+    "kind": "negation",
+    "status": "CONTRADICTED",
+    "cos_best": 0.9036117196083069
+   }
+  },
+  {
+   "qid": "183",
+   "query": "Bone marrow cells contribute to adult macrophage compartments.",
+   "answer": "Bone marrow stem cells give rise to a variety of hematopoietic lineages and repopulate the blood throughout adult life. [1] We also found that after bone marrow transplantation, host macrophages retained the capacity to expand when the development of donor macrophages was compromised. [2] Therefore, LepR(+) cells are the major source of bone and adipocytes in adult bone marrow. [3]",
+   "context_chunks": [
+    8661,
+    3621,
+    2964,
+    61,
+    3814
+   ],
+   "context_has_relevant": true,
+   "confidence": 0.5837754121391848,
+   "alpha": 0.0,
+   "verdicts": [
+    {
+     "text": "Bone marrow stem cells give rise to a variety of hematopoietic lineages and repopulate the blood throughout adult life.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "Bone marrow stem cells give rise to a variety of hematopoietic lineages and repopulate the blood throughout adult life.",
+     "p_support": 0.9959039257695177,
+     "p_contradict": 0.0003585941561487355,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.996,
+       0.0,
+       0.004
+      ],
+      "2": [
+       0.036,
+       0.004,
+       0.959
+      ],
+      "3": [
+       0.056,
+       0.011,
+       0.933
+      ],
+      "4": [
+       0.043,
+       0.003,
+       0.954
+      ],
+      "5": [
+       0.202,
+       0.041,
+       0.758
+      ]
+     }
+    },
+    {
+     "text": "After bone marrow transplantation, host macrophages retained the capacity to expand when the development of donor macrophages was compromised.",
+     "cited": [
+      2
+     ],
+     "status": "VERIFIED",
+     "support_ref": 2,
+     "support_sentence": "We also found that after bone marrow transplantation, host macrophages retained the capacity to expand when the development of donor macrophages was compromised.",
+     "p_support": 0.9921463310095608,
+     "p_contradict": 0.00039254448488355734,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.009,
+       0.006,
+       0.985
+      ],
+      "2": [
+       0.992,
+       0.0,
+       0.007
+      ],
+      "3": [
+       0.008,
+       0.002,
+       0.989
+      ],
+      "4": [
+       0.145,
+       0.03,
+       0.825
+      ],
+      "5": [
+       0.05,
+       0.002,
+       0.948
+      ]
+     }
+    },
+    {
+     "text": "Therefore, LepR(+) cells are the major source of bone and adipocytes in adult bone marrow.",
+     "cited": [
+      3
+     ],
+     "status": "VERIFIED",
+     "support_ref": 3,
+     "support_sentence": "Therefore, LepR(+) cells are the major source of bone and adipocytes in adult bone marrow.",
+     "p_support": 0.99526758942736,
+     "p_contradict": 0.001353060711712911,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.011,
+       0.032,
+       0.957
+      ],
+      "2": [
+       0.02,
+       0.003,
+       0.977
+      ],
+      "3": [
+       0.995,
+       0.001,
+       0.003
+      ],
+      "4": [
+       0.005,
+       0.006,
+       0.989
+      ],
+      "5": [
+       0.012,
+       0.004,
+       0.985
+      ]
+     }
+    }
+   ],
+   "timings": {
+    "sparse_ms": 2.582073211669922,
+    "dense_ms": 39.823055267333984,
+    "router_ms": 212.1124267578125,
+    "ltr_ms": 934.7481727600098,
+    "retrieval_total_ms": 1191.6029453277588,
+    "generate_s": 0.6380221843719482,
+    "verify_s": 17.277525186538696
+   },
+   "injected": {
+    "orig": "Therefore, LepR(+) cells are the major source of bone and adipocytes in adult bone marrow.",
+    "corrupted": "Therefore, Molgen(+) cells are the major source of bone and adipocytes in adult bone marrow.",
+    "kind": "entity",
+    "status": "CONTRADICTED",
+    "cos_best": 0.6658793687820435
+   }
+  },
+  {
+   "qid": "213",
+   "query": "CRP is not predictive of postoperative mortality following Coronary Artery Bypass Graft (CABG) surgery.",
+   "answer": "CONCLUSION We demonstrate that preoperative CRP levels as low as 3 mg/l are associated with increased long-term mortality and extended hospital length of stay in relatively lower-acuity patients undergoing primary, nonemergent coronary artery bypass graft-only surgery. [2] DATA SOURCES Swedish Coronary Angiography and Angioplasty Registry (9935 patients with stable angina awaiting coronary artery bypass grafting and then followed up for cardiovascular events after the procedure for 3.8 years), and meta-analyses of prognostic effects (relative risks) of biomarkers. [3] BACKGROUND Few studies have compared long-term status of bypass grafts between patients with and without diabetes, and uncertainty exists as to whether diabetes independently predicts poor clinical outcome after CABG. [4]",
+   "context_chunks": [
+    5359,
+    6876,
+    3844,
+    248,
+    744
+   ],
+   "context_has_relevant": true,
+   "confidence": 0.978128463773836,
+   "alpha": 0.06460213666087916,
+   "verdicts": [
+    {
+     "text": "Preoperative CRP levels as low as 3 mg/l are associated with increased long-term mortality and extended hospital length of stay in relatively lower-acuity patients undergoing primary, nonemergent coronary artery bypass graft-only surgery.",
+     "cited": [
+      2
+     ],
+     "status": "VERIFIED",
+     "support_ref": 2,
+     "support_sentence": "CONCLUSION We demonstrate that preoperative CRP levels as low as 3 mg/l are associated with increased long-term mortality and extended hospital length of stay in relatively lower-acuity patients undergoing primary, nonemergent coronary artery bypass graft-only surgery.",
+     "p_support": 0.9915250876174682,
+     "p_contradict": 0.001348642488393147,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.005,
+       0.044,
+       0.951
+      ],
+      "2": [
+       0.992,
+       0.001,
+       0.007
+      ],
+      "3": [
+       0.015,
+       0.002,
+       0.983
+      ],
+      "4": [
+       0.007,
+       0.005,
+       0.988
+      ],
+      "5": [
+       0.04,
+       0.022,
+       0.938
+      ]
+     }
+    },
+    {
+     "text": "DATA SOURCES Swedish Coronary Angiography and Angioplasty Registry (9935 patients with stable angina awaiting coronary artery bypass grafting and then followed up for cardiovascular events after the procedure for 3.8 years), and meta-analyses of prognostic effects (relative risks) of biomarkers.",
+     "cited": [
+      3
+     ],
+     "status": "VERIFIED",
+     "support_ref": 3,
+     "support_sentence": "DATA SOURCES Swedish Coronary Angiography and Angioplasty Registry (9935 patients with stable angina awaiting coronary artery bypass grafting and then followed up for cardiovascular events after the procedure for 3.8 years), and meta-analyses of prognostic effects (relative risks) of biomarkers.",
+     "p_support": 0.9195998614060452,
+     "p_contradict": 0.02340793516278376,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.003,
+       0.001,
+       0.996
+      ],
+      "2": [
+       0.008,
+       0.002,
+       0.989
+      ],
+      "3": [
+       0.92,
+       0.023,
+       0.057
+      ],
+      "4": [
+       0.058,
+       0.05,
+       0.892
+      ],
+      "5": [
+       0.004,
+       0.002,
+       0.994
+      ]
+     }
+    },
+    {
+     "text": "BACKGROUND Few studies have compared long-term status of bypass grafts between patients with and without diabetes, and uncertainty exists as to whether diabetes independently predicts poor clinical outcome after CABG.",
+     "cited": [
+      4
+     ],
+     "status": "VERIFIED",
+     "support_ref": 4,
+     "support_sentence": "BACKGROUND Few studies have compared long-term status of bypass grafts between patients with and without diabetes, and uncertainty exists as to whether diabetes independently predicts poor clinical outcome after CABG.",
+     "p_support": 0.9663587247271397,
+     "p_contradict": 0.021126334056218696,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.014,
+       0.01,
+       0.976
+      ],
+      "2": [
+       0.003,
+       0.002,
+       0.995
+      ],
+      "3": [
+       0.007,
+       0.004,
+       0.989
+      ],
+      "4": [
+       0.966,
+       0.021,
+       0.013
+      ],
+      "5": [
+       0.007,
+       0.002,
+       0.991
+      ]
+     }
+    }
+   ],
+   "timings": {
+    "sparse_ms": 4.987239837646484,
+    "dense_ms": 51.14459991455078,
+    "router_ms": 209.75613594055176,
+    "ltr_ms": 942.0750141143799,
+    "retrieval_total_ms": 1213.0796909332275,
+    "generate_s": 0.9181084632873535,
+    "verify_s": 16.42303991317749
+   },
+   "injected": {
+    "orig": "Preoperative CRP levels as low as 3 mg/l are associated with increased long-term mortality and extended hospital length of stay in relatively lower-acuity patients undergoing primary, nonemergent coronary artery bypass graft-only surgery.",
+    "corrupted": "Preoperative CRP levels as low as 8 mg/l are associated with increased long-term mortality and extended hospital length of stay in relatively lower-acuity patients undergoing primary, nonemergent coronary artery bypass graft-only surgery.",
+    "kind": "number",
+    "status": "CONTRADICTED",
+    "cos_best": 0.8622885942459106
+   }
+  },
+  {
+   "qid": "237",
+   "query": "Cells lacking clpC have a defect in sporulation efficiency in Bacillus subtilis.",
+   "answer": "Clp-controlled proteolysis in Bacillus subtilis seems to play a substantial role, particularly under stress conditions. [1] Several mutants had novel sporulation phenotypes. [2] The Bacillus subtilis clpC operon is regulated by two stress induction pathways relying on either sigmaB or a class III stress induction mechanism acting at a sigmaA-like promoter. [4]",
+   "context_chunks": [
+    3630,
+    1602,
+    4717,
+    7656,
+    6825
+   ],
+   "context_has_relevant": true,
+   "confidence": 0.9207441931454359,
+   "alpha": 0.36447831808171927,
+   "verdicts": [
+    {
+     "text": "Clp-controlled proteolysis in Bacillus subtilis seems to play a substantial role, particularly under stress conditions.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "Clp-controlled proteolysis in Bacillus subtilis seems to play a substantial role, particularly under stress conditions.",
+     "p_support": 0.9942560499306113,
+     "p_contradict": 0.0004753833052867294,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.994,
+       0.0,
+       0.005
+      ],
+      "2": [
+       0.017,
+       0.006,
+       0.978
+      ],
+      "3": [
+       0.055,
+       0.009,
+       0.935
+      ],
+      "4": [
+       0.058,
+       0.02,
+       0.923
+      ],
+      "5": [
+       0.003,
+       0.01,
+       0.988
+      ]
+     }
+    },
+    {
+     "text": "Several mutants had novel sporulation phenotypes.",
+     "cited": [
+      2
+     ],
+     "status": "VERIFIED",
+     "support_ref": 2,
+     "support_sentence": "Several mutants had novel sporulation phenotypes.",
+     "p_support": 0.9853572103124546,
+     "p_contradict": 0.0006981121224376306,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.003,
+       0.001,
+       0.996
+      ],
+      "2": [
+       0.985,
+       0.001,
+       0.014
+      ],
+      "3": [
+       0.003,
+       0.001,
+       0.996
+      ],
+      "4": [
+       0.002,
+       0.0,
+       0.998
+      ],
+      "5": [
+       0.013,
+       0.001,
+       0.986
+      ]
+     }
+    },
+    {
+     "text": "The Bacillus subtilis clpC operon is regulated by two stress induction pathways relying on either sigmaB or a class III stress induction mechanism acting at a sigmaA-like promoter.",
+     "cited": [
+      4
+     ],
+     "status": "VERIFIED",
+     "support_ref": 4,
+     "support_sentence": "The Bacillus subtilis clpC operon is regulated by two stress induction pathways relying on either sigmaB or a class III stress induction mechanism acting at a sigmaA-like promoter.",
+     "p_support": 0.987136672674824,
+     "p_contradict": 0.0026626475526312634,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.031,
+       0.058,
+       0.911
+      ],
+      "2": [
+       0.163,
+       0.049,
+       0.787
+      ],
+      "3": [
+       0.035,
+       0.021,
+       0.944
+      ],
+      "4": [
+       0.987,
+       0.003,
+       0.01
+      ],
+      "5": [
+       0.005,
+       0.003,
+       0.992
+      ]
+     }
+    }
+   ],
+   "timings": {
+    "sparse_ms": 4.386186599731445,
+    "dense_ms": 61.00940704345703,
+    "router_ms": 202.84676551818848,
+    "ltr_ms": 935.3675842285156,
+    "retrieval_total_ms": 1206.0277462005615,
+    "generate_s": 0.5709102153778076,
+    "verify_s": 14.392389297485352
+   },
+   "injected": {
+    "orig": "The Bacillus subtilis clpC operon is regulated by two stress induction pathways relying on either sigmaB or a class III stress induction mechanism acting at a sigmaA-like promoter.",
+    "corrupted": "The Bacillus subtilis clpC operon is not regulated by two stress induction pathways relying on either sigmaB or a class III stress induction mechanism acting at a sigmaA-like promoter.",
+    "kind": "negation",
+    "status": "CONTRADICTED",
+    "cos_best": 0.9000489711761475
+   }
+  },
+  {
+   "qid": "440",
+   "query": "Fz/PCP-dependent Pk localizes to the anterior membrane of notochord cells during zebrafish neuralation.",
+   "answer": "Studies in Drosophila and vertebrates have revealed a conserved PCP pathway, including Frizzled (Fz) receptors. [1] Here we use the cochlea as a model system to explore the involvement of known ligands of Fz, Wnt morphogens, in PCP regulation. [1] Here we show a novel role for PCP signalling during neurulation in zebrafish. [2]",
+   "context_chunks": [
+    4940,
+    1391,
+    1714,
+    1597,
+    2840
+   ],
+   "context_has_relevant": true,
+   "confidence": 0.8607039599796319,
+   "alpha": 0.4356714539510982,
+   "verdicts": [
+    {
+     "text": "Studies in Drosophila and vertebrates have revealed a conserved PCP pathway, including Frizzled (Fz) receptors.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "Studies in Drosophila and vertebrates have revealed a conserved PCP pathway, including Frizzled (Fz) receptors.",
+     "p_support": 0.9839963564248685,
+     "p_contradict": 0.0007904559159186073,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.984,
+       0.001,
+       0.015
+      ],
+      "2": [
+       0.003,
+       0.088,
+       0.909
+      ],
+      "3": [
+       0.002,
+       0.0,
+       0.998
+      ],
+      "4": [
+       0.001,
+       0.003,
+       0.995
+      ],
+      "5": [
+       0.007,
+       0.001,
+       0.992
+      ]
+     }
+    },
+    {
+     "text": "Here we use the cochlea as a model system to explore the involvement of known ligands of Fz, Wnt morphogens, in PCP regulation.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "Here we use the cochlea as a model system to explore the involvement of known ligands of Fz, Wnt morphogens, in PCP regulation.",
+     "p_support": 0.9951238821219498,
+     "p_contradict": 0.0011059774294007757,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.995,
+       0.001,
+       0.004
+      ],
+      "2": [
+       0.003,
+       0.438,
+       0.559
+      ],
+      "3": [
+       0.001,
+       0.242,
+       0.757
+      ],
+      "4": [
+       0.003,
+       0.181,
+       0.817
+      ],
+      "5": [
+       0.004,
+       0.088,
+       0.908
+      ]
+     }
+    },
+    {
+     "text": "Here we show a novel role for PCP signalling during neurulation in zebrafish.",
+     "cited": [
+      2
+     ],
+     "status": "VERIFIED",
+     "support_ref": 2,
+     "support_sentence": "Here we show a novel role for PCP signalling during neurulation in zebrafish.",
+     "p_support": 0.991582447456985,
+     "p_contradict": 0.0003641349684480981,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.003,
+       0.228,
+       0.769
+      ],
+      "2": [
+       0.992,
+       0.0,
+       0.008
+      ],
+      "3": [
+       0.224,
+       0.018,
+       0.758
+      ],
+      "4": [
+       0.034,
+       0.223,
+       0.742
+      ],
+      "5": [
+       0.029,
+       0.002,
+       0.968
+      ]
+     }
+    }
+   ],
+   "timings": {
+    "sparse_ms": 2.4290084838867188,
+    "dense_ms": 41.20039939880371,
+    "router_ms": 215.48771858215332,
+    "ltr_ms": 972.9807376861572,
+    "retrieval_total_ms": 1239.0334606170654,
+    "generate_s": 0.517268180847168,
+    "verify_s": 13.058000087738037
+   },
+   "injected": {
+    "orig": "Studies in Drosophila and vertebrates have revealed a conserved PCP pathway, including Frizzled (Fz) receptors.",
+    "corrupted": "Studies in Drosophila and vertebrates have not revealed a conserved PCP pathway, including Frizzled (Fz) receptors.",
+    "kind": "negation",
+    "status": "CONTRADICTED",
+    "cos_best": 0.8736276030540466
+   }
+  },
+  {
+   "qid": "528",
+   "query": "Human T-lymphotropic virus type-I-associated myelopathy / tropical spastic paraparesis (HAM/TSP) patients produce Immunoglobulin G (IgG) antibodies which cross-react with an immunodominant epitope in Tax.",
+   "answer": "As a model for molecular mimicry, we studied patients with human T-lymphotropic virus type 1 (HTLV-1)-associated myelopathy/tropical spastic paraparesis (HAM/TSP), a disease that can be indistinguishable from MS (refs. [1] HAM/TSP patients develop antibodies to neurons. [1] Two patients had a past history of tropical spastic paraparesis/HTLV I associated myelopathy (TSP/HAM). [2]",
+   "context_chunks": [
+    1734,
+    5904,
+    6213,
+    5809,
+    6054
+   ],
+   "context_has_relevant": true,
+   "confidence": 0.9963598001628847,
+   "alpha": 0.4775194503676221,
+   "verdicts": [
+    {
+     "text": "As a model for molecular mimicry, we studied patients with human T-lymphotropic virus type 1 (HTLV-1)-associated myelopathy/tropical spastic paraparesis (HAM/TSP), a disease that can be indistinguishable from MS (refs.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "As a model for molecular mimicry, we studied patients with human T-lymphotropic virus type 1 (HTLV-1)-associated myelopathy/tropical spastic paraparesis (HAM/TSP), a disease that can be indistinguishable from MS (refs.",
+     "p_support": 0.958430477160753,
+     "p_contradict": 0.014105752459867248,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.958,
+       0.014,
+       0.027
+      ],
+      "2": [
+       0.018,
+       0.008,
+       0.974
+      ],
+      "3": [
+       0.012,
+       0.005,
+       0.984
+      ],
+      "4": [
+       0.008,
+       0.002,
+       0.99
+      ],
+      "5": [
+       0.014,
+       0.002,
+       0.984
+      ]
+     }
+    },
+    {
+     "text": "HAM/TSP patients develop antibodies to neurons.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "HAM/TSP patients develop antibodies to neurons.",
+     "p_support": 0.9869166803317917,
+     "p_contradict": 0.0005271920511395399,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.987,
+       0.001,
+       0.013
+      ],
+      "2": [
+       0.013,
+       0.097,
+       0.89
+      ],
+      "3": [
+       0.005,
+       0.002,
+       0.993
+      ],
+      "4": [
+       0.06,
+       0.073,
+       0.867
+      ],
+      "5": [
+       0.003,
+       0.002,
+       0.995
+      ]
+     }
+    },
+    {
+     "text": "Two patients had a past history of tropical spastic paraparesis/HTLV I associated myelopathy (TSP/HAM).",
+     "cited": [
+      2
+     ],
+     "status": "VERIFIED",
+     "support_ref": 2,
+     "support_sentence": "Two patients had a past history of tropical spastic paraparesis/HTLV I associated myelopathy (TSP/HAM).",
+     "p_support": 0.7334285287574235,
+     "p_contradict": 0.010459630547183154,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.012,
+       0.004,
+       0.984
+      ],
+      "2": [
+       0.733,
+       0.01,
+       0.256
+      ],
+      "3": [
+       0.002,
+       0.001,
+       0.997
+      ],
+      "4": [
+       0.002,
+       0.0,
+       0.998
+      ],
+      "5": [
+       0.001,
+       0.0,
+       0.999
+      ]
+     }
+    }
+   ],
+   "timings": {
+    "sparse_ms": 4.060029983520508,
+    "dense_ms": 87.86153793334961,
+    "router_ms": 239.8550510406494,
+    "ltr_ms": 1079.3299674987793,
+    "retrieval_total_ms": 1414.2286777496338,
+    "generate_s": 1.5494840145111084,
+    "verify_s": 16.795011043548584
+   },
+   "injected": {
+    "orig": "HAM/TSP patients develop antibodies to neurons.",
+    "corrupted": "HAM/TSP patients develop recombination to neurons.",
+    "kind": "entity",
+    "status": "CONTRADICTED",
+    "cos_best": 0.7351454496383667
+   }
+  },
+  {
+   "qid": "560",
+   "query": "Immune responses result in the development of inflammatory Th17 cells and anti-inflammatory iTregs.",
+   "answer": "IL-23, which promotes Th17 cell development, as well as IL-17 and IL-22 produced by the Th17 cells plays essential roles in various inflammatory diseases, such as experimental autoimmune encephalomyelitis, rheumatoid arthritis, colitis, and Concanavalin A-induced hepatitis. [2] In this review, we summarize the characteristics of the functional role of Th17 cells, with particular focus on the Th17 cell-related cytokines such as IL-17, IL-22, and IL-23, in mouse models and human inflammatory diseases. [2] During TCR activation in a particular cytokine milieu, naive CD4 T cells may differentiate into one of several lineages of T helper (Th) cells, including Th1, Th2, Th17, and iTreg, as defined by their pattern of cytokine production and function. [5]",
+   "context_chunks": [
+    6592,
+    3234,
+    327,
+    5791,
+    3901
+   ],
+   "context_has_relevant": false,
+   "confidence": 0.24919788783579386,
+   "alpha": 0.4016166240555949,
+   "verdicts": [
+    {
+     "text": "IL-23, which promotes Th17 cell development, as well as IL-17 and IL-22 produced by the Th17 cells plays essential roles in various inflammatory diseases, such as experimental autoimmune encephalomyelitis, rheumatoid arthritis, colitis, and Concanavalin A-induced hepatitis.",
+     "cited": [
+      2
+     ],
+     "status": "VERIFIED",
+     "support_ref": 2,
+     "support_sentence": "IL-23, which promotes Th17 cell development, as well as IL-17 and IL-22 produced by the Th17 cells plays essential roles in various inflammatory diseases, such as experimental autoimmune encephalomyelitis, rheumatoid arthritis, colitis, and Concanavalin A-induced hepatitis.",
+     "p_support": 0.9593313958144559,
+     "p_contradict": 0.01127449205730175,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.011,
+       0.027,
+       0.963
+      ],
+      "2": [
+       0.959,
+       0.011,
+       0.029
+      ],
+      "3": [
+       0.087,
+       0.011,
+       0.902
+      ],
+      "4": [
+       0.004,
+       0.032,
+       0.964
+      ],
+      "5": [
+       0.008,
+       0.003,
+       0.989
+      ]
+     }
+    },
+    {
+     "text": "In this review, we summarize the characteristics of the functional role of Th17 cells, with particular focus on the Th17 cell-related cytokines such as IL-17, IL-22, and IL-23, in mouse models and human inflammatory diseases.",
+     "cited": [
+      2
+     ],
+     "status": "VERIFIED",
+     "support_ref": 2,
+     "support_sentence": "In this review, we summarize the characteristics of the functional role of Th17 cells, with particular focus on the Th17 cell-related cytokines such as IL-17, IL-22, and IL-23, in mouse models and human inflammatory diseases.",
+     "p_support": 0.9831698384408687,
+     "p_contradict": 0.0014386627813721836,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.01,
+       0.012,
+       0.977
+      ],
+      "2": [
+       0.983,
+       0.001,
+       0.015
+      ],
+      "3": [
+       0.162,
+       0.056,
+       0.782
+      ],
+      "4": [
+       0.007,
+       0.092,
+       0.901
+      ],
+      "5": [
+       0.02,
+       0.006,
+       0.974
+      ]
+     }
+    },
+    {
+     "text": "During TCR activation in a particular cytokine milieu, naive CD4 T cells may differentiate into one of several lineages of T helper (Th) cells, including Th1, Th2, Th17, and iTreg, as defined by their pattern of cytokine production and function.",
+     "cited": [
+      5
+     ],
+     "status": "VERIFIED",
+     "support_ref": 5,
+     "support_sentence": "During TCR activation in a particular cytokine milieu, naive CD4 T cells may differentiate into one of several lineages of T helper (Th) cells, including Th1, Th2, Th17, and iTreg, as defined by their pattern of cytokine production and function.",
+     "p_support": 0.9833763912318682,
+     "p_contradict": 0.0053943623624934,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.005,
+       0.001,
+       0.994
+      ],
+      "2": [
+       0.072,
+       0.005,
+       0.923
+      ],
+      "3": [
+       0.003,
+       0.001,
+       0.996
+      ],
+      "4": [
+       0.006,
+       0.002,
+       0.992
+      ],
+      "5": [
+       0.983,
+       0.005,
+       0.011
+      ]
+     }
+    }
+   ],
+   "timings": {
+    "sparse_ms": 4.6939849853515625,
+    "dense_ms": 53.81011962890625,
+    "router_ms": 263.500452041626,
+    "ltr_ms": 1103.2752990722656,
+    "retrieval_total_ms": 1428.0805587768555,
+    "generate_s": 0.6215517520904541,
+    "verify_s": 17.73615336418152
+   },
+   "injected": {
+    "orig": "IL-23, which promotes Th17 cell development, as well as IL-17 and IL-22 produced by the Th17 cells plays essential roles in various inflammatory diseases, such as experimental autoimmune encephalomyelitis, rheumatoid arthritis, colitis, and Concanavalin A-induced hepatitis.",
+    "corrupted": "IL-23, which promotes Th17 cell development, as well as IL-17 and IL-22 produced by the Th17 cells plays essential roles in various inflammatory diseases, such as experimental autoimmune encephalomyelitis, rheumatoid arthritis, colitis, and Prereplication A-induced hepatitis.",
+    "kind": "entity",
+    "status": "VERIFIED",
+    "cos_best": 0.8388502597808838
+   }
+  },
+  {
+   "qid": "569",
+   "query": "In adult tissue, most T cells are memory T cells.",
+   "answer": "Whereas adult tissues contain a predominance of memory T cells, in pediatric blood and tissues the main subset consists of naive recent thymic emigrants, with effector memory T cells (T(EM)) found only in the lungs and small intestine. [1] Although the trafficking of memory T cells around the body is integral to their capacity to provide immune protection, studies have shown that specialization of some memory T cells into unique tissue-resident subsets gives the host enhanced regional immunity. [2] The persistence of the resting memory T cells that eventually develop is regulated by cytokines. [4]",
+   "context_chunks": [
+    5941,
+    957,
+    7934,
+    5461,
+    1302
+   ],
+   "context_has_relevant": true,
+   "confidence": 0.8328188501184586,
+   "alpha": 0.18338931505126138,
+   "verdicts": [
+    {
+     "text": "Whereas adult tissues contain a predominance of memory T cells, in pediatric blood and tissues the main subset consists of naive recent thymic emigrants, with effector memory T cells (T(EM)) found only in the lungs and small intestine.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "Whereas adult tissues contain a predominance of memory T cells, in pediatric blood and tissues the main subset consists of naive recent thymic emigrants, with effector memory T cells (T(EM)) found only in the lungs and small intestine.",
+     "p_support": 0.9819611506036824,
+     "p_contradict": 0.004261670884554513,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.982,
+       0.004,
+       0.014
+      ],
+      "2": [
+       0.017,
+       0.012,
+       0.971
+      ],
+      "3": [
+       0.004,
+       0.007,
+       0.989
+      ],
+      "4": [
+       0.018,
+       0.007,
+       0.975
+      ],
+      "5": [
+       0.078,
+       0.003,
+       0.919
+      ]
+     }
+    },
+    {
+     "text": "Although the trafficking of memory T cells around the body is integral to their capacity to provide immune protection, studies have shown that specialization of some memory T cells into unique tissue-resident subsets gives the host enhanced regional immunity.",
+     "cited": [
+      2
+     ],
+     "status": "VERIFIED",
+     "support_ref": 2,
+     "support_sentence": "Although the trafficking of memory T cells around the body is integral to their capacity to provide immune protection, studies have shown that specialization of some memory T cells into unique tissue-resident subsets gives the host enhanced regional immunity.",
+     "p_support": 0.9856594035336528,
+     "p_contradict": 0.0020681418469586004,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.008,
+       0.003,
+       0.988
+      ],
+      "2": [
+       0.986,
+       0.002,
+       0.012
+      ],
+      "3": [
+       0.091,
+       0.056,
+       0.853
+      ],
+      "4": [
+       0.041,
+       0.035,
+       0.924
+      ],
+      "5": [
+       0.018,
+       0.006,
+       0.976
+      ]
+     }
+    },
+    {
+     "text": "The persistence of the resting memory T cells that eventually develop is regulated by cytokines.",
+     "cited": [
+      4
+     ],
+     "status": "VERIFIED",
+     "support_ref": 4,
+     "support_sentence": "The persistence of the resting memory T cells that eventually develop is regulated by cytokines.",
+     "p_support": 0.9937552167354916,
+     "p_contradict": 0.0007405139480051622,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.005,
+       0.004,
+       0.992
+      ],
+      "2": [
+       0.002,
+       0.001,
+       0.997
+      ],
+      "3": [
+       0.004,
+       0.003,
+       0.993
+      ],
+      "4": [
+       0.994,
+       0.001,
+       0.006
+      ],
+      "5": [
+       0.009,
+       0.003,
+       0.988
+      ]
+     }
+    }
+   ],
+   "timings": {
+    "sparse_ms": 1.9612312316894531,
+    "dense_ms": 51.989078521728516,
+    "router_ms": 222.89729118347168,
+    "ltr_ms": 1107.774257659912,
+    "retrieval_total_ms": 1387.1634006500244,
+    "generate_s": 0.4177439212799072,
+    "verify_s": 14.815496444702148
+   },
+   "injected": {
+    "orig": "Although the trafficking of memory T cells around the body is integral to their capacity to provide immune protection, studies have shown that specialization of some memory T cells into unique tissue-resident subsets gives the host enhanced regional immunity.",
+    "corrupted": "Although the experienced of memory T cells around the body is integral to their capacity to provide immune protection, studies have shown that specialization of some memory T cells into unique tissue-resident subsets gives the host enhanced regional immunity.",
+    "kind": "entity",
+    "status": "VERIFIED",
+    "cos_best": 0.8947935700416565
+   }
+  },
+  {
+   "qid": "619",
+   "query": "Increased vessel density along with a reduction in fibrosis decreases the efficacy of chemotherapy treatments.",
+   "answer": "Risk of FN depends on chemotherapy- and patient-level factors. [2] In conclusion, the density of TAMs is increased in advanced thyroid cancers. [3] The presence of a high density of TAMs in PDTC correlates with invasion and decreased cancer-related survival. [3]",
+   "context_chunks": [
+    359,
+    1996,
+    6504,
+    9008,
+    4341
+   ],
+   "context_has_relevant": false,
+   "confidence": 0.529499468782189,
+   "alpha": 0.0,
+   "verdicts": [
+    {
+     "text": "Risk of FN depends on chemotherapy- and patient-level factors.",
+     "cited": [
+      2
+     ],
+     "status": "VERIFIED",
+     "support_ref": 2,
+     "support_sentence": "Risk of FN depends on chemotherapy- and patient-level factors.",
+     "p_support": 0.989762649591115,
+     "p_contradict": 0.0004141997737131207,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.076,
+       0.011,
+       0.913
+      ],
+      "2": [
+       0.99,
+       0.0,
+       0.01
+      ],
+      "3": [
+       0.031,
+       0.003,
+       0.966
+      ],
+      "4": [
+       0.052,
+       0.268,
+       0.68
+      ],
+      "5": [
+       0.362,
+       0.069,
+       0.569
+      ]
+     }
+    },
+    {
+     "text": "In conclusion, the density of TAMs is increased in advanced thyroid cancers.",
+     "cited": [
+      3
+     ],
+     "status": "VERIFIED",
+     "support_ref": 3,
+     "support_sentence": "In conclusion, the density of TAMs is increased in advanced thyroid cancers.",
+     "p_support": 0.9952040659910334,
+     "p_contradict": 0.0003812293843027634,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.112,
+       0.037,
+       0.852
+      ],
+      "2": [
+       0.003,
+       0.001,
+       0.997
+      ],
+      "3": [
+       0.995,
+       0.0,
+       0.004
+      ],
+      "4": [
+       0.006,
+       0.012,
+       0.981
+      ],
+      "5": [
+       0.012,
+       0.002,
+       0.986
+      ]
+     }
+    },
+    {
+     "text": "The presence of a high density of TAMs in PDTC correlates with invasion and decreased cancer-related survival.",
+     "cited": [
+      3
+     ],
+     "status": "VERIFIED",
+     "support_ref": 3,
+     "support_sentence": "The presence of a high density of TAMs in PDTC correlates with invasion and decreased cancer-related survival.",
+     "p_support": 0.9965884939544397,
+     "p_contradict": 0.00037559051310721847,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.098,
+       0.019,
+       0.883
+      ],
+      "2": [
+       0.01,
+       0.001,
+       0.988
+      ],
+      "3": [
+       0.997,
+       0.0,
+       0.003
+      ],
+      "4": [
+       0.018,
+       0.023,
+       0.959
+      ],
+      "5": [
+       0.004,
+       0.008,
+       0.988
+      ]
+     }
+    }
+   ],
+   "timings": {
+    "sparse_ms": 4.037618637084961,
+    "dense_ms": 64.67676162719727,
+    "router_ms": 249.56536293029785,
+    "ltr_ms": 1085.5779647827148,
+    "retrieval_total_ms": 1406.6543579101562,
+    "generate_s": 0.7885022163391113,
+    "verify_s": 19.380903720855713
+   },
+   "injected": {
+    "orig": "In conclusion, the density of TAMs is increased in advanced thyroid cancers.",
+    "corrupted": "In conclusion, the density of TAMs is decreased in advanced thyroid cancers.",
+    "kind": "direction",
+    "status": "CONTRADICTED",
+    "cos_best": 0.8252348899841309
+   }
+  },
+  {
+   "qid": "636",
+   "query": "Inositol lipid 3-phosphatase PTEN converts Ptdlns(3,4)P 2 into phosphatidylinositol 4-phosphate.",
+   "answer": "Here we show that PTEN also functions as a PI(3,4)P2 3-phosphatase, both in vitro and in vivo. [1] PTEN is a major PI(3,4)P2 phosphatase in Mcf10a cytosol, and loss of PTEN and INPP4B, a known PI(3,4)P2 4-phosphatase, leads to synergistic accumulation of PI(3,4)P2, which correlated with increased invadopodia in epidermal growth factor (EGF)-stimulated cells. [1] This enzyme hydrolyzes only lipid substrates, phosphatidylinositol 3,4,5-trisphosphate and phosphatidylinositol 4,5-bisphosphate. [2]",
+   "context_chunks": [
+    6155,
+    8449,
+    398,
+    5120,
+    4276
+   ],
+   "context_has_relevant": true,
+   "confidence": 0.9806174354008431,
+   "alpha": 0.0,
+   "verdicts": [
+    {
+     "text": "PTEN also functions as a PI(3,4)P2 3-phosphatase, both in vitro and in vivo.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "Here we show that PTEN also functions as a PI(3,4)P2 3-phosphatase, both in vitro and in vivo.",
+     "p_support": 0.9854936653593739,
+     "p_contradict": 0.0018430352814681294,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.985,
+       0.002,
+       0.013
+      ],
+      "2": [
+       0.005,
+       0.006,
+       0.989
+      ],
+      "3": [
+       0.009,
+       0.004,
+       0.986
+      ],
+      "4": [
+       0.119,
+       0.007,
+       0.874
+      ],
+      "5": [
+       0.009,
+       0.004,
+       0.986
+      ]
+     }
+    },
+    {
+     "text": "PTEN is a major PI(3,4)P2 phosphatase in Mcf10a cytosol, and loss of PTEN and INPP4B, a known PI(3,4)P2 4-phosphatase, leads to synergistic accumulation of PI(3,4)P2, which correlated with increased invadopodia in epidermal growth factor (EGF)-stimulated cells.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "PTEN is a major PI(3,4)P2 phosphatase in Mcf10a cytosol, and loss of PTEN and INPP4B, a known PI(3,4)P2 4-phosphatase, leads to synergistic accumulation of PI(3,4)P2, which correlated with increased invadopodia in epidermal growth factor (EGF)-stimulated cells.",
+     "p_support": 0.9856026072098863,
+     "p_contradict": 0.0031995533204546432,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.986,
+       0.003,
+       0.011
+      ],
+      "2": [
+       0.003,
+       0.002,
+       0.995
+      ],
+      "3": [
+       0.01,
+       0.002,
+       0.988
+      ],
+      "4": [
+       0.09,
+       0.011,
+       0.899
+      ],
+      "5": [
+       0.015,
+       0.009,
+       0.976
+      ]
+     }
+    },
+    {
+     "text": "This enzyme hydrolyzes only lipid substrates, phosphatidylinositol 3,4,5-trisphosphate and phosphatidylinositol 4,5-bisphosphate.",
+     "cited": [
+      2
+     ],
+     "status": "VERIFIED",
+     "support_ref": 2,
+     "support_sentence": "This enzyme hydrolyzes only lipid substrates, phosphatidylinositol 3,4,5-trisphosphate and phosphatidylinositol 4,5-bisphosphate.",
+     "p_support": 0.9923436573505542,
+     "p_contradict": 0.00047160672343725277,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.007,
+       0.016,
+       0.977
+      ],
+      "2": [
+       0.992,
+       0.0,
+       0.007
+      ],
+      "3": [
+       0.014,
+       0.001,
+       0.985
+      ],
+      "4": [
+       0.004,
+       0.002,
+       0.994
+      ],
+      "5": [
+       0.012,
+       0.002,
+       0.986
+      ]
+     }
+    }
+   ],
+   "timings": {
+    "sparse_ms": 3.415346145629883,
+    "dense_ms": 74.1279125213623,
+    "router_ms": 268.3591842651367,
+    "ltr_ms": 1130.4664611816406,
+    "retrieval_total_ms": 1479.2935848236084,
+    "generate_s": 0.8912606239318848,
+    "verify_s": 20.566696166992188
+   },
+   "injected": {
+    "orig": "This enzyme hydrolyzes only lipid substrates, phosphatidylinositol 3,4,5-trisphosphate and phosphatidylinositol 4,5-bisphosphate.",
+    "corrupted": "This enzyme hydrolyzes only lipid substrates, phosphatidylinositol 3,4,5-trisphosphate and phosphatidylinositol 12,5-bisphosphate.",
+    "kind": "number",
+    "status": "CONTRADICTED",
+    "cos_best": 0.8848432302474976
+   }
+  },
+  {
+   "qid": "659",
+   "query": "Ivermectin is used to treat lymphatic filariasis.",
+   "answer": "These achievements include the substantive reductions in the prevalence and incidence of the so-called neglected diseases such as lymphatic filariasis, onchocerciasis, guinea worm, leprosy, and trachoma (Box 1) [2]. [1] TAM can express LYVE-1, one of the established markers of lymphatic endothelium. [2] Leuyte trafficking into and within lymph vessels is mediated by an interply with lymphatic endothelial cells (LECs). [4]",
+   "context_chunks": [
+    372,
+    3682,
+    4705,
+    8706,
+    2256
+   ],
+   "context_has_relevant": true,
+   "confidence": 0.8108491043068639,
+   "alpha": 0.8398209546666822,
+   "verdicts": [
+    {
+     "text": "These achievements include the substantive reductions in the prevalence and incidence of the so-called neglected diseases such as lymphatic filariasis, onchocerciasis, guinea worm, leprosy, and trachoma (Box 1).",
+     "cited": [
+      1,
+      2
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "These achievements include the substantive reductions in the prevalence and incidence of the so-called neglected diseases such as lymphatic filariasis, onchocerciasis, guinea worm, leprosy, and trachoma (Box 1) [2].",
+     "p_support": 0.9524154378820014,
+     "p_contradict": 0.01979975801446112,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.952,
+       0.02,
+       0.028
+      ],
+      "2": [
+       0.0,
+       0.0,
+       0.999
+      ],
+      "3": [
+       0.0,
+       0.0,
+       0.999
+      ],
+      "4": [
+       0.0,
+       0.0,
+       0.999
+      ],
+      "5": [
+       0.0,
+       0.0,
+       1.0
+      ]
+     }
+    },
+    {
+     "text": "TAM can express LYVE-1, one of the established markers of lymphatic endothelium.",
+     "cited": [
+      2
+     ],
+     "status": "VERIFIED",
+     "support_ref": 2,
+     "support_sentence": "TAM can express LYVE-1, one of the established markers of lymphatic endothelium.",
+     "p_support": 0.9811521740233681,
+     "p_contradict": 0.000752045525076419,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.006,
+       0.0,
+       0.994
+      ],
+      "2": [
+       0.981,
+       0.001,
+       0.018
+      ],
+      "3": [
+       0.272,
+       0.003,
+       0.725
+      ],
+      "4": [
+       0.006,
+       0.0,
+       0.993
+      ],
+      "5": [
+       0.028,
+       0.003,
+       0.969
+      ]
+     }
+    },
+    {
+     "text": "Leuyte trafficking into and within lymph vessels is mediated by an interply with lymphatic endothelial cells (LECs).",
+     "cited": [
+      4
+     ],
+     "status": "VERIFIED",
+     "support_ref": 4,
+     "support_sentence": "Leuyte trafficking into and within lymph vessels is mediated by an interply with lymphatic endothelial cells (LECs).",
+     "p_support": 0.996104186222346,
+     "p_contradict": 0.0009965020161326018,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.004,
+       0.0,
+       0.995
+      ],
+      "2": [
+       0.02,
+       0.012,
+       0.968
+      ],
+      "3": [
+       0.06,
+       0.023,
+       0.917
+      ],
+      "4": [
+       0.996,
+       0.001,
+       0.003
+      ],
+      "5": [
+       0.051,
+       0.007,
+       0.942
+      ]
+     }
+    }
+   ],
+   "timings": {
+    "sparse_ms": 1.4314651489257812,
+    "dense_ms": 58.07352066040039,
+    "router_ms": 262.24637031555176,
+    "ltr_ms": 1186.267375946045,
+    "retrieval_total_ms": 1510.2388858795166,
+    "generate_s": 0.7434642314910889,
+    "verify_s": 17.449745655059814
+   },
+   "injected": {
+    "orig": "These achievements include the substantive reductions in the prevalence and incidence of the so-called neglected diseases such as lymphatic filariasis, onchocerciasis, guinea worm, leprosy, and trachoma (Box 1).",
+    "corrupted": "These achievements include the substantive reductions in the prevalence and incidence of the so-called neglected diseases such as lymphatic filariasis, onchocerciasis, guinea worm, leprosy, and trachoma (Box 4).",
+    "kind": "number",
+    "status": "CONTRADICTED",
+    "cos_best": 0.86745285987854
+   }
+  },
+  {
+   "qid": "811",
+   "query": "Mutant mice lacking SVCT2 have greatly increased ascorbic acid levels in both brain and adrenals.",
+   "answer": "We have created mice deficient in the mouse ortholog (solute carrier family 23 member 1 or Slc23a1) of a rat ascorbic-acid transporter, Svct2 (ref. [1] Cultured embryonic fibroblasts from homozygous Slc23a1\u2212/\u2212 mice had less than 5% of normal ascorbic-acid uptake. [1] Ascorbic-acid levels were undetectable or markedly reduced in the blood and tissues of Slc23a1\u2212/\u2212 mice. [1]",
+   "context_chunks": [
+    5126,
+    3659,
+    6038,
+    8368,
+    2623
+   ],
+   "context_has_relevant": true,
+   "confidence": 0.9804931691105371,
+   "alpha": 0.13308188726737563,
+   "verdicts": [
+    {
+     "text": "We have created mice deficient in the mouse ortholog (solute carrier family 23 member 1 or Slc23a1) of a rat ascorbic-acid transporter, Svct2 (ref.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "We have created mice deficient in the mouse ortholog (solute carrier family 23 member 1 or Slc23a1) of a rat ascorbic-acid transporter, Svct2 (ref.",
+     "p_support": 0.9848217336121619,
+     "p_contradict": 0.00425967681968458,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.985,
+       0.004,
+       0.011
+      ],
+      "2": [
+       0.033,
+       0.017,
+       0.95
+      ],
+      "3": [
+       0.001,
+       0.001,
+       0.999
+      ],
+      "4": [
+       0.002,
+       0.016,
+       0.982
+      ],
+      "5": [
+       0.008,
+       0.016,
+       0.975
+      ]
+     }
+    },
+    {
+     "text": "Cultured embryonic fibroblasts from homozygous Slc23a1\u2212/\u2212 mice had less than 5% of normal ascorbic-acid uptake.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "Cultured embryonic fibroblasts from homozygous Slc23a1\u2212/\u2212 mice had less than 5% of normal ascorbic-acid uptake.",
+     "p_support": 0.9966679681194142,
+     "p_contradict": 0.0006002616692290267,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.997,
+       0.001,
+       0.003
+      ],
+      "2": [
+       0.193,
+       0.002,
+       0.805
+      ],
+      "3": [
+       0.013,
+       0.002,
+       0.985
+      ],
+      "4": [
+       0.009,
+       0.004,
+       0.987
+      ],
+      "5": [
+       0.005,
+       0.003,
+       0.992
+      ]
+     }
+    },
+    {
+     "text": "Ascorbic-acid levels were undetectable or markedly reduced in the blood and tissues of Slc23a1\u2212/\u2212 mice.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "Ascorbic-acid levels were undetectable or markedly reduced in the blood and tissues of Slc23a1\u2212/\u2212 mice.",
+     "p_support": 0.9956054670631335,
+     "p_contradict": 0.0015669703285183174,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.996,
+       0.002,
+       0.003
+      ],
+      "2": [
+       0.051,
+       0.017,
+       0.932
+      ],
+      "3": [
+       0.013,
+       0.047,
+       0.94
+      ],
+      "4": [
+       0.0,
+       0.003,
+       0.996
+      ],
+      "5": [
+       0.003,
+       0.009,
+       0.987
+      ]
+     }
+    }
+   ],
+   "timings": {
+    "sparse_ms": 7.458686828613281,
+    "dense_ms": 81.16793632507324,
+    "router_ms": 334.822416305542,
+    "ltr_ms": 1267.9352760314941,
+    "retrieval_total_ms": 1694.8204040527344,
+    "generate_s": 1.4714279174804688,
+    "verify_s": 20.602895975112915
+   },
+   "injected": {
+    "orig": "Cultured embryonic fibroblasts from homozygous Slc23a1\u2212/\u2212 mice had less than 5% of normal ascorbic-acid uptake.",
+    "corrupted": "Cultured embryonic fibroblasts from homozygous Monocytosis\u2212/\u2212 mice had less than 5% of normal ascorbic-acid uptake.",
+    "kind": "entity",
+    "status": "CONTRADICTED",
+    "cos_best": 0.7506094574928284
+   }
+  },
+  {
+   "qid": "870",
+   "query": "Obesity decreases life quality.",
+   "answer": "Extreme obesity is associated with severe psychiatric and somatic comorbidity and impairment of psychosocial functioning. [2] The aim of this study was to evaluate the relationship between the course of weight and psychological variables including depression, anxiety, health-related quality of life (HRQOL), and self-esteem up to 4 years after obesity surgery. [2] The global epidemic of obesity results from a combination of genetic susceptibility, increased availability of high-energy foods and decreased requirement for physical activity in modern society. [4]",
+   "context_chunks": [
+    9012,
+    8484,
+    1829,
+    1277,
+    2568
+   ],
+   "context_has_relevant": true,
+   "confidence": 0.40562236007083224,
+   "alpha": 0.0,
+   "verdicts": [
+    {
+     "text": "Extreme obesity is associated with severe psychiatric and somatic comorbidity and impairment of psychosocial functioning.",
+     "cited": [
+      2
+     ],
+     "status": "VERIFIED",
+     "support_ref": 2,
+     "support_sentence": "Extreme obesity is associated with severe psychiatric and somatic comorbidity and impairment of psychosocial functioning.",
+     "p_support": 0.9857052748538926,
+     "p_contradict": 0.0004578428956664063,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.072,
+       0.003,
+       0.925
+      ],
+      "2": [
+       0.986,
+       0.0,
+       0.014
+      ],
+      "3": [
+       0.003,
+       0.001,
+       0.996
+      ],
+      "4": [
+       0.136,
+       0.009,
+       0.855
+      ],
+      "5": [
+       0.016,
+       0.004,
+       0.981
+      ]
+     }
+    },
+    {
+     "text": "The aim of this study was to evaluate the relationship between the course of weight and psychological variables including depression, anxiety, health-related quality of life (HRQOL), and self-esteem up to 4 years after obesity surgery.",
+     "cited": [
+      2
+     ],
+     "status": "VERIFIED",
+     "support_ref": 2,
+     "support_sentence": "The aim of this study was to evaluate the relationship between the course of weight and psychological variables including depression, anxiety, health-related quality of life (HRQOL), and self-esteem up to 4 years after obesity surgery.",
+     "p_support": 0.9886797694409726,
+     "p_contradict": 0.0014356841707947286,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.002,
+       0.0,
+       0.998
+      ],
+      "2": [
+       0.989,
+       0.001,
+       0.01
+      ],
+      "3": [
+       0.007,
+       0.05,
+       0.943
+      ],
+      "4": [
+       0.003,
+       0.0,
+       0.996
+      ],
+      "5": [
+       0.014,
+       0.002,
+       0.984
+      ]
+     }
+    },
+    {
+     "text": "The global epidemic of obesity results from a combination of genetic susceptibility, increased availability of high-energy foods and decreased requirement for physical activity in modern society.",
+     "cited": [
+      4
+     ],
+     "status": "VERIFIED",
+     "support_ref": 4,
+     "support_sentence": "The global epidemic of obesity results from a combination of genetic susceptibility, increased availability of high-energy foods and decreased requirement for physical activity in modern society.",
+     "p_support": 0.9698522927304841,
+     "p_contradict": 0.0012965137274692895,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.021,
+       0.002,
+       0.977
+      ],
+      "2": [
+       0.004,
+       0.0,
+       0.996
+      ],
+      "3": [
+       0.002,
+       0.001,
+       0.997
+      ],
+      "4": [
+       0.97,
+       0.001,
+       0.029
+      ],
+      "5": [
+       0.031,
+       0.007,
+       0.961
+      ]
+     }
+    }
+   ],
+   "timings": {
+    "sparse_ms": 0.7417201995849609,
+    "dense_ms": 49.306631088256836,
+    "router_ms": 237.30874061584473,
+    "ltr_ms": 1192.253828048706,
+    "retrieval_total_ms": 1481.8990230560303,
+    "generate_s": 1.5809705257415771,
+    "verify_s": 18.995057582855225
+   },
+   "injected": {
+    "orig": "Extreme obesity is associated with severe psychiatric and somatic comorbidity and impairment of psychosocial functioning.",
+    "corrupted": "Extreme obesity is not associated with severe psychiatric and somatic comorbidity and impairment of psychosocial functioning.",
+    "kind": "negation",
+    "status": "CONTRADICTED",
+    "cos_best": 0.9339083433151245
+   }
+  },
+  {
+   "qid": "907",
+   "query": "PGE 2 promotes intestinal tumor growth by altering the expression of tumor suppressing and DNA repair genes.",
+   "answer": "Here we show that prostaglandin E(2) (PGE(2)) silences certain tumor-suppressor and DNA-repair genes through DNA methylation to promote tumor growth. [1] These findings uncover a previously unrecognized role for PGE(2) in the promotion of tumor progression. [1] Furthermore, PKC\u03b6 and caspase-3 activities are correlated with PHGDH levels in human intestinal tumors. [3]",
+   "context_chunks": [
+    2155,
+    5416,
+    4789,
+    6526,
+    2425
+   ],
+   "context_has_relevant": true,
+   "confidence": 0.9933638473437828,
+   "alpha": 0.0,
+   "verdicts": [
+    {
+     "text": "Prostaglandin E(2) (PGE(2)) silences certain tumor-suppressor and DNA-repair genes through DNA methylation to promote tumor growth.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "Here we show that prostaglandin E(2) (PGE(2)) silences certain tumor-suppressor and DNA-repair genes through DNA methylation to promote tumor growth.",
+     "p_support": 0.9892352784906109,
+     "p_contradict": 0.0010964101683618383,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.989,
+       0.001,
+       0.01
+      ],
+      "2": [
+       0.069,
+       0.011,
+       0.919
+      ],
+      "3": [
+       0.001,
+       0.02,
+       0.979
+      ],
+      "4": [
+       0.005,
+       0.002,
+       0.994
+      ],
+      "5": [
+       0.022,
+       0.123,
+       0.855
+      ]
+     }
+    },
+    {
+     "text": "These findings uncover a previously unrecognized role for PGE(2) in the promotion of tumor progression.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "These findings uncover a previously unrecognized role for PGE(2) in the promotion of tumor progression.",
+     "p_support": 0.9940508748424081,
+     "p_contradict": 0.00042471329613876283,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.994,
+       0.0,
+       0.006
+      ],
+      "2": [
+       0.439,
+       0.054,
+       0.507
+      ],
+      "3": [
+       0.003,
+       0.066,
+       0.931
+      ],
+      "4": [
+       0.013,
+       0.006,
+       0.981
+      ],
+      "5": [
+       0.466,
+       0.001,
+       0.533
+      ]
+     }
+    },
+    {
+     "text": "Furthermore, PKC\u03b6 and caspase-3 activities are correlated with PHGDH levels in human intestinal tumors.",
+     "cited": [
+      3
+     ],
+     "status": "VERIFIED",
+     "support_ref": 3,
+     "support_sentence": "Furthermore, PKC\u03b6 and caspase-3 activities are correlated with PHGDH levels in human intestinal tumors.",
+     "p_support": 0.9908564661575299,
+     "p_contradict": 0.004211623841273405,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.009,
+       0.003,
+       0.988
+      ],
+      "2": [
+       0.005,
+       0.004,
+       0.991
+      ],
+      "3": [
+       0.991,
+       0.004,
+       0.005
+      ],
+      "4": [
+       0.003,
+       0.001,
+       0.997
+      ],
+      "5": [
+       0.02,
+       0.001,
+       0.98
+      ]
+     }
+    }
+   ],
+   "timings": {
+    "sparse_ms": 2.6390552520751953,
+    "dense_ms": 62.97898292541504,
+    "router_ms": 250.72264671325684,
+    "ltr_ms": 1162.2540950775146,
+    "retrieval_total_ms": 1481.2767505645752,
+    "generate_s": 0.7153012752532959,
+    "verify_s": 15.176660776138306
+   },
+   "injected": {
+    "orig": "Prostaglandin E(2) (PGE(2)) silences certain tumor-suppressor and DNA-repair genes through DNA methylation to promote tumor growth.",
+    "corrupted": "Beating E(2) (PGE(2)) silences certain tumor-suppressor and DNA-repair genes through DNA methylation to promote tumor growth.",
+    "kind": "entity",
+    "status": "CONTRADICTED",
+    "cos_best": 0.7892704010009766
+   }
+  },
+  {
+   "qid": "94",
+   "query": "Albendazole is used to treat lymphatic filariasis.",
+   "answer": "These achievements include the substantive reductions in the prevalence and incidence of the so-called neglected diseases such as lymphatic filariasis, onchocerciasis, guinea worm, leprosy, and trachoma (Box 1) [2]. [1] TAM can express LYVE-1, one of the established markers of lymphatic endothelium. [3] Leuyte trafficking into and within lymph vessels is mediated by an interply with lymphatic endothelial cells (LECs). [4]",
+   "context_chunks": [
+    372,
+    4705,
+    3682,
+    8706,
+    5298
+   ],
+   "context_has_relevant": true,
+   "confidence": 0.8753043793717735,
+   "alpha": 0.7143107487447313,
+   "verdicts": [
+    {
+     "text": "These achievements include the substantive reductions in the prevalence and incidence of the so-called neglected diseases such as lymphatic filariasis, onchocerciasis, guinea worm, leprosy, and trachoma (Box 1).",
+     "cited": [
+      1,
+      2
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "These achievements include the substantive reductions in the prevalence and incidence of the so-called neglected diseases such as lymphatic filariasis, onchocerciasis, guinea worm, leprosy, and trachoma (Box 1) [2].",
+     "p_support": 0.9524154378820014,
+     "p_contradict": 0.01979975801446112,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.952,
+       0.02,
+       0.028
+      ],
+      "2": [
+       0.0,
+       0.0,
+       0.999
+      ],
+      "3": [
+       0.0,
+       0.0,
+       0.999
+      ],
+      "4": [
+       0.0,
+       0.0,
+       0.999
+      ],
+      "5": [
+       0.0,
+       0.0,
+       0.999
+      ]
+     }
+    },
+    {
+     "text": "TAM can express LYVE-1, one of the established markers of lymphatic endothelium.",
+     "cited": [
+      3
+     ],
+     "status": "VERIFIED",
+     "support_ref": 3,
+     "support_sentence": "TAM can express LYVE-1, one of the established markers of lymphatic endothelium.",
+     "p_support": 0.9811521740233681,
+     "p_contradict": 0.000752045525076419,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.006,
+       0.0,
+       0.994
+      ],
+      "2": [
+       0.272,
+       0.003,
+       0.725
+      ],
+      "3": [
+       0.981,
+       0.001,
+       0.018
+      ],
+      "4": [
+       0.006,
+       0.0,
+       0.993
+      ],
+      "5": [
+       0.005,
+       0.001,
+       0.994
+      ]
+     }
+    },
+    {
+     "text": "Leuyte trafficking into and within lymph vessels is mediated by an interply with lymphatic endothelial cells (LECs).",
+     "cited": [
+      4
+     ],
+     "status": "VERIFIED",
+     "support_ref": 4,
+     "support_sentence": "Leuyte trafficking into and within lymph vessels is mediated by an interply with lymphatic endothelial cells (LECs).",
+     "p_support": 0.996104186222346,
+     "p_contradict": 0.0009965020161326018,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.004,
+       0.0,
+       0.995
+      ],
+      "2": [
+       0.06,
+       0.023,
+       0.917
+      ],
+      "3": [
+       0.02,
+       0.012,
+       0.968
+      ],
+      "4": [
+       0.996,
+       0.001,
+       0.003
+      ],
+      "5": [
+       0.004,
+       0.001,
+       0.995
+      ]
+     }
+    }
+   ],
+   "timings": {
+    "sparse_ms": 1.172780990600586,
+    "dense_ms": 55.38010597229004,
+    "router_ms": 237.1358871459961,
+    "ltr_ms": 1080.3420543670654,
+    "retrieval_total_ms": 1376.349687576294,
+    "generate_s": 0.6946680545806885,
+    "verify_s": 3.956799030303955
+   },
+   "injected": {
+    "orig": "TAM can express LYVE-1, one of the established markers of lymphatic endothelium.",
+    "corrupted": "TAM cannot express LYVE-1, one of the established markers of lymphatic endothelium.",
+    "kind": "negation",
+    "status": "CONTRADICTED",
+    "cos_best": 0.8228821158409119
+   }
+  },
+  {
+   "qid": "975",
+   "query": "Primary pro-inflammatory cytokines induce secondary pro- and anti-inflammatory mediators.",
+   "answer": "In animal experiments, the mediators evoke anti-inflammatory and novel pro-resolving mechanisms, and enhance microbial clearance. [1] The expression of pro-inflammatory cytokine genes (IL-1-\u03b1, IL-1-\u03b2 and TNF-\u03b1) that also mediate cytokine-induced beta cell dysfunction correlated with the lytic potential of a virus. [2] Here we show overt pro-inflammatory effects of HDL-mediated passive cholesterol depletion and lipid raft disruption in murine and human primary macrophages in vitro. [3]",
+   "context_chunks": [
+    1427,
+    1921,
+    7193,
+    1400,
+    1162
+   ],
+   "context_has_relevant": false,
+   "confidence": 0.774773909797084,
+   "alpha": 0.38230921174437527,
+   "verdicts": [
+    {
+     "text": "In animal experiments, the mediators evoke anti-inflammatory and novel pro-resolving mechanisms, and enhance microbial clearance.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "In animal experiments, the mediators evoke anti-inflammatory and novel pro-resolving mechanisms, and enhance microbial clearance.",
+     "p_support": 0.9829994290987684,
+     "p_contradict": 0.001490991996528597,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.983,
+       0.001,
+       0.016
+      ],
+      "2": [
+       0.002,
+       0.001,
+       0.997
+      ],
+      "3": [
+       0.001,
+       0.019,
+       0.98
+      ],
+      "4": [
+       0.001,
+       0.001,
+       0.999
+      ],
+      "5": [
+       0.014,
+       0.004,
+       0.982
+      ]
+     }
+    },
+    {
+     "text": "The expression of pro-inflammatory cytokine genes (IL-1-\u03b1, IL-1-\u03b2 and TNF-\u03b1) that also mediate cytokine-induced beta cell dysfunction correlated with the lytic potential of a virus.",
+     "cited": [
+      2
+     ],
+     "status": "VERIFIED",
+     "support_ref": 2,
+     "support_sentence": "The expression of pro-inflammatory cytokine genes (IL-1-\u03b1, IL-1-\u03b2 and TNF-\u03b1) that also mediate cytokine-induced beta cell dysfunction correlated with the lytic potential of a virus.",
+     "p_support": 0.9849176414990279,
+     "p_contradict": 0.0016324446820210957,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.003,
+       0.001,
+       0.996
+      ],
+      "2": [
+       0.985,
+       0.002,
+       0.013
+      ],
+      "3": [
+       0.001,
+       0.025,
+       0.974
+      ],
+      "4": [
+       0.008,
+       0.002,
+       0.991
+      ],
+      "5": [
+       0.002,
+       0.001,
+       0.997
+      ]
+     }
+    },
+    {
+     "text": "Here we show overt pro-inflammatory effects of HDL-mediated passive cholesterol depletion and lipid raft disruption in murine and human primary macrophages in vitro.",
+     "cited": [
+      3
+     ],
+     "status": "CONTRADICTED",
+     "support_ref": 3,
+     "support_sentence": "Here we show overt pro-inflammatory effects of HDL-mediated passive cholesterol depletion and lipid raft disruption in murine and human primary macrophages in vitro.",
+     "p_support": 0.05426098974025132,
+     "p_contradict": 0.9281732892115732,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.002,
+       0.139,
+       0.858
+      ],
+      "2": [
+       0.002,
+       0.07,
+       0.928
+      ],
+      "3": [
+       0.054,
+       0.928,
+       0.018
+      ],
+      "4": [
+       0.001,
+       0.0,
+       0.999
+      ],
+      "5": [
+       0.003,
+       0.462,
+       0.535
+      ]
+     }
+    }
+   ],
+   "timings": {
+    "sparse_ms": 2.2466182708740234,
+    "dense_ms": 56.56790733337402,
+    "router_ms": 246.66237831115723,
+    "ltr_ms": 1094.1593647003174,
+    "retrieval_total_ms": 1403.8968086242676,
+    "generate_s": 0.7457380294799805,
+    "verify_s": 19.45241069793701
+   },
+   "injected": {
+    "orig": "The expression of pro-inflammatory cytokine genes (IL-1-\u03b1, IL-1-\u03b2 and TNF-\u03b1) that also mediate cytokine-induced beta cell dysfunction correlated with the lytic potential of a virus.",
+    "corrupted": "The expression of pro-inflammatory cytokine genes (IL-1-\u03b1, IL-1-\u03b2 and TNF-\u03b1) that also mediate cytokine-did not induce beta cell dysfunction correlated with the lytic potential of a virus.",
+    "kind": "negation",
+    "status": "CONTRADICTED",
+    "cos_best": 0.9195111393928528
+   }
+  },
+  {
+   "qid": "99",
+   "query": "Alizarin forms hydrogen bonds with residues involved in PGAM1 substrate binding.",
+   "answer": "We also report the crystal structure of H11-phosphorylated PGAM1 and find that phospho-H11 activates PGAM1 at least in part by promoting substrate 3-phosphoglycerate binding. [1] E3 enzymes are responsible for substrate specificity and catalyze the formation of an isopeptide bond between a lysine residue of the substrate (or the N terminus of the substrate) and ubiquitin. [2] Following their release we propose that the transmembrane regions assemble into \u03b2-hairpins via top down zippering of backbone hydrogen bonds to form the membrane-inserted \u03b2-barrel. [5]",
+   "context_chunks": [
+    4970,
+    3484,
+    5570,
+    7256,
+    826
+   ],
+   "context_has_relevant": true,
+   "confidence": 0.6619663262988569,
+   "alpha": 0.8588071933220376,
+   "verdicts": [
+    {
+     "text": "Phospho-H11 activates PGAM1 at least in part by promoting substrate 3-phosphoglycerate binding.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "We also report the crystal structure of H11-phosphorylated PGAM1 and find that phospho-H11 activates PGAM1 at least in part by promoting substrate 3-phosphoglycerate binding.",
+     "p_support": 0.9929963995264374,
+     "p_contradict": 0.0006900292388763188,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.993,
+       0.001,
+       0.006
+      ],
+      "2": [
+       0.04,
+       0.002,
+       0.958
+      ],
+      "3": [
+       0.009,
+       0.003,
+       0.988
+      ],
+      "4": [
+       0.034,
+       0.005,
+       0.961
+      ],
+      "5": [
+       0.006,
+       0.0,
+       0.993
+      ]
+     }
+    },
+    {
+     "text": "E3 enzymes are responsible for substrate specificity and catalyze the formation of an isopeptide bond between a lysine residue of the substrate (or the N terminus of the substrate) and ubiquitin.",
+     "cited": [
+      2
+     ],
+     "status": "VERIFIED",
+     "support_ref": 2,
+     "support_sentence": "E3 enzymes are responsible for substrate specificity and catalyze the formation of an isopeptide bond between a lysine residue of the substrate (or the N terminus of the substrate) and ubiquitin.",
+     "p_support": 0.9917213549303611,
+     "p_contradict": 0.0008533703371173491,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.009,
+       0.003,
+       0.988
+      ],
+      "2": [
+       0.992,
+       0.001,
+       0.007
+      ],
+      "3": [
+       0.037,
+       0.01,
+       0.953
+      ],
+      "4": [
+       0.01,
+       0.002,
+       0.988
+      ],
+      "5": [
+       0.018,
+       0.004,
+       0.977
+      ]
+     }
+    },
+    {
+     "text": "Following their release we propose that the transmembrane regions assemble into \u03b2-hairpins via top down zippering of backbone hydrogen bonds to form the membrane-inserted \u03b2-barrel.",
+     "cited": [
+      5
+     ],
+     "status": "VERIFIED",
+     "support_ref": 5,
+     "support_sentence": "Following their release we propose that the transmembrane regions assemble into \u03b2-hairpins via top down zippering of backbone hydrogen bonds to form the membrane-inserted \u03b2-barrel.",
+     "p_support": 0.9651223360971164,
+     "p_contradict": 0.011465967860159576,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.001,
+       0.0,
+       0.999
+      ],
+      "2": [
+       0.001,
+       0.0,
+       0.999
+      ],
+      "3": [
+       0.098,
+       0.019,
+       0.883
+      ],
+      "4": [
+       0.018,
+       0.001,
+       0.981
+      ],
+      "5": [
+       0.965,
+       0.011,
+       0.023
+      ]
+     }
+    }
+   ],
+   "timings": {
+    "sparse_ms": 4.505395889282227,
+    "dense_ms": 60.95623970031738,
+    "router_ms": 250.42080879211426,
+    "ltr_ms": 1125.2055168151855,
+    "retrieval_total_ms": 1443.8509941101074,
+    "generate_s": 1.8291175365447998,
+    "verify_s": 20.28044629096985
+   },
+   "injected": {
+    "orig": "Following their release we propose that the transmembrane regions assemble into \u03b2-hairpins via top down zippering of backbone hydrogen bonds to form the membrane-inserted \u03b2-barrel.",
+    "corrupted": "Following their release we propose that the transmembrane regions assemble into \u03b2-hairpins via top down zippering of backbone hydrogen bonds to form the membrane-inserted \u03b2-mimetic.",
+    "kind": "entity",
+    "status": "CONTRADICTED",
+    "cos_best": 0.8632953763008118
+   }
+  },
+  {
+   "qid": "993",
+   "query": "Pyridostatin destabilizes the G - quadruplex in the telomeric region.",
+   "answer": "G-quadruplex (G4)-forming genomic sequences, including telomeres, represent natural replication fork barriers. [1] Treatment with the G4-stabilizing compound pyridostatin (PDS) increases telomere fragility in BRCA2-deficient cells, suggesting that G4 formation drives telomere instability. [1] Telomestatin is able to stabilize G-quadruplex structures that are formed from duplex human telomeric DNA as well as from single-stranded DNA. [2]",
+   "context_chunks": [
+    4554,
+    6764,
+    6640,
+    6609,
+    856
+   ],
+   "context_has_relevant": true,
+   "confidence": 0.9174864859362142,
+   "alpha": 0.1316499361213015,
+   "verdicts": [
+    {
+     "text": "G-quadruplex (G4)-forming genomic sequences, including telomeres, represent natural replication fork barriers.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "G-quadruplex (G4)-forming genomic sequences, including telomeres, represent natural replication fork barriers.",
+     "p_support": 0.9941793328290358,
+     "p_contradict": 0.0005210254228000072,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.994,
+       0.001,
+       0.005
+      ],
+      "2": [
+       0.112,
+       0.106,
+       0.782
+      ],
+      "3": [
+       0.008,
+       0.197,
+       0.795
+      ],
+      "4": [
+       0.791,
+       0.035,
+       0.174
+      ],
+      "5": [
+       0.39,
+       0.216,
+       0.394
+      ]
+     }
+    },
+    {
+     "text": "Treatment with the G4-stabilizing compound pyridostatin (PDS) increases telomere fragility in BRCA2-deficient cells, suggesting that G4 formation drives telomere instability.",
+     "cited": [
+      1
+     ],
+     "status": "VERIFIED",
+     "support_ref": 1,
+     "support_sentence": "Treatment with the G4-stabilizing compound pyridostatin (PDS) increases telomere fragility in BRCA2-deficient cells, suggesting that G4 formation drives telomere instability.",
+     "p_support": 0.9832152566793476,
+     "p_contradict": 0.002358008308077196,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.983,
+       0.002,
+       0.014
+      ],
+      "2": [
+       0.008,
+       0.21,
+       0.782
+      ],
+      "3": [
+       0.004,
+       0.002,
+       0.994
+      ],
+      "4": [
+       0.004,
+       0.052,
+       0.944
+      ],
+      "5": [
+       0.005,
+       0.08,
+       0.915
+      ]
+     }
+    },
+    {
+     "text": "Telomestatin is able to stabilize G-quadruplex structures that are formed from duplex human telomeric DNA as well as from single-stranded DNA.",
+     "cited": [
+      2
+     ],
+     "status": "VERIFIED",
+     "support_ref": 2,
+     "support_sentence": "Telomestatin is able to stabilize G-quadruplex structures that are formed from duplex human telomeric DNA as well as from single-stranded DNA.",
+     "p_support": 0.9963226516820693,
+     "p_contradict": 0.0005064515298918206,
+     "new_chunk": null,
+     "probs": {
+      "1": [
+       0.13,
+       0.048,
+       0.822
+      ],
+      "2": [
+       0.996,
+       0.001,
+       0.003
+      ],
+      "3": [
+       0.068,
+       0.025,
+       0.907
+      ],
+      "4": [
+       0.042,
+       0.008,
+       0.95
+      ],
+      "5": [
+       0.083,
+       0.025,
+       0.891
+      ]
+     }
+    }
+   ],
+   "timings": {
+    "sparse_ms": 1.8801689147949219,
+    "dense_ms": 56.68902397155762,
+    "router_ms": 264.41335678100586,
+    "ltr_ms": 1101.7696857452393,
+    "retrieval_total_ms": 1430.4251670837402,
+    "generate_s": 1.332050085067749,
+    "verify_s": 20.50070548057556
+   },
+   "injected": {
+    "orig": "Treatment with the G4-stabilizing compound pyridostatin (PDS) increases telomere fragility in BRCA2-deficient cells, suggesting that G4 formation drives telomere instability.",
+    "corrupted": "Treatment with the G4-stabilizing compound pyridostatin (PDS) decreases telomere fragility in BRCA2-deficient cells, suggesting that G4 formation drives telomere instability.",
+    "kind": "direction",
+    "status": "CONTRADICTED",
+    "cos_best": 0.8748798966407776
+   }
+  }
+ ],
+ "claims": [
+  {
+   "qid": "1110",
+   "status": "VERIFIED",
+   "judge_cited": 0.9900122880935669,
+   "judge_any": 0.9900122880935669,
+   "judge_final": 0.9900122880935669,
+   "n_cited": 1
+  },
+  {
+   "qid": "1110",
+   "status": "VERIFIED",
+   "judge_cited": 0.9917397499084473,
+   "judge_any": 0.9917397499084473,
+   "judge_final": 0.9917397499084473,
+   "n_cited": 1
+  },
+  {
+   "qid": "1110",
+   "status": "VERIFIED",
+   "judge_cited": 0.8617061972618103,
+   "judge_any": 0.8617061972618103,
+   "judge_final": 0.8617061972618103,
+   "n_cited": 1
+  },
+  {
+   "qid": "1137",
+   "status": "VERIFIED",
+   "judge_cited": 0.998755931854248,
+   "judge_any": 0.998755931854248,
+   "judge_final": 0.998755931854248,
+   "n_cited": 1
+  },
+  {
+   "qid": "1137",
+   "status": "VERIFIED",
+   "judge_cited": 0.9993513226509094,
+   "judge_any": 0.9993513226509094,
+   "judge_final": 0.9993513226509094,
+   "n_cited": 1
+  },
+  {
+   "qid": "1137",
+   "status": "VERIFIED",
+   "judge_cited": 0.9970826506614685,
+   "judge_any": 0.9970826506614685,
+   "judge_final": 0.9970826506614685,
+   "n_cited": 1
+  },
+  {
+   "qid": "1140",
+   "status": "VERIFIED",
+   "judge_cited": 0.996752917766571,
+   "judge_any": 0.996752917766571,
+   "judge_final": 0.996752917766571,
+   "n_cited": 1
+  },
+  {
+   "qid": "1140",
+   "status": "VERIFIED",
+   "judge_cited": 0.9988608360290527,
+   "judge_any": 0.9988608360290527,
+   "judge_final": 0.9988608360290527,
+   "n_cited": 1
+  },
+  {
+   "qid": "1140",
+   "status": "VERIFIED",
+   "judge_cited": 0.999524712562561,
+   "judge_any": 0.999524712562561,
+   "judge_final": 0.999524712562561,
+   "n_cited": 1
+  },
+  {
+   "qid": "1150",
+   "status": "VERIFIED",
+   "judge_cited": 0.9990167617797852,
+   "judge_any": 0.9990167617797852,
+   "judge_final": 0.9990167617797852,
+   "n_cited": 1
+  },
+  {
+   "qid": "1150",
+   "status": "VERIFIED",
+   "judge_cited": 0.9994984865188599,
+   "judge_any": 0.9994984865188599,
+   "judge_final": 0.9994984865188599,
+   "n_cited": 1
+  },
+  {
+   "qid": "1150",
+   "status": "VERIFIED",
+   "judge_cited": 0.997426450252533,
+   "judge_any": 0.997426450252533,
+   "judge_final": 0.997426450252533,
+   "n_cited": 1
+  },
+  {
+   "qid": "1163",
+   "status": "VERIFIED",
+   "judge_cited": 0.998572826385498,
+   "judge_any": 0.998572826385498,
+   "judge_final": 0.998572826385498,
+   "n_cited": 1
+  },
+  {
+   "qid": "1163",
+   "status": "VERIFIED",
+   "judge_cited": 0.9992614388465881,
+   "judge_any": 0.9992614388465881,
+   "judge_final": 0.9992614388465881,
+   "n_cited": 1
+  },
+  {
+   "qid": "1163",
+   "status": "VERIFIED",
+   "judge_cited": 0.9972729086875916,
+   "judge_any": 0.9972729086875916,
+   "judge_final": 0.9972729086875916,
+   "n_cited": 1
+  },
+  {
+   "qid": "1175",
+   "status": "VERIFIED",
+   "judge_cited": 0.9990449547767639,
+   "judge_any": 0.9990449547767639,
+   "judge_final": 0.9990449547767639,
+   "n_cited": 1
+  },
+  {
+   "qid": "1175",
+   "status": "VERIFIED",
+   "judge_cited": 0.9987218976020813,
+   "judge_any": 0.9987218976020813,
+   "judge_final": 0.9987218976020813,
+   "n_cited": 1
+  },
+  {
+   "qid": "1175",
+   "status": "VERIFIED",
+   "judge_cited": 0.9917349815368652,
+   "judge_any": 0.9917349815368652,
+   "judge_final": 0.9917349815368652,
+   "n_cited": 1
+  },
+  {
+   "qid": "1185",
+   "status": "VERIFIED",
+   "judge_cited": 0.9881587624549866,
+   "judge_any": 0.9881587624549866,
+   "judge_final": 0.9881587624549866,
+   "n_cited": 1
+  },
+  {
+   "qid": "1185",
+   "status": "VERIFIED",
+   "judge_cited": 0.994645357131958,
+   "judge_any": 0.994645357131958,
+   "judge_final": 0.994645357131958,
+   "n_cited": 1
+  },
+  {
+   "qid": "1185",
+   "status": "VERIFIED",
+   "judge_cited": 0.9987309575080872,
+   "judge_any": 0.9987309575080872,
+   "judge_final": 0.9987309575080872,
+   "n_cited": 1
+  },
+  {
+   "qid": "1191",
+   "status": "VERIFIED",
+   "judge_cited": 0.8413605690002441,
+   "judge_any": 0.8413605690002441,
+   "judge_final": 0.8413605690002441,
+   "n_cited": 1
+  },
+  {
+   "qid": "1191",
+   "status": "VERIFIED",
+   "judge_cited": 0.9993358254432678,
+   "judge_any": 0.9993358254432678,
+   "judge_final": 0.9993358254432678,
+   "n_cited": 1
+  },
+  {
+   "qid": "1191",
+   "status": "VERIFIED",
+   "judge_cited": 0.9951590895652771,
+   "judge_any": 0.9951590895652771,
+   "judge_final": 0.9951590895652771,
+   "n_cited": 1
+  },
+  {
+   "qid": "1204",
+   "status": "VERIFIED",
+   "judge_cited": 0.9950380921363831,
+   "judge_any": 0.9950380921363831,
+   "judge_final": 0.9950380921363831,
+   "n_cited": 1
+  },
+  {
+   "qid": "1204",
+   "status": "VERIFIED",
+   "judge_cited": 0.9976444840431213,
+   "judge_any": 0.9976444840431213,
+   "judge_final": 0.9976444840431213,
+   "n_cited": 1
+  },
+  {
+   "qid": "1204",
+   "status": "VERIFIED",
+   "judge_cited": 0.999129593372345,
+   "judge_any": 0.999129593372345,
+   "judge_final": 0.999129593372345,
+   "n_cited": 1
+  },
+  {
+   "qid": "1213",
+   "status": "VERIFIED",
+   "judge_cited": 0.961654543876648,
+   "judge_any": 0.961654543876648,
+   "judge_final": 0.961654543876648,
+   "n_cited": 1
+  },
+  {
+   "qid": "1213",
+   "status": "VERIFIED",
+   "judge_cited": 0.9975887537002563,
+   "judge_any": 0.9975887537002563,
+   "judge_final": 0.9975887537002563,
+   "n_cited": 1
+  },
+  {
+   "qid": "1213",
+   "status": "VERIFIED",
+   "judge_cited": 0.9960599541664124,
+   "judge_any": 0.9966465830802917,
+   "judge_final": 0.9960599541664124,
+   "n_cited": 1
+  },
+  {
+   "qid": "1221",
+   "status": "REPAIRED",
+   "judge_cited": 0.0,
+   "judge_any": 0.9404488205909729,
+   "judge_final": 0.9404488205909729,
+   "n_cited": 0
+  },
+  {
+   "qid": "1221",
+   "status": "VERIFIED",
+   "judge_cited": 0.9855319857597351,
+   "judge_any": 0.9855319857597351,
+   "judge_final": 0.9855319857597351,
+   "n_cited": 1
+  },
+  {
+   "qid": "1221",
+   "status": "VERIFIED",
+   "judge_cited": 0.9475749135017395,
+   "judge_any": 0.9475749135017395,
+   "judge_final": 0.9475749135017395,
+   "n_cited": 1
+  },
+  {
+   "qid": "1221",
+   "status": "VERIFIED",
+   "judge_cited": 0.9995656609535217,
+   "judge_any": 0.9995656609535217,
+   "judge_final": 0.9995656609535217,
+   "n_cited": 1
+  },
+  {
+   "qid": "1274",
+   "status": "VERIFIED",
+   "judge_cited": 0.34605368971824646,
+   "judge_any": 0.9994789958000183,
+   "judge_final": 0.34605368971824646,
+   "n_cited": 1
+  },
+  {
+   "qid": "1274",
+   "status": "VERIFIED",
+   "judge_cited": 0.9980120658874512,
+   "judge_any": 0.9980120658874512,
+   "judge_final": 0.9980120658874512,
+   "n_cited": 1
+  },
+  {
+   "qid": "1274",
+   "status": "VERIFIED",
+   "judge_cited": 0.9991629123687744,
+   "judge_any": 0.9995989203453064,
+   "judge_final": 0.9991629123687744,
+   "n_cited": 1
+  },
+  {
+   "qid": "1316",
+   "status": "VERIFIED",
+   "judge_cited": 0.9926873445510864,
+   "judge_any": 0.9926873445510864,
+   "judge_final": 0.9926873445510864,
+   "n_cited": 1
+  },
+  {
+   "qid": "1316",
+   "status": "VERIFIED",
+   "judge_cited": 0.9912926554679871,
+   "judge_any": 0.9912926554679871,
+   "judge_final": 0.9912926554679871,
+   "n_cited": 1
+  },
+  {
+   "qid": "1316",
+   "status": "VERIFIED",
+   "judge_cited": 0.9930257797241211,
+   "judge_any": 0.9930257797241211,
+   "judge_final": 0.9930257797241211,
+   "n_cited": 1
+  },
+  {
+   "qid": "183",
+   "status": "VERIFIED",
+   "judge_cited": 0.9984847903251648,
+   "judge_any": 0.9984847903251648,
+   "judge_final": 0.9984847903251648,
+   "n_cited": 1
+  },
+  {
+   "qid": "183",
+   "status": "VERIFIED",
+   "judge_cited": 0.99946528673172,
+   "judge_any": 0.99946528673172,
+   "judge_final": 0.99946528673172,
+   "n_cited": 1
+  },
+  {
+   "qid": "183",
+   "status": "VERIFIED",
+   "judge_cited": 0.9987812638282776,
+   "judge_any": 0.9987812638282776,
+   "judge_final": 0.9987812638282776,
+   "n_cited": 1
+  },
+  {
+   "qid": "213",
+   "status": "VERIFIED",
+   "judge_cited": 0.9981131553649902,
+   "judge_any": 0.9981131553649902,
+   "judge_final": 0.9981131553649902,
+   "n_cited": 1
+  },
+  {
+   "qid": "213",
+   "status": "VERIFIED",
+   "judge_cited": 0.24477063119411469,
+   "judge_any": 0.24477063119411469,
+   "judge_final": 0.24477063119411469,
+   "n_cited": 1
+  },
+  {
+   "qid": "213",
+   "status": "VERIFIED",
+   "judge_cited": 0.9729390144348145,
+   "judge_any": 0.9729390144348145,
+   "judge_final": 0.9729390144348145,
+   "n_cited": 1
+  },
+  {
+   "qid": "237",
+   "status": "VERIFIED",
+   "judge_cited": 0.9982333183288574,
+   "judge_any": 0.9982333183288574,
+   "judge_final": 0.9982333183288574,
+   "n_cited": 1
+  },
+  {
+   "qid": "237",
+   "status": "VERIFIED",
+   "judge_cited": 0.9971498847007751,
+   "judge_any": 0.9971498847007751,
+   "judge_final": 0.9971498847007751,
+   "n_cited": 1
+  },
+  {
+   "qid": "237",
+   "status": "VERIFIED",
+   "judge_cited": 0.9980891346931458,
+   "judge_any": 0.9980891346931458,
+   "judge_final": 0.9980891346931458,
+   "n_cited": 1
+  },
+  {
+   "qid": "440",
+   "status": "VERIFIED",
+   "judge_cited": 0.9966549873352051,
+   "judge_any": 0.9966549873352051,
+   "judge_final": 0.9966549873352051,
+   "n_cited": 1
+  },
+  {
+   "qid": "440",
+   "status": "VERIFIED",
+   "judge_cited": 0.9980720281600952,
+   "judge_any": 0.9980720281600952,
+   "judge_final": 0.9980720281600952,
+   "n_cited": 1
+  },
+  {
+   "qid": "440",
+   "status": "VERIFIED",
+   "judge_cited": 0.9972589015960693,
+   "judge_any": 0.9972589015960693,
+   "judge_final": 0.9972589015960693,
+   "n_cited": 1
+  },
+  {
+   "qid": "528",
+   "status": "VERIFIED",
+   "judge_cited": 0.9926324486732483,
+   "judge_any": 0.9926324486732483,
+   "judge_final": 0.9926324486732483,
+   "n_cited": 1
+  },
+  {
+   "qid": "528",
+   "status": "VERIFIED",
+   "judge_cited": 0.999404788017273,
+   "judge_any": 0.999404788017273,
+   "judge_final": 0.999404788017273,
+   "n_cited": 1
+  },
+  {
+   "qid": "528",
+   "status": "VERIFIED",
+   "judge_cited": 0.9954055547714233,
+   "judge_any": 0.9954055547714233,
+   "judge_final": 0.9954055547714233,
+   "n_cited": 1
+  },
+  {
+   "qid": "560",
+   "status": "VERIFIED",
+   "judge_cited": 0.9972476363182068,
+   "judge_any": 0.9972476363182068,
+   "judge_final": 0.9972476363182068,
+   "n_cited": 1
+  },
+  {
+   "qid": "560",
+   "status": "VERIFIED",
+   "judge_cited": 0.9965988993644714,
+   "judge_any": 0.997337281703949,
+   "judge_final": 0.9965988993644714,
+   "n_cited": 1
+  },
+  {
+   "qid": "560",
+   "status": "VERIFIED",
+   "judge_cited": 0.9711937308311462,
+   "judge_any": 0.9711937308311462,
+   "judge_final": 0.9711937308311462,
+   "n_cited": 1
+  },
+  {
+   "qid": "569",
+   "status": "VERIFIED",
+   "judge_cited": 0.9890714883804321,
+   "judge_any": 0.9890714883804321,
+   "judge_final": 0.9890714883804321,
+   "n_cited": 1
+  },
+  {
+   "qid": "569",
+   "status": "VERIFIED",
+   "judge_cited": 0.9925044775009155,
+   "judge_any": 0.9925044775009155,
+   "judge_final": 0.9925044775009155,
+   "n_cited": 1
+  },
+  {
+   "qid": "569",
+   "status": "VERIFIED",
+   "judge_cited": 0.9978621602058411,
+   "judge_any": 0.9978621602058411,
+   "judge_final": 0.9978621602058411,
+   "n_cited": 1
+  },
+  {
+   "qid": "619",
+   "status": "VERIFIED",
+   "judge_cited": 0.9994267225265503,
+   "judge_any": 0.9994267225265503,
+   "judge_final": 0.9994267225265503,
+   "n_cited": 1
+  },
+  {
+   "qid": "619",
+   "status": "VERIFIED",
+   "judge_cited": 0.9990509152412415,
+   "judge_any": 0.9990509152412415,
+   "judge_final": 0.9990509152412415,
+   "n_cited": 1
+  },
+  {
+   "qid": "619",
+   "status": "VERIFIED",
+   "judge_cited": 0.9996017813682556,
+   "judge_any": 0.9996017813682556,
+   "judge_final": 0.9996017813682556,
+   "n_cited": 1
+  },
+  {
+   "qid": "636",
+   "status": "VERIFIED",
+   "judge_cited": 0.9983365535736084,
+   "judge_any": 0.9983365535736084,
+   "judge_final": 0.9983365535736084,
+   "n_cited": 1
+  },
+  {
+   "qid": "636",
+   "status": "VERIFIED",
+   "judge_cited": 0.9331759810447693,
+   "judge_any": 0.9331759810447693,
+   "judge_final": 0.9331759810447693,
+   "n_cited": 1
+  },
+  {
+   "qid": "636",
+   "status": "VERIFIED",
+   "judge_cited": 0.9989500641822815,
+   "judge_any": 0.9989500641822815,
+   "judge_final": 0.9989500641822815,
+   "n_cited": 1
+  },
+  {
+   "qid": "659",
+   "status": "VERIFIED",
+   "judge_cited": 0.9887836575508118,
+   "judge_any": 0.9887836575508118,
+   "judge_final": 0.9887836575508118,
+   "n_cited": 2
+  },
+  {
+   "qid": "659",
+   "status": "VERIFIED",
+   "judge_cited": 0.9438232779502869,
+   "judge_any": 0.9438232779502869,
+   "judge_final": 0.9438232779502869,
+   "n_cited": 1
+  },
+  {
+   "qid": "659",
+   "status": "VERIFIED",
+   "judge_cited": 0.9987718462944031,
+   "judge_any": 0.9987718462944031,
+   "judge_final": 0.9987718462944031,
+   "n_cited": 1
+  },
+  {
+   "qid": "811",
+   "status": "VERIFIED",
+   "judge_cited": 0.6658521890640259,
+   "judge_any": 0.6658521890640259,
+   "judge_final": 0.6658521890640259,
+   "n_cited": 1
+  },
+  {
+   "qid": "811",
+   "status": "VERIFIED",
+   "judge_cited": 0.9981957077980042,
+   "judge_any": 0.9981957077980042,
+   "judge_final": 0.9981957077980042,
+   "n_cited": 1
+  },
+  {
+   "qid": "811",
+   "status": "VERIFIED",
+   "judge_cited": 0.9985393285751343,
+   "judge_any": 0.9985393285751343,
+   "judge_final": 0.9985393285751343,
+   "n_cited": 1
+  },
+  {
+   "qid": "870",
+   "status": "VERIFIED",
+   "judge_cited": 0.9930102229118347,
+   "judge_any": 0.9930102229118347,
+   "judge_final": 0.9930102229118347,
+   "n_cited": 1
+  },
+  {
+   "qid": "870",
+   "status": "VERIFIED",
+   "judge_cited": 0.998214840888977,
+   "judge_any": 0.998214840888977,
+   "judge_final": 0.998214840888977,
+   "n_cited": 1
+  },
+  {
+   "qid": "870",
+   "status": "VERIFIED",
+   "judge_cited": 0.9872130751609802,
+   "judge_any": 0.9872130751609802,
+   "judge_final": 0.9872130751609802,
+   "n_cited": 1
+  },
+  {
+   "qid": "907",
+   "status": "VERIFIED",
+   "judge_cited": 0.9995903372764587,
+   "judge_any": 0.9995903372764587,
+   "judge_final": 0.9995903372764587,
+   "n_cited": 1
+  },
+  {
+   "qid": "907",
+   "status": "VERIFIED",
+   "judge_cited": 0.9994105100631714,
+   "judge_any": 0.9994105100631714,
+   "judge_final": 0.9994105100631714,
+   "n_cited": 1
+  },
+  {
+   "qid": "907",
+   "status": "VERIFIED",
+   "judge_cited": 0.9988827109336853,
+   "judge_any": 0.9988827109336853,
+   "judge_final": 0.9988827109336853,
+   "n_cited": 1
+  },
+  {
+   "qid": "94",
+   "status": "VERIFIED",
+   "judge_cited": 0.9887836575508118,
+   "judge_any": 0.9887836575508118,
+   "judge_final": 0.9887836575508118,
+   "n_cited": 2
+  },
+  {
+   "qid": "94",
+   "status": "VERIFIED",
+   "judge_cited": 0.9438232779502869,
+   "judge_any": 0.9438232779502869,
+   "judge_final": 0.9438232779502869,
+   "n_cited": 1
+  },
+  {
+   "qid": "94",
+   "status": "VERIFIED",
+   "judge_cited": 0.9987718462944031,
+   "judge_any": 0.9987718462944031,
+   "judge_final": 0.9987718462944031,
+   "n_cited": 1
+  },
+  {
+   "qid": "975",
+   "status": "VERIFIED",
+   "judge_cited": 0.9957373142242432,
+   "judge_any": 0.9957373142242432,
+   "judge_final": 0.9957373142242432,
+   "n_cited": 1
+  },
+  {
+   "qid": "975",
+   "status": "VERIFIED",
+   "judge_cited": 0.996093213558197,
+   "judge_any": 0.996093213558197,
+   "judge_final": 0.996093213558197,
+   "n_cited": 1
+  },
+  {
+   "qid": "975",
+   "status": "CONTRADICTED",
+   "judge_cited": 0.9974896907806396,
+   "judge_any": 0.9974896907806396,
+   "judge_final": null,
+   "n_cited": 1
+  },
+  {
+   "qid": "99",
+   "status": "VERIFIED",
+   "judge_cited": 0.9989925026893616,
+   "judge_any": 0.9989925026893616,
+   "judge_final": 0.9989925026893616,
+   "n_cited": 1
+  },
+  {
+   "qid": "99",
+   "status": "VERIFIED",
+   "judge_cited": 0.9979684948921204,
+   "judge_any": 0.9979684948921204,
+   "judge_final": 0.9979684948921204,
+   "n_cited": 1
+  },
+  {
+   "qid": "99",
+   "status": "VERIFIED",
+   "judge_cited": 0.7833216786384583,
+   "judge_any": 0.7833216786384583,
+   "judge_final": 0.7833216786384583,
+   "n_cited": 1
+  },
+  {
+   "qid": "993",
+   "status": "VERIFIED",
+   "judge_cited": 0.9981208443641663,
+   "judge_any": 0.9981208443641663,
+   "judge_final": 0.9981208443641663,
+   "n_cited": 1
+  },
+  {
+   "qid": "993",
+   "status": "VERIFIED",
+   "judge_cited": 0.9980809688568115,
+   "judge_any": 0.9980809688568115,
+   "judge_final": 0.9980809688568115,
+   "n_cited": 1
+  },
+  {
+   "qid": "993",
+   "status": "VERIFIED",
+   "judge_cited": 0.9976956248283386,
+   "judge_any": 0.9976956248283386,
+   "judge_final": 0.9976956248283386,
+   "n_cited": 1
+  }
+ ]
+}

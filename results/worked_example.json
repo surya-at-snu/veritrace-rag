@@ -1,0 +1,503 @@
+{
+ "query": "Does vitamin D deficiency increase the risk of multiple sclerosis?",
+ "N_chunks": 9022,
+ "N_docs": 5183,
+ "avg_chunk_len": 88.64,
+ "k1": 0.6,
+ "b": 0.3,
+ "g": 0.2,
+ "analysis": [
+  [
+   "does",
+   "<stop>"
+  ],
+  [
+   "vitamin",
+   "vitamin"
+  ],
+  [
+   "d",
+   "d"
+  ],
+  [
+   "deficiency",
+   "defici"
+  ],
+  [
+   "increase",
+   "increas"
+  ],
+  [
+   "the",
+   "<stop>"
+  ],
+  [
+   "risk",
+   "risk"
+  ],
+  [
+   "of",
+   "<stop>"
+  ],
+  [
+   "multiple",
+   "multipl"
+  ],
+  [
+   "sclerosis",
+   "sclerosi"
+  ]
+ ],
+ "terms": [
+  {
+   "term": "vitamin",
+   "df": 98,
+   "cf": 275,
+   "idf_log10": 1.964,
+   "bm25_idf": 4.517,
+   "first_postings": [
+    {
+     "chunk": 85,
+     "tf": 1,
+     "positions": [
+      9
+     ]
+    },
+    {
+     "chunk": 86,
+     "tf": 5,
+     "positions": [
+      49,
+      53,
+      90,
+      106,
+      133
+     ]
+    },
+    {
+     "chunk": 184,
+     "tf": 1,
+     "positions": [
+      37
+     ]
+    }
+   ],
+   "champions_top5": [
+    8111,
+    8110,
+    5478,
+    3616,
+    3422
+   ]
+  },
+  {
+   "term": "d",
+   "df": 318,
+   "cf": 705,
+   "idf_log10": 1.453,
+   "bm25_idf": 3.344,
+   "first_postings": [
+    {
+     "chunk": 36,
+     "tf": 2,
+     "positions": [
+      61,
+      65
+     ]
+    },
+    {
+     "chunk": 60,
+     "tf": 1,
+     "positions": [
+      84
+     ]
+    },
+    {
+     "chunk": 68,
+     "tf": 2,
+     "positions": [
+      64,
+      71
+     ]
+    }
+   ],
+   "champions_top5": [
+    7896,
+    7301,
+    4523,
+    4524,
+    951
+   ]
+  },
+  {
+   "term": "defici",
+   "df": 366,
+   "cf": 546,
+   "idf_log10": 1.392,
+   "bm25_idf": 3.204,
+   "first_postings": [
+    {
+     "chunk": 77,
+     "tf": 1,
+     "positions": [
+      85
+     ]
+    },
+    {
+     "chunk": 86,
+     "tf": 3,
+     "positions": [
+      55,
+      94,
+      110
+     ]
+    },
+    {
+     "chunk": 102,
+     "tf": 1,
+     "positions": [
+      78
+     ]
+    }
+   ],
+   "champions_top5": [
+    6673,
+    1983,
+    6675,
+    6597,
+    8164
+   ]
+  },
+  {
+   "term": "increas",
+   "df": 2028,
+   "cf": 2969,
+   "idf_log10": 0.648,
+   "bm25_idf": 1.492,
+   "first_postings": [
+    {
+     "chunk": 10,
+     "tf": 1,
+     "positions": [
+      94
+     ]
+    },
+    {
+     "chunk": 22,
+     "tf": 1,
+     "positions": [
+      40
+     ]
+    },
+    {
+     "chunk": 26,
+     "tf": 1,
+     "positions": [
+      74
+     ]
+    }
+   ],
+   "champions_top5": [
+    3069,
+    2057,
+    7992,
+    4370,
+    5389
+   ]
+  },
+  {
+   "term": "risk",
+   "df": 1156,
+   "cf": 2226,
+   "idf_log10": 0.892,
+   "bm25_idf": 2.054,
+   "first_postings": [
+    {
+     "chunk": 39,
+     "tf": 2,
+     "positions": [
+      6,
+      78
+     ]
+    },
+    {
+     "chunk": 63,
+     "tf": 1,
+     "positions": [
+      8
+     ]
+    },
+    {
+     "chunk": 64,
+     "tf": 1,
+     "positions": [
+      49
+     ]
+    }
+   ],
+   "champions_top5": [
+    8329,
+    7440,
+    8330,
+    139,
+    460
+   ]
+  },
+  {
+   "term": "multipl",
+   "df": 561,
+   "cf": 629,
+   "idf_log10": 1.206,
+   "bm25_idf": 2.777,
+   "first_postings": [
+    {
+     "chunk": 2,
+     "tf": 1,
+     "positions": [
+      79
+     ]
+    },
+    {
+     "chunk": 25,
+     "tf": 1,
+     "positions": [
+      33
+     ]
+    },
+    {
+     "chunk": 28,
+     "tf": 1,
+     "positions": [
+      13
+     ]
+    }
+   ],
+   "champions_top5": [
+    4649,
+    4650,
+    3530,
+    7491,
+    8815
+   ]
+  },
+  {
+   "term": "sclerosi",
+   "df": 52,
+   "cf": 61,
+   "idf_log10": 2.239,
+   "bm25_idf": 5.147,
+   "first_postings": [
+    {
+     "chunk": 35,
+     "tf": 1,
+     "positions": [
+      41
+     ]
+    },
+    {
+     "chunk": 198,
+     "tf": 1,
+     "positions": [
+      25
+     ]
+    },
+    {
+     "chunk": 374,
+     "tf": 1,
+     "positions": [
+      45
+     ]
+    }
+   ],
+   "champions_top5": [
+    4649,
+    4650,
+    5681,
+    5363,
+    7964
+   ]
+  }
+ ],
+ "ltc_query_vector": {
+  "vitamin": 0.4974,
+  "d": 0.3679,
+  "defici": 0.3525,
+  "increas": 0.1642,
+  "risk": 0.226,
+  "multipl": 0.3055,
+  "sclerosi": 0.5671
+ },
+ "bm25_top5": [
+  {
+   "chunk": 5790,
+   "doc": "22843838",
+   "title": "[Vitamin D and latitude as environmental factors in multiple sclerosis].",
+   "score": 21.545
+  },
+  {
+   "chunk": 86,
+   "doc": "275294",
+   "title": "Environmental factors that influence the cutaneous production of vitamin D",
+   "score": 17.439
+  },
+  {
+   "chunk": 5886,
+   "doc": "23267371",
+   "title": "Vitamin D: The \"sunshine\" vitamin.",
+   "score": 17.383
+  },
+  {
+   "chunk": 5885,
+   "doc": "23267371",
+   "title": "Vitamin D: The \"sunshine\" vitamin.",
+   "score": 16.876
+  },
+  {
+   "chunk": 7302,
+   "doc": "30720103",
+   "title": "Vitamin D status: measurement, interpretation, and clinical application.",
+   "score": 15.77
+  }
+ ],
+ "top_chunk": {
+  "chunk": 5790,
+  "len": 59,
+  "lnc_norm": 7.1619,
+  "text": "Multiple sclerosis (MS) shows a multifold increase in prevalence with an increase in latitudes, both north and south of the equator. One of the potential factors related to the difference of the prevalence is vitamin D, because the strength of ambient ultraviolet light, which is essential for vitamin D production, decreases with increasing latitude. It is known that vitamin D has immunomodulatory "
+ },
+ "breakdown": [
+  {
+   "term": "vitamin",
+   "qtf": 1,
+   "df": 98,
+   "idf_log10": 1.964,
+   "bm25_idf": 4.517,
+   "tf_body": 5,
+   "bm25_body": 6.5237,
+   "tf_title": 1,
+   "bm25_title": 5.4257,
+   "lnc_ltc": 0.118,
+   "weighted": 6.3041
+  },
+  {
+   "term": "d",
+   "qtf": 1,
+   "df": 318,
+   "idf_log10": 1.453,
+   "bm25_idf": 3.344,
+   "tf_body": 5,
+   "bm25_body": 4.8289,
+   "tf_title": 1,
+   "bm25_title": 5.1045,
+   "lnc_ltc": 0.0873,
+   "weighted": 4.884
+  },
+  {
+   "term": "defici",
+   "qtf": 1,
+   "df": 366,
+   "idf_log10": 1.392,
+   "bm25_idf": 3.204,
+   "tf_body": 0,
+   "bm25_body": 0.0,
+   "tf_title": 0,
+   "bm25_title": 0.0,
+   "lnc_ltc": 0.0,
+   "weighted": 0.0
+  },
+  {
+   "term": "increas",
+   "qtf": 1,
+   "df": 2028,
+   "idf_log10": 0.648,
+   "bm25_idf": 1.492,
+   "tf_body": 3,
+   "bm25_body": 2.0238,
+   "tf_title": 0,
+   "bm25_title": 0.0,
+   "lnc_ltc": 0.0339,
+   "weighted": 1.619
+  },
+  {
+   "term": "risk",
+   "qtf": 1,
+   "df": 1156,
+   "idf_log10": 0.892,
+   "bm25_idf": 2.054,
+   "tf_body": 0,
+   "bm25_body": 0.0,
+   "tf_title": 0,
+   "bm25_title": 0.0,
+   "lnc_ltc": 0.0,
+   "weighted": 0.0
+  },
+  {
+   "term": "multipl",
+   "qtf": 1,
+   "df": 561,
+   "idf_log10": 1.206,
+   "bm25_idf": 2.777,
+   "tf_body": 1,
+   "bm25_body": 2.8855,
+   "tf_title": 1,
+   "bm25_title": 4.7365,
+   "lnc_ltc": 0.0427,
+   "weighted": 3.2557
+  },
+  {
+   "term": "sclerosi",
+   "qtf": 1,
+   "df": 52,
+   "idf_log10": 2.239,
+   "bm25_idf": 5.147,
+   "tf_body": 1,
+   "bm25_body": 5.3479,
+   "tf_title": 1,
+   "bm25_title": 6.0195,
+   "lnc_ltc": 0.0792,
+   "weighted": 5.4822
+  }
+ ],
+ "n_nonzero": 3797,
+ "tiered": {
+  "tier": 1,
+  "scored": 584,
+  "same_top10": 10
+ },
+ "boolean": {
+  "query": "\"multiple sclerosis\" AND vitamin NOT mice",
+  "parse": "('AND', [('PHRASE', 'multiple sclerosis'), ('TERM', 'vitamin')], [('TERM', 'mice')])",
+  "hits": 1,
+  "titles": [
+   "[Vitamin D and latitude as environmental factors in multiple sclerosis]."
+  ],
+  "postings_sizes": {
+   "vitamin": 109,
+   "mice": 906
+  },
+  "phrase_hits": 34,
+  "and_hits": 43
+ },
+ "spell": {
+  "typo": "Does vitamin D deficency increse the risk of multiple sclerosis?",
+  "corrected": "Does vitamin D deficiency increase the risk of multiple sclerosis?",
+  "fixes": [
+   {
+    "original": "deficency",
+    "corrected": "deficiency",
+    "method": "k-gram+edit",
+    "distance": 1,
+    "jaccard": 0.75
+   },
+   {
+    "original": "increse",
+    "corrected": "increase",
+    "method": "k-gram+edit",
+    "distance": 1,
+    "jaccard": 0.7
+   }
+  ],
+  "typo_top1": "[Vitamin D and latitude as environmental factors in multiple sclerosis].",
+  "fixed_top1": "[Vitamin D and latitude as environmental factors in multiple sclerosis]."
+ }
+}
