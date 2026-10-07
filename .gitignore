@@ -1,0 +1,19 @@
+# downloaded data and generated artefacts (re-created by the scripts, see README)
+data/raw/
+artifacts/
+logs/
+__pycache__/
+*.pyc
+.streamlit/
+report/draft/
+# keep: results/ (metrics + figures), report/VeriTrace_Report_10p.* and _v2.*, data/custom_*.tsv/csv
+
+# demo video build files (re-created by video/record.py and video/build.py)
+video/raw/
+video/work/
+video/*.mp4
+
+# local copies, editor lock files
+Claude outputs/
+~$*
+.~lock*
